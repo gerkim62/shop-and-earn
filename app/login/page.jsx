@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "@/components/small/link-with-loader";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -86,9 +87,9 @@ const LoginPage = () => {
             </p>
             <p className="text-sm text-gray-600">
               Don't have an account?{" "}
-              <a href="#" className="text-purple-600 hover:underline">
+              <Link href="/signup" className="text-purple-600 hover:underline">
                 Sign up
-              </a>
+              </Link>
             </p>
           </div>
         </CardContent>

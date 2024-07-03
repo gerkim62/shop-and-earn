@@ -9,7 +9,7 @@ import { Gift, Users, Coins, ShieldCheck, Star, Heart } from "lucide-react";
 import app from "@/constants/app";
 import Link from "@/components/small/link-with-loader";
 
-const SignupForm = ({ referralCode }) => {
+const SignupForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,7 +34,7 @@ const SignupForm = ({ referralCode }) => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
+  const referralCode = "REFERRAL123";
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
@@ -50,7 +50,7 @@ const SignupForm = ({ referralCode }) => {
         <Card className="flex-grow w-full">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-center text-purple-700">
-              Create a {app.name} Account
+              Create your {app.name} Account
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -69,7 +69,7 @@ const SignupForm = ({ referralCode }) => {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                  placeholder="Your lovely name"
+                  placeholder="Your name"
                 />
                 {errors.name && (
                   <p className="text-red-500 text-xs mt-1">{errors.name}</p>
@@ -111,7 +111,7 @@ const SignupForm = ({ referralCode }) => {
                   value={formData.password}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                  placeholder="Your secret code"
+                  placeholder="Your password"
                 />
                 {errors.password && (
                   <p className="text-red-500 text-xs mt-1">{errors.password}</p>
@@ -132,7 +132,7 @@ const SignupForm = ({ referralCode }) => {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                  placeholder="Confirm your secret code"
+                  placeholder="Confirm your password"
                 />
                 {errors.confirmPassword && (
                   <p className="text-red-500 text-xs mt-1">

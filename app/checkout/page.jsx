@@ -41,7 +41,7 @@ const CartCheckoutPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 min-h-screen bg-gradient-to-b from-pink-100 to-purple-100  p-4 max-w-4xl space-y-8">
       <h1 className="text-4xl font-bold mb-2 text-purple-800">My Shopping Cart</h1>
       <p className="text-xl text-gray-600 mb-8">Review your items, choose delivery, and complete your purchase</p>
       

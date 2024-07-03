@@ -44,9 +44,11 @@ const NotificationsPage = () => {
       message: "Someone liked your product review!",
       time: "2 weeks ago",
     },
-  ];
+  ] as const
 
-  const getIcon = (type) => {
+  const getIcon = (
+    type: "reward" | "purchase" | "sale" | "wishlist" | "review"
+  ) => {
     switch (type) {
       case "reward":
         return <Gift className="h-6 w-6 text-green-500" />;

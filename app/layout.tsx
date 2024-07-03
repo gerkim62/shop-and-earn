@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import Link from "@/components/small/link-with-loader";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           }
         </Link>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

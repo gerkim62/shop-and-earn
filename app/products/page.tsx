@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from "react";
@@ -83,9 +84,6 @@ const ProductsPage = () => {
     indexOfFirstProduct,
     indexOfLastProduct
   );
-
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className="container mx-auto px-4 py-8">
