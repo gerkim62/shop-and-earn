@@ -15,7 +15,7 @@ const Link: React.FC<CustomLinkProps> = ({ children, href, ...rest }) => {
     NProgress.done();
   }, [pathname]);
 
-  const handleClick = (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleClick = (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
     // this is not comprehensive but it's a good start, you can add more conditions if needed
     const wontNavigate =
       pathname === href ||

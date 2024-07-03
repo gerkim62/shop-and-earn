@@ -4,11 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import app from "@/constants/app";
 import Link from "../small/link-with-loader";
+import ProductSearch from "./product-search";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-800 py-12">
-      <div className="max-w-6xl mx-auto px-4">
+    <footer className="bg-gray-100 text-gray-800 py-12 pt-4">
+      
+      <ProductSearch />
+      <div className="max-w-6xl mx-auto px-4 mt-4">
+        
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
