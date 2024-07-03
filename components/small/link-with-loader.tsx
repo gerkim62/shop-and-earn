@@ -1,5 +1,5 @@
 "use client";
-import { ComponentProps, useEffect } from "react";
+import { ComponentProps, MouseEvent, useEffect } from "react";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import NProgress from "nprogress";
@@ -15,13 +15,13 @@ const Link: React.FC<CustomLinkProps> = ({ children, href, ...rest }) => {
     NProgress.done();
   }, [pathname]);
 
-  const handleClick = () => {
-    
+  const handleClick = (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     // this is not comprehensive but it's a good start, you can add more conditions if needed
     const wontNavigate =
       pathname === href ||
       href.toString().startsWith("#") ||
-      rest.target === "_blank"; 
+      rest.target === "_blank" ||
+      e.ctrlKey;
 
     NProgress.start();
     if (wontNavigate) {
@@ -30,7 +30,7 @@ const Link: React.FC<CustomLinkProps> = ({ children, href, ...rest }) => {
       return NProgress.done();
     }
 
-    return
+    return;
   };
 
   return (

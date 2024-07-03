@@ -1,13 +1,22 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Progress } from "@/components/ui/progress";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { User, Gift, ShoppingBag, Copy, CheckCircle } from 'lucide-react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { User, Gift, ShoppingBag, Copy, CheckCircle } from "lucide-react";
+import WithdrawalModal from "@/components/modals/withdrawal";
+import CopyButton from "@/components/small/copy-button";
 
 const MyAccountPage = () => {
   const [copiedReferralCode, setCopiedReferralCode] = useState(false);
@@ -19,7 +28,7 @@ const MyAccountPage = () => {
     referralCode: "JANE2023",
     referralCount: 8,
     referralTarget: 10,
-    earnedRewards: 1600
+    earnedRewards: 1600,
   };
 
   const referrals = [
@@ -63,7 +72,9 @@ const MyAccountPage = () => {
                 <p className="text-gray-600">{user.email}</p>
               </div>
             </div>
-            <Button variant="outline" className="w-full">Edit Profile</Button>
+            <Button variant="outline" className="w-full">
+              Edit Profile
+            </Button>
           </CardContent>
         </Card>
 
@@ -75,21 +86,28 @@ const MyAccountPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="mb-2">Your Referral Code:</p>
-            <div className="flex mb-4">
-              <input 
-                type="text" 
-                value={user.referralCode} 
-                readOnly 
-                className="flex-grow p-2 border rounded-l-md"
+            <p className="mb-2">Your Referral Link:</p>
+            <div className="flex mb-4 ">
+              <input
+                type="text"
+                value={user.referralCode}
+                readOnly
+                className="flex-grow  w-32  border rounded-l-md px-2 "
               />
-              <Button onClick={copyReferralCode} className="rounded-l-none">
-                {copiedReferralCode ? <CheckCircle className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-              </Button>
+              <CopyButton
+                dontNormalize
+                link="https://example.com/referral?code=JANE2023"
+                className="rounded-l-none "
+              ></CopyButton>
             </div>
             <p className="mb-2">Referral Progress:</p>
-            <Progress value={(user.referralCount / user.referralTarget) * 100} className="mb-2" />
-            <p className="text-sm text-gray-600">{user.referralCount} / {user.referralTarget} referrals</p>
+            <Progress
+              value={(user.referralCount / user.referralTarget) * 100}
+              className="mb-2"
+            />
+            <p className="text-sm text-gray-600">
+              {user.referralCount} / {user.referralTarget} referrals
+            </p>
           </CardContent>
         </Card>
 
@@ -101,9 +119,15 @@ const MyAccountPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <h3 className="text-3xl font-bold text-green-600 mb-2">{user.earnedRewards} KSH</h3>
-            <p className="text-gray-600 mb-4">Available to use on your next purchase</p>
-            <Button className="w-full">Use Rewards</Button>
+            <h3 className="text-3xl font-bold text-green-600 mb-2">
+              {user.earnedRewards} KSH
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Available to use on your next purchase
+            </p>
+            <WithdrawalModal currentBalance={user.earnedRewards}>
+              <Button className="w-full">Use Rewards</Button>
+            </WithdrawalModal>
           </CardContent>
         </Card>
       </div>

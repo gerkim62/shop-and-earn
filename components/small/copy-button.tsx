@@ -4,8 +4,11 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CopyIcon, CheckCircleIcon } from "lucide-react";
 import { toast } from "sonner";
+import { ComponentProps } from "react";
 
-type Props =
+type ButtonProps = ComponentProps<typeof Button>;
+
+type Props = (
   | {
       text: string;
     }
@@ -20,7 +23,9 @@ type Props =
   | {
       link: string;
       dontNormalize: true;
-    };
+    }
+) &
+  ButtonProps;
 
 export default function CopyButton(props: Props) {
   const [copied, setCopied] = useState(false);
@@ -47,7 +52,9 @@ export default function CopyButton(props: Props) {
       description: "Invalid prop type for CopyButton",
     });
 
-    throw new Error(props + " is not a valid prop type for CopyButton");
+    throw new Error(
+      JSON.stringify(props) + " is not a valid prop type for CopyButton"
+    );
   }
 
   const handleCopy = async () => {
@@ -64,10 +71,14 @@ export default function CopyButton(props: Props) {
 
   return (
     <Button
+      {...props}
       onClick={handleCopy}
       variant="outline"
       size="sm"
-      className="flex items-center gap-2"
+      className={
+        "flex items-center gap-2" +
+        (props.className ? " " + props.className : "")
+      }
     >
       {copied ? (
         <>

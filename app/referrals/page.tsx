@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Copy, CheckCircle, XCircle, Link, ShoppingCart } from "lucide-react";
 import app from "@/constants/app";
+import WithdrawalModal from "@/components/modals/withdrawal";
 
 const ReferralsPage = () => {
   const [copied, setCopied] = useState(false);
@@ -15,9 +16,36 @@ const ReferralsPage = () => {
   const totalInvited = 15;
   const totalEarned = 5000; // in KSH
   const invitedUsers = [
-    { id: 1, name: "John Doe", signedUp: true, purchased: true, signUpDate: "2024-03-01", purchaseDate: "2024-03-05", earnedFromSignUp: 100, earnedFromPurchase: 500 },
-    { id: 2, name: "Jane Smith", signedUp: true, purchased: false, signUpDate: "2024-03-05", purchaseDate: null, earnedFromSignUp: 100, earnedFromPurchase: 0 },
-    { id: 3, name: "Alice Johnson", signedUp: true, purchased: true, signUpDate: "2024-03-10", purchaseDate: "2024-03-12", earnedFromSignUp: 100, earnedFromPurchase: 500 },
+    {
+      id: 1,
+      name: "John Doe",
+      signedUp: true,
+      purchased: true,
+      signUpDate: "2024-03-01",
+      purchaseDate: "2024-03-05",
+      earnedFromSignUp: 100,
+      earnedFromPurchase: 500,
+    },
+    {
+      id: 2,
+      name: "Jane Smith",
+      signedUp: true,
+      purchased: false,
+      signUpDate: "2024-03-05",
+      purchaseDate: null,
+      earnedFromSignUp: 100,
+      earnedFromPurchase: 0,
+    },
+    {
+      id: 3,
+      name: "Alice Johnson",
+      signedUp: true,
+      purchased: true,
+      signUpDate: "2024-03-10",
+      purchaseDate: "2024-03-12",
+      earnedFromSignUp: 100,
+      earnedFromPurchase: 500,
+    },
     // Add more users as needed
   ];
 
@@ -38,7 +66,9 @@ const ReferralsPage = () => {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="bg-purple-100 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2 text-purple-700">How Referrals Work</h3>
+              <h3 className="text-lg font-semibold mb-2 text-purple-700">
+                How Referrals Work
+              </h3>
               <p className="text-sm text-purple-600">
                 It's easy to earn with our referral program:
               </p>
@@ -56,29 +86,43 @@ const ReferralsPage = () => {
             <div>
               <h3 className="text-lg font-semibold mb-2">Your Referral Link</h3>
               <div className="flex space-x-2">
-                <Input
-                  value={referralLink}
-                  readOnly
-                  className="flex-grow"
-                />
+                <Input value={referralLink} readOnly className="flex-grow" />
                 <Button onClick={copyToClipboard} className="w-24">
-                  {copied ? <CheckCircle className="h-5 w-5" /> : <Copy className="h-5 w-5" />}
+                  {copied ? (
+                    <CheckCircle className="h-5 w-5" />
+                  ) : (
+                    <Copy className="h-5 w-5" />
+                  )}
                   {copied ? "Copied!" : "Copy"}
                 </Button>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="sm:grid grid-cols-2 gap-4 ">
               <Card>
                 <CardContent className="p-4">
                   <h3 className="text-lg font-semibold">Total Invited</h3>
-                  <p className="text-3xl font-bold text-purple-600">{totalInvited}</p>
+                  <p className="text-3xl font-bold text-purple-600">
+                    {totalInvited}
+                  </p>
                 </CardContent>
               </Card>
-              <Card>
-                <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold">Total Earned</h3>
-                  <p className="text-3xl font-bold text-purple-600">KSH {totalEarned.toLocaleString()}</p>
+              <Card className="mt-4 sm:mt-auto">
+                <CardContent className="p-4 ">
+                  <h3 className="text-lg font-semibold flex justify-between">
+                    Total Earned
+                    {
+                      <WithdrawalModal currentBalance={totalEarned}>
+                        <Button
+                        size={"sm"}
+                        variant={"outline"}
+                        >Withdraw</Button>
+                      </WithdrawalModal>
+                    }
+                  </h3>
+                  <p className="text-3xl font-bold text-purple-600">
+                    KSH {totalEarned.toLocaleString()}
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -92,16 +136,27 @@ const ReferralsPage = () => {
                       <div className="flex justify-between items-center mb-2">
                         <p className="font-semibold">{user.name}</p>
                         <div className="flex space-x-2">
-                          {user.signedUp && <Link className="h-5 w-5 text-green-500" />}
-                          {user.purchased && <ShoppingCart className="h-5 w-5 text-green-500" />}
+                          {user.signedUp && (
+                            <Link className="h-5 w-5 text-green-500" />
+                          )}
+                          {user.purchased && (
+                            <ShoppingCart className="h-5 w-5 text-green-500" />
+                          )}
                         </div>
                       </div>
-                      <p className="text-sm text-gray-600">Signed up: {user.signUpDate}</p>
+                      <p className="text-sm text-gray-600">
+                        Signed up: {user.signUpDate}
+                      </p>
                       {user.purchaseDate && (
-                        <p className="text-sm text-gray-600">First purchase: {user.purchaseDate}</p>
+                        <p className="text-sm text-gray-600">
+                          First purchase: {user.purchaseDate}
+                        </p>
                       )}
                       <p className="text-sm font-semibold text-purple-600 mt-2">
-                        Earned: KSH {(user.earnedFromSignUp + user.earnedFromPurchase).toLocaleString()}
+                        Earned: KSH{" "}
+                        {(
+                          user.earnedFromSignUp + user.earnedFromPurchase
+                        ).toLocaleString()}
                       </p>
                     </CardContent>
                   </Card>

@@ -26,13 +26,13 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/login/page.jsx",
+    "app/login/page.tsx",
     "app/forgot-password/page.jsx",
-    "app/checkout/page.jsx",
+    "app/checkout/page.tsx",
     "app/nothing-here/page55.jsx",
-    "app/signup/page.jsx",
+    "app/signup/page.tsx",
     "app/terms/page.jsx",
-    "app/page.jsx"
+    "app/page.tsx"
   ],
   "exclude": ["node_modules"]
 }

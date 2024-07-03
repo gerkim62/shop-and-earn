@@ -1,9 +1,10 @@
-import { Gift, ShoppingCart, User } from "lucide-react";
+import { Bell, Gift, ShoppingCart, User } from "lucide-react";
 import { FC } from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import app from "@/constants/app";
 import Link from "../small/link-with-loader";
+import UserButton from "../small/user-button";
 
 const Header: FC = () => {
   return (
@@ -37,10 +38,10 @@ const Header: FC = () => {
               type="button"
               className="p-2 inline-flex items-center text-xs  "
             >
-              <Link href={"/referrals"}>
+              <Link href={"/notifications"}>
                 {" "}
-                <Gift className="w-6 h-6" />
-                <span className="hidden sm:inline ml-2">Referrals</span>
+                <Bell className="w-6 h-6" />
+                <span className="hidden sm:inline ml-2">Notifications</span>
               </Link>
             </Button>
 
@@ -56,13 +57,14 @@ const Header: FC = () => {
               </Link>
             </Button>
 
-            <Button
+            {/* <Button
               variant={"outline"}
               type="button"
               className="p-2 inline-flex items-center text-xs  border rounded-full"
             >
               <User className="w-6 h-6" />
-            </Button>
+            </Button> */}
+            <UserButton />
           </div>
         </div>
       </nav>

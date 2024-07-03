@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins, Quicksand } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import Link from "@/components/small/link-with-loader";
 import { Toaster } from "@/components/ui/sonner";
+import InstallBanner from "@/components/banners/install";
+import ProductSearch from "@/components/layout/product-search";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,14 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <Navbar />
+        <ProductSearch />
         {children}
         <Link hidden href="/">
           {
             // hidden link to make nprogress work with our link-with-loader component (dont know why it needs this but it does)
           }
         </Link>
+        <InstallBanner />
         <Footer />
         <Toaster />
       </body>
