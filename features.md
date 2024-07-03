@@ -102,6 +102,10 @@ export default routes;const routes = [
   { path: '*', redirect: '/404' }
 ]
 
+imagine an app that users can earn money (ksh) for referring their friends, they can buy products in the app (and redeem earned ksh during checkout). the app convinces the people to take advantage of the referral program and refer others. the app also sells products at highly discounted prices.
+
+in addition  to navbar, footer, landing page, referrals page where user can view his balance and referred users, my cart page, checkout page, about page, what else can the app have.
+
 
 That's an interesting app concept combining referral rewards, e-commerce, and discounts. Here are some additional pages and features the app could have:
 

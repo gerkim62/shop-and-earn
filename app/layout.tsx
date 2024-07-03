@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import Link from "@/components/small/link-with-loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+        <Link hidden href="/">
+          {
+            // hidden link to make nprogress work with our link-with-loader component (dont know why it needs this but it does)
+          }
+        </Link>
+        <Footer />
+      </body>
     </html>
   );
 }
