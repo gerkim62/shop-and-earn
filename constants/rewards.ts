@@ -1,6 +1,11 @@
 const rewards = {
-  onInvitedSignup: 100,
-  onInvitedFirstPurchase: 500,
+  onSignup: {
+    user: 100,
+    referrer: 100,
+  },
+  onFirstPurchase: {
+    referrer: 200,
+  },
 };
 
 export default rewards;

@@ -1,10 +1,11 @@
-"use client";
-
-import React, { useState } from "react";
+import authOptions from "@/auth/options";
+import EditProfileModal from "@/components/modals/edit-profile";
+import WithdrawalModal from "@/components/modals/withdrawal";
+import CopyButton from "@/components/small/copy-button";
+import NothingHere from "@/components/small/nothing-here";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Progress } from "@/components/ui/progress";
 import {
   Table,
@@ -14,40 +15,96 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { User, Gift, ShoppingBag, Copy, CheckCircle } from "lucide-react";
-import WithdrawalModal from "@/components/modals/withdrawal";
-import CopyButton from "@/components/small/copy-button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import limits from "@/constants/limits";
+import prisma from "@/lib/prisma";
+import { Gift, ShoppingBag, User } from "lucide-react";
+import { getServerSession } from "next-auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-const MyAccountPage = () => {
-  const [copiedReferralCode, setCopiedReferralCode] = useState(false);
+const MyAccountPage = async () => {
+  const session = await getServerSession(authOptions);
+
+  const headersList = headers();
+
+  const hostname = headersList.get("host");
+
+  if (!session) redirect("/login");
 
   // Mock data
-  const user = {
-    name: "Jane Doe",
-    email: "jane@example.com",
-    referralCode: "JANE2023",
-    referralCount: 8,
-    referralTarget: 10,
-    earnedRewards: 1600,
-  };
+  // const user = {
+  //   name: "Jane Doe",
+  //   email: "jane@example.com",
+  //   referralCode: "JANE2023",
+  //   referralCount: 8,
+  //   referralTarget: 10,
+  //   earnedRewards: 1600,
+  // };
 
-  const referrals = [
-    { id: 1, name: "John Smith", date: "2023-06-15", status: "Completed" },
-    { id: 2, name: "Alice Johnson", date: "2023-06-20", status: "Pending" },
-    // Add more referrals as needed
-  ];
+  if (!session.user || !session.user.email) {
+    redirect("/login");
+  }
 
-  const orders = [
-    { id: "ORD001", date: "2023-07-01", total: 2500, status: "Delivered" },
-    { id: "ORD002", date: "2023-07-15", total: 1800, status: "Processing" },
-    // Add more orders as needed
-  ];
+  const user = await prisma.user.findUnique({
+    where: {
+      email: session.user.email,
+    },
+    include: {
+      orders: {
+        select: {
+          id: true,
+          createdAt: true,
+          totalAmount: true,
+          status: true,
+        },
+      },
+      referredUsers: {
+        select: {
+          id: true,
+          fullName: true,
+          createdAt: true,
+          orders: {
+            select: {
+              id: true,
+            },
+          },
+        },
+      },
+    },
+  });
 
-  const copyReferralCode = () => {
-    navigator.clipboard.writeText(user.referralCode);
-    setCopiedReferralCode(true);
-    setTimeout(() => setCopiedReferralCode(false), 3000);
-  };
+  if (!user) {
+    redirect("/login");
+  }
+
+  const referralLink = `https://${hostname}/invite/${user.referralCode}`;
+
+  // const referrals = [
+  //   { id: 1, name: "John Smith", date: "2023-06-15", status: "Completed" },
+  //   { id: 2, name: "Alice Johnson", date: "2023-06-20", status: "Pending" },
+  //   // Add more referrals as needed
+  // ];
+
+  const referrals = user.referredUsers.map((referredUser) => ({
+    id: referredUser.id,
+    name: referredUser.fullName,
+    date: referredUser.createdAt.toLocaleDateString(),
+    status: referredUser.orders.length > 0 ? "Completed" : "Pending",
+  }));
+
+  // const orders = [
+  //   { id: "ORD001", date: "2023-07-01", total: 2500, status: "Delivered" },
+  //   { id: "ORD002", date: "2023-07-15", total: 1800, status: "Processing" },
+  //   // Add more orders as needed
+  // ];
+
+  const orders = user.orders.map((order) => ({
+    id: order.id,
+    date: order.createdAt.toLocaleDateString(),
+    total: order.totalAmount,
+    status: order.status,
+  }));
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -64,17 +121,22 @@ const MyAccountPage = () => {
           <CardContent>
             <div className="flex items-center mb-4">
               <Avatar className="h-16 w-16 mr-4">
-                <AvatarImage src="/api/placeholder/120/120" alt={user.name} />
-                <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
+                <AvatarImage
+                  src="/api/placeholder/120/120"
+                  alt={user.fullName}
+                />
+                <AvatarFallback>{user.fullName.charAt(0)}</AvatarFallback>
               </Avatar>
               <div>
-                <h2 className="text-xl font-semibold">{user.name}</h2>
+                <h2 className="text-xl font-semibold">{user.fullName}</h2>
                 <p className="text-gray-600">{user.email}</p>
               </div>
             </div>
-            <Button variant="outline" className="w-full">
-              Edit Profile
-            </Button>
+            <EditProfileModal user={user}>
+              <Button variant="outline" className="w-full">
+                Edit Profile
+              </Button>
+            </EditProfileModal>
           </CardContent>
         </Card>
 
@@ -90,23 +152,23 @@ const MyAccountPage = () => {
             <div className="flex mb-4 ">
               <input
                 type="text"
-                value={user.referralCode}
+                value={referralLink}
                 readOnly
                 className="flex-grow  w-32  border rounded-l-md px-2 "
               />
               <CopyButton
                 dontNormalize
-                link="https://example.com/referral?code=JANE2023"
+                link={referralLink}
                 className="rounded-l-none "
               ></CopyButton>
             </div>
             <p className="mb-2">Referral Progress:</p>
             <Progress
-              value={(user.referralCount / user.referralTarget) * 100}
+              value={(user.balance / limits.withdrawal) * 100}
               className="mb-2"
             />
             <p className="text-sm text-gray-600">
-              {user.referralCount} / {user.referralTarget} referrals
+              {user.balance} / {limits.withdrawal}
             </p>
           </CardContent>
         </Card>
@@ -120,13 +182,13 @@ const MyAccountPage = () => {
           </CardHeader>
           <CardContent>
             <h3 className="text-3xl font-bold text-green-600 mb-2">
-              {user.earnedRewards} KSH
+              KSH {user.balance}
             </h3>
             <p className="text-gray-600 mb-4">
               Available to use on your next purchase
             </p>
-            <WithdrawalModal currentBalance={user.earnedRewards}>
-              <Button className="w-full">Use Rewards</Button>
+            <WithdrawalModal currentBalance={user.balance}>
+              <Button className="w-full">Withdraw Rewards</Button>
             </WithdrawalModal>
           </CardContent>
         </Card>
@@ -143,24 +205,32 @@ const MyAccountPage = () => {
               <CardTitle>Your Referrals</CardTitle>
             </CardHeader>
             <CardContent>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Name</TableHead>
-                    <TableHead>Date</TableHead>
-                    <TableHead>Status</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {referrals.map((referral) => (
-                    <TableRow key={referral.id}>
-                      <TableCell>{referral.name}</TableCell>
-                      <TableCell>{referral.date}</TableCell>
-                      <TableCell>{referral.status}</TableCell>
+              {referrals.length < 0 ? (
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Name</TableHead>
+                      <TableHead>Date</TableHead>
+                      <TableHead>Status</TableHead>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+                  </TableHeader>
+                  <TableBody>
+                    {referrals.map((referral) => (
+                      <TableRow key={referral.id}>
+                        <TableCell>{referral.name}</TableCell>
+                        <TableCell>{referral.date}</TableCell>
+                        <TableCell>{referral.status}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              ) : (
+                <NothingHere
+                  icon="frown"
+                  title="You haven't referred anyone yet"
+                  message="Start sharing your referral link to earn rewards."
+                />
+              )}
             </CardContent>
           </Card>
         </TabsContent>
@@ -170,26 +240,34 @@ const MyAccountPage = () => {
               <CardTitle>Order History</CardTitle>
             </CardHeader>
             <CardContent>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Order ID</TableHead>
-                    <TableHead>Date</TableHead>
-                    <TableHead>Total</TableHead>
-                    <TableHead>Status</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {orders.map((order) => (
-                    <TableRow key={order.id}>
-                      <TableCell>{order.id}</TableCell>
-                      <TableCell>{order.date}</TableCell>
-                      <TableCell>{order.total} KSH</TableCell>
-                      <TableCell>{order.status}</TableCell>
+              {orders.length < 0 ? (
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Order ID</TableHead>
+                      <TableHead>Date</TableHead>
+                      <TableHead>Total</TableHead>
+                      <TableHead>Status</TableHead>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+                  </TableHeader>
+                  <TableBody>
+                    {orders.map((order) => (
+                      <TableRow key={order.id}>
+                        <TableCell>{order.id}</TableCell>
+                        <TableCell>{order.date}</TableCell>
+                        <TableCell>{order.total} KSH</TableCell>
+                        <TableCell>{order.status}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              ) : (
+                <NothingHere
+                  icon="frown"
+                  title="No orders found"
+                  message="You haven't placed any orders yet."
+                />
+              )}
             </CardContent>
           </Card>
         </TabsContent>

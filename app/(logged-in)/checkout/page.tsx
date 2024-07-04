@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Minus, Plus, Trash2, Share2, MapPin, CheckCircle } from "lucide-react";
 import Link from "@/components/small/link-with-loader";
+import PickupStationModal from "@/components/modals/pickup-station";
 
 const CartCheckoutPage = () => {
   const [cartItems, setCartItems] = useState([
@@ -64,11 +65,10 @@ const CartCheckoutPage = () => {
           the more you save on your next purchase!
         </AlertDescription>
         <Button
-        asChild
-        className="mt-2 bg-white text-purple-700 hover:bg-purple-100 ml-6">
-          <Link
-          href={"/referrals"}
-          >Go to Referrals Page</Link>
+          asChild
+          className="mt-2 bg-white text-purple-700 hover:bg-purple-100 ml-6"
+        >
+          <Link href={"/referrals"}>Go to Referrals Page</Link>
         </Button>
       </Alert>
 
@@ -128,16 +128,18 @@ const CartCheckoutPage = () => {
           </div>
 
           {/* Delivery Location Button */}
-          <Button
-            className="w-full mt-6 mb-4"
-            variant={deliveryLocation ? "outline" : "default"}
-            onClick={handleChooseLocation}
-          >
-            <MapPin className="mr-2 h-4 w-4" />
-            {deliveryLocation
-              ? "Change Delivery Location"
-              : "Choose Delivery Location"}
-          </Button>
+          <PickupStationModal>
+            <Button
+              className="w-full mt-6 mb-4"
+              variant={deliveryLocation ? "outline" : "default"}
+              onClick={handleChooseLocation}
+            >
+              <MapPin className="mr-2 h-4 w-4" />
+              {deliveryLocation
+                ? "Change Delivery Location"
+                : "Choose Delivery Location"}
+            </Button>
+          </PickupStationModal>
 
           {/* Display chosen location if available */}
           {deliveryLocation && (
