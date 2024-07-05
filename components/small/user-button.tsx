@@ -1,24 +1,22 @@
-import React from "react";
+import { UserWithRelations } from "@/auth/user";
+import Link from "@/components/small/link-with-loader";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import Link from "next/link";
-import { User, Gift, LogOut, Bell, ShoppingCart } from "lucide-react";
+import { Bell, Gift, LogOut, ShoppingCart, User } from "lucide-react";
 
-export default function UserButton() {
+type UserButtonProps = {
+  user: UserWithRelations;
+};
+export default function UserButton({ user }: UserButtonProps) {
   // Mock user data - replace with actual user data in a real application
-  const user = {
-    name: "John Doe",
-    email: "john.doe@example.com",
-    avatar: "/placeholder-user.jpg",
-  };
 
   return (
     <DropdownMenu>
@@ -29,20 +27,25 @@ export default function UserButton() {
           className="p-2 inline-flex items-center text-xs rounded-full bg-purple-500"
         >
           <Avatar className="h-10 w-10 ">
-            <AvatarImage src={user.avatar} alt={`${user.name}'s avatar`} />
-            <AvatarFallback>{user.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+            {/* <AvatarImage src={user.avatar} alt={`${user.fullName}'s avatar`} /> */}
+            <AvatarFallback>
+              {user.fullName
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+            </AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-64 bg-purple-50">
         <DropdownMenuLabel className="flex flex-col space-y-1 p-4">
-          <span className="font-medium text-purple-900">{user.name}</span>
+          <span className="font-medium text-purple-900">{user.fullName}</span>
           <span className="text-sm text-purple-600">{user.email}</span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator className="bg-purple-200" />
-        <DropdownMenuItem className="hover:bg-purple-100">
+        <DropdownMenuItem asChild className="hover:bg-purple-100">
           <Link
-            href="#"
+            href="/account"
             className="flex items-center gap-2 text-purple-700"
             prefetch={false}
           >
@@ -50,9 +53,9 @@ export default function UserButton() {
             <span>My Account</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="hover:bg-purple-100">
+        <DropdownMenuItem asChild className="hover:bg-purple-100">
           <Link
-            href="#"
+            href="/referrals"
             className="flex items-center gap-2 text-purple-700"
             prefetch={false}
           >
@@ -61,9 +64,9 @@ export default function UserButton() {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator className="bg-purple-200" />
-        <DropdownMenuItem className="hover:bg-purple-100">
+        <DropdownMenuItem asChild className="hover:bg-purple-100">
           <Link
-            href="#"
+            href="/notifications"
             className="flex items-center gap-2 text-purple-700"
             prefetch={false}
           >
@@ -71,9 +74,9 @@ export default function UserButton() {
             <span>Notifications</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="hover:bg-purple-100">
+        <DropdownMenuItem asChild className="hover:bg-purple-100">
           <Link
-            href="#"
+            href="/checkout"
             className="flex items-center gap-2 text-purple-700"
             prefetch={false}
           >
@@ -82,9 +85,9 @@ export default function UserButton() {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator className="bg-purple-200" />
-        <DropdownMenuItem className="hover:bg-purple-100">
+        <DropdownMenuItem asChild className="hover:bg-purple-100">
           <Link
-            href="#"
+            href="/logout"
             className="flex items-center gap-2 text-purple-700"
             prefetch={false}
           >

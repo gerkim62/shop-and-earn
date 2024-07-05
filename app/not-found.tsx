@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search } from 'lucide-react';
-import Link from 'next/link';
+import Link from "@/components/small/link-with-loader";
 
 const NotFoundPage = () => {
   return (

@@ -34,14 +34,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="/products" className="hover:text-purple-600">
+                <Link href="/products" className="hover:text-purple-600">
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/referrals" className="hover:text-purple-600">
+                <Link href="/referrals" className="hover:text-purple-600">
                   Referral Program
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/faq" className="hover:text-purple-600">
@@ -58,19 +58,19 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="/terms" className="hover:text-purple-600">
+                <Link href="/terms" className="hover:text-purple-600">
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/privacy" className="hover:text-purple-600">
+                <Link href="/privacy" className="hover:text-purple-600">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/returns" className="hover:text-purple-600">
+                <Link href="/returns" className="hover:text-purple-600">
                   Return Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -99,18 +99,18 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <a href="#" className="text-gray-600 hover:text-purple-600">
+            <Link href="#" className="text-gray-600 hover:text-purple-600">
               <Facebook size={24} />
-            </a>
-            <a href="#" className="text-gray-600 hover:text-purple-600">
+            </Link>
+            <Link href="#" className="text-gray-600 hover:text-purple-600">
               <Twitter size={24} />
-            </a>
-            <a href="#" className="text-gray-600 hover:text-purple-600">
+            </Link>
+            <Link href="#" className="text-gray-600 hover:text-purple-600">
               <Instagram size={24} />
-            </a>
-            <a href="#" className="text-gray-600 hover:text-purple-600">
+            </Link>
+            <Link href="#" className="text-gray-600 hover:text-purple-600">
               <Linkedin size={24} />
-            </a>
+            </Link>
           </div>
           <p className="text-gray-600">
             &copy; {new Date().getFullYear()} {app.name}. All rights reserved.

@@ -1,55 +1,33 @@
-"use client";
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Minus, Plus, Trash2, Share2, MapPin, CheckCircle } from "lucide-react";
 import Link from "@/components/small/link-with-loader";
-import PickupStationModal from "@/components/modals/pickup-station";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Share2 } from "lucide-react";
+import Cart from "./_components/cart";
+import { getCurrentUserOrRedirect } from "@/auth/user";
+import prisma from "@/lib/prisma";
 
-const CartCheckoutPage = () => {
-  const [cartItems, setCartItems] = useState([
-    { id: 1, name: "Product 1", price: 1000, quantity: 2 },
-    { id: 2, name: "Product 2", price: 1500, quantity: 1 },
-  ]);
-  const [earnedRewards, setEarnedRewards] = useState(500); // Assume 500 KSH in rewards
-  const [isPaid, setIsPaid] = useState(false);
-  const [deliveryLocation, setDeliveryLocation] = useState(null);
+const CartCheckoutPage = async () => {
+  const user = await getCurrentUserOrRedirect();
 
-  const updateQuantity = (id, newQuantity) => {
-    setCartItems(
-      cartItems.map((item) =>
-        item.id === id ? { ...item, quantity: Math.max(0, newQuantity) } : item
-      )
-    );
-  };
-
-  const removeItem = (id) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
-  };
-
-  const subtotal = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
-  const total = Math.max(0, subtotal - earnedRewards);
-
-  const handleCheckout = () => {
-    setIsPaid(true);
-    console.log("Payment processed successfully!");
-  };
-
-  const handleChooseLocation = () => {
-    setDeliveryLocation({
-      address: "123 Main St, Nairobi",
-      coordinates: { lat: -1.2921, lng: 36.8219 },
-    });
-  };
+  const cart = await prisma.cart.findUnique({
+    where: {
+      userId: user.id,
+    },
+    include: {
+      items: {
+        include: {
+          product: true,
+        },
+      },
+    },
+  });
 
   return (
     <div className="container mx-auto px-4 sm:my-4 rounded py-8 min-h-screen bg-gradient-to-b from-pink-100 to-purple-100  p-4 max-w-4xl space-y-8">
-      <h1 className="text-4xl font-bold  text-purple-800 -mb-6">My Cart</h1>
+      <h1 className="text-4xl font-bold  text-purple-800 -mb-6">
+        My Cart - Check Out
+      </h1>
       <p className="text-xl text-gray-600 mb-8">
         Review your items, choose delivery, and complete your purchase
       </p>
@@ -72,112 +50,8 @@ const CartCheckoutPage = () => {
         </Button>
       </Alert>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Cart Items</CardTitle>
-        </CardHeader>
-        <CardContent>
-          {cartItems.map((item) => (
-            <div
-              key={item.id}
-              className="flex items-center justify-between mb-4"
-            >
-              <div>
-                <h3 className="font-semibold">{item.name}</h3>
-                <p className="text-sm text-gray-600">{item.price} KSH</p>
-              </div>
-              <div className="flex items-center ">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                >
-                  <Minus className="h-4 w-4" />
-                </Button>
-                <span className="mx-2">{item.quantity}</span>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                >
-                  <Plus className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="ml-2"
-                  onClick={() => removeItem(item.id)}
-                >
-                  <Trash2 className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-          ))}
-          <Separator className="my-4" />
-          <div className="flex justify-between font-semibold">
-            <span>Subtotal:</span>
-            <span>{subtotal} KSH</span>
-          </div>
-          <div className="flex justify-between text-green-600">
-            <span>Rewards Applied:</span>
-            <span>-{earnedRewards} KSH</span>
-          </div>
-          <div className="flex justify-between font-bold text-lg mt-2">
-            <span>Total:</span>
-            <span>{total} KSH</span>
-          </div>
-
-          {/* Delivery Location Button */}
-          <PickupStationModal>
-            <Button
-              className="w-full mt-6 mb-4"
-              variant={deliveryLocation ? "outline" : "default"}
-              onClick={handleChooseLocation}
-            >
-              <MapPin className="mr-2 h-4 w-4" />
-              {deliveryLocation
-                ? "Change Delivery Location"
-                : "Choose Delivery Location"}
-            </Button>
-          </PickupStationModal>
-
-          {/* Display chosen location if available */}
-          {deliveryLocation && (
-            <Alert className="mb-4">
-              <MapPin className="h-4 w-4" />
-              <AlertTitle>Delivery Location</AlertTitle>
-              <AlertDescription>{deliveryLocation.address}</AlertDescription>
-            </Alert>
-          )}
-
-          {/* Payment Button */}
-          <Button
-            className="w-full"
-            onClick={handleCheckout}
-            disabled={isPaid || !deliveryLocation}
-          >
-            {isPaid ? (
-              <>
-                <CheckCircle className="mr-2 h-4 w-4" />
-                Payment Completed
-              </>
-            ) : (
-              "Proceed to Payment"
-            )}
-          </Button>
-
-          {/* Payment Status */}
-          {isPaid && (
-            <Alert className="mt-4 bg-green-100 text-green-800">
-              <CheckCircle className="h-4 w-4" />
-              <AlertTitle>Payment Successful</AlertTitle>
-              <AlertDescription>
-                Your order has been placed and will be delivered soon!
-              </AlertDescription>
-            </Alert>
-          )}
-        </CardContent>
-      </Card>
+      {/* Cart */}
+      <Cart cart={cart} />
 
       {/* Additional Referral Incentive */}
       <Card className="mt-8 bg-yellow-50">

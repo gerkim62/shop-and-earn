@@ -1,5 +1,5 @@
 import authOptions from "@/auth/options";
-import EditProfileModal from "@/components/modals/edit-profile";
+import PreferencesModal from "@/components/modals/preferences";
 import WithdrawalModal from "@/components/modals/withdrawal";
 import CopyButton from "@/components/small/copy-button";
 import NothingHere from "@/components/small/nothing-here";
@@ -80,24 +80,16 @@ const MyAccountPage = async () => {
 
   const referralLink = `https://${hostname}/invite/${user.referralCode}`;
 
-  // const referrals = [
-  //   { id: 1, name: "John Smith", date: "2023-06-15", status: "Completed" },
-  //   { id: 2, name: "Alice Johnson", date: "2023-06-20", status: "Pending" },
-  //   // Add more referrals as needed
-  // ];
+
 
   const referrals = user.referredUsers.map((referredUser) => ({
     id: referredUser.id,
     name: referredUser.fullName,
     date: referredUser.createdAt.toLocaleDateString(),
-    status: referredUser.orders.length > 0 ? "Completed" : "Pending",
+    status: referredUser.orders.length > 0 ? "Ordered" : "Joined",
   }));
 
-  // const orders = [
-  //   { id: "ORD001", date: "2023-07-01", total: 2500, status: "Delivered" },
-  //   { id: "ORD002", date: "2023-07-15", total: 1800, status: "Processing" },
-  //   // Add more orders as needed
-  // ];
+  console.log(referrals);
 
   const orders = user.orders.map((order) => ({
     id: order.id,
@@ -132,11 +124,11 @@ const MyAccountPage = async () => {
                 <p className="text-gray-600">{user.email}</p>
               </div>
             </div>
-            <EditProfileModal user={user}>
+            <PreferencesModal>
               <Button variant="outline" className="w-full">
-                Edit Profile
+                Change your Preferences
               </Button>
-            </EditProfileModal>
+            </PreferencesModal>
           </CardContent>
         </Card>
 
@@ -205,7 +197,7 @@ const MyAccountPage = async () => {
               <CardTitle>Your Referrals</CardTitle>
             </CardHeader>
             <CardContent>
-              {referrals.length < 0 ? (
+              {referrals.length > 0 ? (
                 <Table>
                   <TableHeader>
                     <TableRow>
@@ -225,11 +217,15 @@ const MyAccountPage = async () => {
                   </TableBody>
                 </Table>
               ) : (
-                <NothingHere
-                  icon="frown"
-                  title="You haven't referred anyone yet"
-                  message="Start sharing your referral link to earn rewards."
-                />
+                <>
+                  <NothingHere
+                    icon="frown"
+                    title="You haven't referred anyone yet"
+                    message="Start sharing your referral link to earn rewards."
+                  />{
+                    JSON.stringify(referrals)
+                  }
+                </>
               )}
             </CardContent>
           </Card>
@@ -240,7 +236,7 @@ const MyAccountPage = async () => {
               <CardTitle>Order History</CardTitle>
             </CardHeader>
             <CardContent>
-              {orders.length < 0 ? (
+              {orders.length > 0 ? (
                 <Table>
                   <TableHeader>
                     <TableRow>

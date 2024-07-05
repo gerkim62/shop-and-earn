@@ -24,7 +24,10 @@ const authOptions: AuthOptions = {
         });
 
         if (user?.password === credentials.password) {
-          return user;
+          return {
+            ...user,
+            name: user.fullName,
+          };
         }
 
         return null;

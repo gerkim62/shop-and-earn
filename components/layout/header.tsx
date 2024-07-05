@@ -1,12 +1,40 @@
-import { Bell, Gift, ShoppingCart, User } from "lucide-react";
-import { FC } from "react";
-import { Button } from "../ui/button";
-import Image from "next/image";
+"use client";
+
 import app from "@/constants/app";
+import { Bell, ShoppingCart, LogIn, Loader2 } from "lucide-react";
+import Image from "next/image";
+import { FC, useEffect, useState } from "react";
 import Link from "../small/link-with-loader";
 import UserButton from "../small/user-button";
+import { Button } from "../ui/button";
+import { useSession } from "next-auth/react";
+import { getCurrentUser, type UserWithRelations } from "@/auth/user";
+import { usePathname } from "next/navigation";
 
 const Header: FC = () => {
+  const { status } = useSession();
+  const pathname = usePathname();
+
+  const isAuthenticated = status === "authenticated";
+  const [gettingUser, setGettingUser] = useState(false);
+
+  const [user, setUser] = useState<UserWithRelations | null>(null);
+  const cartItemsCount = user?.cart?.items.length || 0;
+  const newNotificationsCount =
+    user?.notifications.filter((n) => !n.read).length || 0;
+
+  useEffect(() => {
+    (async () => {
+      if (status === "unauthenticated") setUser(null);
+      else {
+        setGettingUser(true);
+        const user = await getCurrentUser().catch(() => null);
+        setUser(user);
+        setGettingUser(false);
+      }
+    })();
+  }, [status, pathname]);
+
   return (
     <header className="antialiased border-b">
       <nav className="bg-white border-gray-200 lg:px-6 py-2.5 dark:bg-gray-800 px-4">
@@ -32,39 +60,65 @@ const Header: FC = () => {
             </Link>
           </div>
           <div className="flex items-center lg:order-2 sm:gap-4 gap-2">
-            <Button
-              asChild
-              variant={"ghost"}
-              type="button"
-              className="p-2 inline-flex items-center text-xs  "
-            >
-              <Link href={"/notifications"}>
-                {" "}
-                <Bell className="w-6 h-6" />
-                <span className="hidden sm:inline ml-2">Notifications</span>
-              </Link>
-            </Button>
+            {isAuthenticated ? (
+              <>
+                <Button
+                  asChild
+                  variant={"ghost"}
+                  type="button"
+                  className="p-2 inline-flex items-center text-xs relative"
+                >
+                  <Link href={"/notifications"}>
+                    <Bell className="w-6 h-6" />
+                    <span className="hidden sm:inline ml-2">Notifications</span>
+                    {newNotificationsCount > 0 && (
+                      <div className="absolute -top-1 -right-0 w-4 h-4 bg-red-500 rounded-full text-[10px] flex items-center justify-center text-white">
+                        {newNotificationsCount > 9
+                          ? "9+"
+                          : newNotificationsCount}
+                      </div>
+                    )}
+                  </Link>
+                </Button>
 
-            <Button
-              asChild
-              variant={"ghost"}
-              type="button"
-              className="p-2 inline-flex items-center text-xs  "
-            >
-              <Link href={"/checkout"}>
-                <ShoppingCart className=" w-6 h-6" />
-                <span className="hidden sm:inline ml-2">Cart</span>
-              </Link>
-            </Button>
+                <Button
+                  asChild
+                  variant={"ghost"}
+                  type="button"
+                  className="p-2 inline-flex items-center text-xs relative"
+                >
+                  <Link href={"/checkout"}>
+                    <ShoppingCart className="w-6 h-6" />
+                    <span className="hidden sm:inline ml-2">Cart</span>
+                    {cartItemsCount > 0 && (
+                      <div className="absolute -top-1 -right-0 w-4 h-4 bg-red-500 rounded-full text-[10px] flex items-center justify-center text-white">
+                        {cartItemsCount > 9 ? "9+" : cartItemsCount}
+                      </div>
+                    )}
+                  </Link>
+                </Button>
 
-            {/* <Button
-              variant={"outline"}
-              type="button"
-              className="p-2 inline-flex items-center text-xs  border rounded-full"
-            >
-              <User className="w-6 h-6" />
-            </Button> */}
-            <UserButton />
+                {gettingUser ? (
+                  <UserLoading />
+                ) : user ? (
+                  <UserButton user={user} />
+                ) : (
+                  <UserLoading />
+                )}
+              </>
+            ) : (
+              <Button
+                asChild
+                variant={"ghost"}
+                type="button"
+                className="p-2 inline-flex items-center text-xs"
+              >
+                <Link href={"/login"}>
+                  <LogIn className="w-6 h-6" />
+                  <span className="hidden sm:inline ml-2">Login</span>
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
       </nav>
@@ -73,3 +127,13 @@ const Header: FC = () => {
 };
 
 export default Header;
+
+function UserLoading() {
+  return (
+    <Link href={"/account"} className="flex items-center">
+      <div className="h-10 w-10 bg-gray-200 rounded-full animate-pulse mr-0 flex items-center justify-center">
+        <Loader2 className="h-8 w-8 text-gray-400 animate-spin" />
+      </div>
+    </Link>
+  );
+}

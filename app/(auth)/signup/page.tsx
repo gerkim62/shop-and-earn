@@ -1,6 +1,7 @@
 import SignUpForm from "@/components/forms/signup";
 import Link from "@/components/small/link-with-loader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import app from "@/constants/app";
 import { Coins, Gift, Heart, ShieldCheck } from "lucide-react";
 
@@ -26,7 +27,9 @@ const Signup = ({ searchParams: { inviteCode } }: SignupPageProps) => {
             <CardContent>
               <SignUpForm inviteCode={inviteCode ?? null} />
 
-              <div className="mt-6 text-center">
+            
+
+              <div className="my-4 text-center">
                 <p className="text-sm text-gray-600">
                   Already have an account?{" "}
                   <Link
@@ -37,6 +40,24 @@ const Signup = ({ searchParams: { inviteCode } }: SignupPageProps) => {
                   </Link>
                 </p>
               </div>
+                {/* agreeing to terms, no checkbox just statement */}
+                <p className="text-sm text-gray-600 text-center">
+                By signing up, you agree to our{" "}
+                <Link
+                  href="/terms"
+                  className="text-purple-600 hover:underline"
+                >
+                  Terms of Service
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/privacy"
+                  className="text-purple-600 hover:underline"
+                >
+                  Privacy Policy
+                </Link>
+                .
+              </p>
             </CardContent>
           </Card>
 

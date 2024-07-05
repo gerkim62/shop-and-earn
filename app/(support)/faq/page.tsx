@@ -13,7 +13,7 @@ const FAQs = () => {
     },
     {
       question: "How does the referral program work?",
-      answer: `You can refer friends using your unique referral link. When each of your friends sign up, you earn KSH${rewards.onInvitedSignup} and when they make their first purchase, you earn KSH${rewards.onInvitedFirstPurchase}.`,
+      answer: `You can refer friends using your unique referral link. When each of your friends sign up, you earn KSH ${rewards.onSignup.referrer} and when they make their first purchase, you earn KSH ${rewards.onFirstPurchase.referrer}.`,
     },
     {
       question: "How can I redeem my rewards?",
@@ -28,7 +28,7 @@ const FAQs = () => {
     {
       question: "What payment methods do you accept?",
       answer:
-        "For Kenyan users, MPesa is supported. For international users, we accept Visa, Mastercard, and PayPal. More payment methods will be added soon.",
+        "For Kenyan users, M-Pesa is supported. For international users, we accept Visa, Mastercard, and PayPal. More payment methods will be added soon.",
     },
   ];
 

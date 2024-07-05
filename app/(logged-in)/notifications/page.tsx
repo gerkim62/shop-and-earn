@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -10,41 +8,79 @@ import {
   Heart,
   Star,
 } from "lucide-react";
+import { getServerSession } from "next-auth";
+import authOptions from "@/auth/options";
+import { redirect } from "next/navigation";
+import prisma from "@/lib/prisma";
 
-const NotificationsPage = () => {
+const NotificationsPage = async () => {
   // Mock data for notifications
-  const notifications = [
-    {
-      id: 1,
-      type: "reward",
-      message: "You earned 500 KSH from a referral!",
-      time: "2 hours ago",
+  // const notifications = [
+  //   {
+  //     id: 1,
+  //     type: "reward",
+  //     message: "You earned 500 KSH from a referral!",
+  //     time: "2 hours ago",
+  //   },
+  //   {
+  //     id: 2,
+  //     type: "purchase",
+  //     message: "Your order #12345 has been shipped!",
+  //     time: "1 day ago",
+  //   },
+  //   {
+  //     id: 3,
+  //     type: "sale",
+  //     message: "Flash sale on electronics! 50% off!",
+  //     time: "3 days ago",
+  //   },
+  //   {
+  //     id: 4,
+  //     type: "wishlist",
+  //     message: "An item from your wishlist is now on sale!",
+  //     time: "1 week ago",
+  //   },
+  //   {
+  //     id: 5,
+  //     type: "review",
+  //     message: "Someone liked your product review!",
+  //     time: "2 weeks ago",
+  //   },
+  // ] as const
+  const email = (await getServerSession(authOptions))?.user.email;
+
+  if (!email) redirect("/login");
+
+  const notifications = (
+    await prisma.notification.findMany({
+      where: {
+        user: {
+          email: email,
+        },
+      },
+    })
+  )
+    .reverse()
+    .map((notification) => ({
+      id: notification.id,
+      type: notification.type,
+      message: notification.message,
+      time: notification.createdAt.toLocaleDateString(),
+      title: notification.title,
+    }));
+
+  const updated = await prisma.notification.updateMany({
+    where: {
+      user: {
+        email: email,
+      },
     },
-    {
-      id: 2,
-      type: "purchase",
-      message: "Your order #12345 has been shipped!",
-      time: "1 day ago",
+    data: {
+      read: true,
     },
-    {
-      id: 3,
-      type: "sale",
-      message: "Flash sale on electronics! 50% off!",
-      time: "3 days ago",
-    },
-    {
-      id: 4,
-      type: "wishlist",
-      message: "An item from your wishlist is now on sale!",
-      time: "1 week ago",
-    },
-    {
-      id: 5,
-      type: "review",
-      message: "Someone liked your product review!",
-      time: "2 weeks ago",
-    },
-  ] as const
+  });
+
+  console.log(updated);
 
   const getIcon = (
     type: "reward" | "purchase" | "sale" | "wishlist" | "review"
@@ -80,13 +116,20 @@ const NotificationsPage = () => {
               {notifications.map((notification) => (
                 <li
                   key={notification.id}
-                  className="bg-white rounded-lg p-4 shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105"
+                  className="bg-white rounded-lg p-4 shadow-md transition-all duration-300 hover:shadow-lg hover:scale-100"
                 >
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
                       {getIcon(notification.type)}
                     </div>
                     <div className="ml-3 flex-1">
+                      <h2
+                        className="mb-2 text-lg font-semibold text-gray-900
+                      
+                      "
+                      >
+                        {notification.title}
+                      </h2>
                       <p className="text-sm font-medium text-gray-900">
                         {notification.message}
                       </p>

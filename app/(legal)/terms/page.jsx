@@ -55,7 +55,7 @@ const TermsOfServicePage = () => {
     },
     {
       title: "11. Governing Law",
-      content: `These terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.`,
+      content: `These terms shall be governed by and construed in accordance with the laws of Kenya, without regard to its conflict of law provisions.`,
     },
     {
       title: "12. Changes to Terms",

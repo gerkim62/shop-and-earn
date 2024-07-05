@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import { Inter, Poppins, Quicksand } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/layout/header";
+import InstallBanner from "@/components/banners/install";
 import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/header";
 import Link from "@/components/small/link-with-loader";
 import { Toaster } from "@/components/ui/sonner";
-import InstallBanner from "@/components/banners/install";
-import ProductSearch from "@/components/layout/product-search";
+import type { Metadata } from "next";
+import { Quicksand } from "next/font/google";
+import "./globals.css";
+import { AuthProvider } from "@/components/providers/auth";
+import Activities from "@/components/activities";
 
 const font = Quicksand({ subsets: ["latin"] });
 
@@ -23,16 +24,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar />
-        {children}
-        <Link hidden href="/">
-          {
-            // hidden link to make nprogress work with our link-with-loader component (dont know why it needs this but it does)
-          }
-        </Link>
-        <InstallBanner />
-        <Footer />
-        <Toaster />
+        <AuthProvider>
+          <Navbar />
+          {children}
+          <Link hidden href="/">
+            {
+              // hidden link to make nprogress work with our link-with-loader component (dont know why it needs this but it does)
+            }
+          </Link>
+          <Activities />
+          <InstallBanner />
+          <Footer />
+          <Toaster />
+        </AuthProvider>
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import prisma from "@/lib/prisma";
 import ServerActionReturnType from "@/types/server-action";
 import SignupFormSchema from "@/validation/forms/signup";
 import { User } from "@prisma/client";
+import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
 export default async function signup(
@@ -89,6 +90,7 @@ export default async function signup(
       return createdUser;
     });
 
+    revalidatePath("/")
     return {
       success: true,
       message: "Account created successfully!",

@@ -1,8 +1,6 @@
 "use client"
 
-import React from 'react';
 import { AlertTriangle } from 'lucide-react';
-import Link from 'next/link';
 
 const ErrorPage = ({  }) => {
     const statusCode = null
@@ -24,12 +22,12 @@ const ErrorPage = ({  }) => {
         <p className="text-purple-600 mb-6">
           Don't worry, it's not you - it's us! We're working on fixing it.
         </p>
-        <Link 
-          href="/"
+        <button 
+          onClick={() => window.location.reload()}
           className="inline-block px-6 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition-colors duration-300 font-medium shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-purple-300"
         >
-          Go Home 🏠
-        </Link>
+          Refresh this page
+        </button>
       </div>
     </div>
   );

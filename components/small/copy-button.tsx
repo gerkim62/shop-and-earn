@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CopyIcon, CheckCircleIcon } from "lucide-react";
 import { toast } from "sonner";
 import { ComponentProps } from "react";
+import { copyToClipboard } from "@/lib/utils";
 
 type ButtonProps = ComponentProps<typeof Button>;
 
@@ -58,7 +59,15 @@ export default function CopyButton(props: Props) {
   }
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(getTextToCopy(props));
+    const text = getTextToCopy(props);
+    const copied = await copyToClipboard(text);
+    if (!copied) {
+      toast.error("Failed to copy", {
+        position: "bottom-right",
+        description: "Please try again.",
+      });
+      return;
+    }
     toast.success("Text Copied!", {
       position: "bottom-right",
       description: `Copied to your clipboard successfully.`,
