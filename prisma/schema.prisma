@@ -120,6 +120,7 @@ enum OrderStatus {
   PROCESSING
   SHIPPED
   DELIVERED
+  CANCELED
 }
 
 enum ReferralTransactionType {

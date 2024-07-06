@@ -6,7 +6,7 @@ import { AlertCircle, DollarSign, Gift, LucideIcon, X } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { formatNumber } from "@/lib/utils";
 import { RECEIVE_NOTIFICATIONS_ABOUT_OTHERS_LOCALSTORAGE_KEY } from "@/constants/storage";
-import { useLocalStorage } from "usehooks-ts";
+import { useIsClient, useLocalStorage } from "usehooks-ts";
 
 const names = [
   // Common names in Kenya
@@ -99,6 +99,7 @@ const getRandomTime = (min: number, max: number): number =>
 
 const Activities: React.FC = () => {
   const [toast, setToast] = useState<ToastProps | null>(null);
+  const isClient = useIsClient();
   const [receiveNotifications] = useLocalStorage(
     RECEIVE_NOTIFICATIONS_ABOUT_OTHERS_LOCALSTORAGE_KEY,
     true
@@ -159,7 +160,7 @@ const Activities: React.FC = () => {
     return null;
   }
 
-  if (!navigator?.onLine) {
+  if (isClient && !navigator.onLine) {
     return null;
   }
 

@@ -34,7 +34,7 @@
     "app/terms/page.jsx",
     "app/page.tsx",
     "app/(auth)/signup/page.tsx"
-  ],
+, "app/(logged-in)/admin/page!.jsx"  ],
   "exclude": ["node_modules"],
   "extends": "@tsconfig/strictest/tsconfig.json"
 }

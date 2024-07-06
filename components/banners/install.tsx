@@ -58,6 +58,7 @@ const InstallBanner = () => {
       });
     }
     setIsInstalling(false);
+    setIsBannerVisible(false);
   }
 
   if (isInstalling) {
