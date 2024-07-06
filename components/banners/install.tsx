@@ -14,7 +14,7 @@ const InstallBanner = () => {
   const [deferredEvent, setDeferredEvent] =
     useState<BeforeInstallPromptEvent | null>(null);
 
-  const [isBannerVisible, setIsBannerVisible] = useState(!!deferredEvent);
+  const [isBannerVisible, setIsBannerVisible] = useState(false);
 
   // Listen for beforeinstallprompt event
   useEffect(() => {
@@ -43,8 +43,8 @@ const InstallBanner = () => {
       await deferredEvent.prompt();
       const { outcome } = await deferredEvent.userChoice;
       if (outcome === "accepted") {
-        toast.success("Installed", {
-          description: `${app.name} has been installed successfully!`,
+        toast.success("Installing", {
+          description: `${app.name} is being installed.`,
         });
         setDeferredEvent(null);
       } else {
