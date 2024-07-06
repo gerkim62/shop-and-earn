@@ -3,18 +3,80 @@
 import app from "@/constants/app";
 import { Download, X, Zap } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 const InstallBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isInstalling, setIsInstalling] = useState(false);
 
-  if (!isVisible) return null;
+  //for BeforeInstallPromptEvent Type, see: https://stackoverflow.com/questions/51503754/typescript-type-beforeinstallpromptevent
+
+  const [deferredEvent, setDeferredEvent] =
+    useState<BeforeInstallPromptEvent | null>(null);
+
+  const [isBannerVisible, setIsBannerVisible] = useState(!!deferredEvent);
+
+  // Listen for beforeinstallprompt event
+  useEffect(() => {
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    return () =>
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt
+      );
+  }, []);
+
+  const handleBeforeInstallPrompt = (event: Event) => {
+    // Prevent the default behavior to keep the event available for later use
+    event.preventDefault();
+
+    // Save the event for later use
+    setDeferredEvent(event as BeforeInstallPromptEvent);
+
+    setIsBannerVisible(true);
+  };
+
+  async function install() {
+    if (!deferredEvent) return;
+    setIsInstalling(true);
+    try {
+      await deferredEvent.prompt();
+      const { outcome } = await deferredEvent.userChoice;
+      if (outcome === "accepted") {
+        toast.success("Installed", {
+          description: `${app.name} has been installed successfully!`,
+        });
+        setDeferredEvent(null);
+      } else {
+        toast.error("Cancelled", {
+          description: `${app.name} installation was cancelled.`,
+        });
+      }
+    } catch (error) {
+      toast.error("Failed", {
+        description: `Something went wrong while installing ${app.name}. Please try again later.`,
+      });
+    }
+    setIsInstalling(false);
+  }
+
+  if (isInstalling) {
+    return (
+      <div
+        className={`fixed z-50 inset-0 overflow-hidden dark:bg-white bg-black opacity-20 fade-in-20 ${
+          isInstalling ? "" : "hidden"
+        }`}
+      ></div>
+    );
+  }
+
+  if (!isBannerVisible) return null;
 
   return (
     <>
       {/* Transparent fullscreen overlay */}
       <div
-        onClick={() => setIsVisible(false)}
+        onClick={() => setIsBannerVisible(false)}
         className="fixed inset-0 bg-black bg-opacity-50 z-40"
       />
 
@@ -41,14 +103,14 @@ const InstallBanner = () => {
         <div className="flex items-center">
           <button
             className="bg-purple-500 text-white px-6 py-2 rounded-full sm:mr-4 font-medium hover:bg-purple-600 transition-colors duration-300 shadow-md flex items-center border"
-            onClick={() => console.log("Install app")}
+            onClick={install}
           >
             <Download size={18} className="mr-2" />
             <span>Install</span>
           </button>
           <button
             className="text-gray-300 hover:text-white transition-colors duration-300 hidden sm:block"
-            onClick={() => setIsVisible(false)}
+            onClick={() => setIsBannerVisible(false)}
           >
             <X size={28} />
           </button>
