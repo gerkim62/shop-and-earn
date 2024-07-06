@@ -233,14 +233,16 @@ const MyAccountPage = async () => {
         <TabsContent value="orders">
           <Card>
             <CardHeader>
-              <CardTitle>Order History</CardTitle>
+              <CardTitle>
+                My Orders ({orders.length})
+              </CardTitle>
             </CardHeader>
             <CardContent>
               {orders.length > 0 ? (
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Order ID</TableHead>
+                      <TableHead>Order #</TableHead>
                       <TableHead>Date</TableHead>
                       <TableHead>Total</TableHead>
                       <TableHead>Status</TableHead>
@@ -251,7 +253,7 @@ const MyAccountPage = async () => {
                       <TableRow key={order.id}>
                         <TableCell>{order.id}</TableCell>
                         <TableCell>{order.date}</TableCell>
-                        <TableCell>{order.total} KSH</TableCell>
+                        <TableCell className="whitespace-nowrap">{order.total} KSH</TableCell>
                         <TableCell>{order.status}</TableCell>
                       </TableRow>
                     ))}
