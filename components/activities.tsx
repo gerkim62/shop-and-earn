@@ -159,6 +159,10 @@ const Activities: React.FC = () => {
     return null;
   }
 
+  if (!navigator?.onLine) {
+    return null;
+  }
+
   return toast ? (
     <Toast message={toast.message} icon={toast.icon} onClose={toast.onClose} />
   ) : null;
