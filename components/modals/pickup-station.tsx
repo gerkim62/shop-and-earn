@@ -22,99 +22,92 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
-// Define types for our data structure
-interface Station {
-  id: number;
-  name: string;
-  fee: string;
-  address: string;
-  town: string;
-  openingHours: string;
-}
-
-interface City {
-  id: number;
-  name: string;
-  stations: Station[];
-}
-
-interface Region {
-  id: number;
-  name: string;
-  cities: City[];
-}
+import {
+  CityWithStations,
+  RegionWithCitiesWithStations,
+} from "@/app/(logged-in)/checkout/_components/cart";
+import { Station } from "@prisma/client";
+import { ScrollArea } from "../ui/scroll-area";
+import { toast } from "sonner";
+import { updatePickupStation } from "@/actions/cart";
 
 // Mock data
-const mockData: { regions: Region[] } = {
-  regions: [
-    {
-      id: 1,
-      name: "North",
-      cities: [
-        {
-          id: 1,
-          name: "City A",
-          stations: [
-            {
-              id: 1,
-              name: "Station 1",
-              fee: "$5",
-              address: "123 Main St",
-              town: "Downtown",
-              openingHours: "9AM-5PM",
-            },
-          ],
-        },
-        {
-          id: 2,
-          name: "City B",
-          stations: [
-            {
-              id: 2,
-              name: "Station 2",
-              fee: "$4",
-              address: "456 Elm St",
-              town: "Uptown",
-              openingHours: "8AM-6PM",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 2,
-      name: "South",
-      cities: [
-        {
-          id: 3,
-          name: "City C",
-          stations: [
-            {
-              id: 3,
-              name: "Station 3",
-              fee: "$6",
-              address: "789 Oak St",
-              town: "Midtown",
-              openingHours: "10AM-7PM",
-            },
-          ],
-        },
-      ],
-    },
-  ],
-};
+// const regions: { regions: Region[] } = {
+//   regions: [
+//     {
+//       id: 1,
+//       name: "North",
+//       cities: [
+//         {
+//           id: 1,
+//           name: "City A",
+//           stations: [
+//             {
+//               id: 1,
+//               name: "Station 1",
+//               fee: "$5",
+//               address: "123 Main St",
+//               town: "Downtown",
+//               openingHours: "9AM-5PM",
+//             },
+//           ],
+//         },
+//         {
+//           id: 2,
+//           name: "City B",
+//           stations: [
+//             {
+//               id: 2,
+//               name: "Station 2",
+//               fee: "$4",
+//               address: "456 Elm St",
+//               town: "Uptown",
+//               openingHours: "8AM-6PM",
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//     {
+//       id: 2,
+//       name: "South",
+//       cities: [
+//         {
+//           id: 3,
+//           name: "City C",
+//           stations: [
+//             {
+//               id: 3,
+//               name: "Station 3",
+//               fee: "$6",
+//               address: "789 Oak St",
+//               town: "Midtown",
+//               openingHours: "10AM-7PM",
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//   ],
+// };
 
 interface PickupStationModalProps {
   children: React.ReactNode;
+  regions: RegionWithCitiesWithStations[];
+  setDeliveryStation?: (station: Station) => void;
 }
 
 export default function PickupStationModal({
   children,
+  regions,
+  setDeliveryStation = () => {},
 }: PickupStationModalProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedRegion, setSelectedRegion] = useState<Region | null>(null);
-  const [selectedCity, setSelectedCity] = useState<City | null>(null);
+  const [selectedRegion, setSelectedRegion] =
+    useState<RegionWithCitiesWithStations | null>(null);
+  const [selectedCity, setSelectedCity] = useState<CityWithStations | null>(
+    null
+  );
 
   const handleClose = () => {
     setIsOpen(false);
@@ -125,7 +118,7 @@ export default function PickupStationModal({
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] bg-purple-50">
+      <DialogContent className="sm:max-w-[425px] max-w-[95%] bg-purple-50 rounded-xl">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-purple-800 text-center">
             Choose Your Pickup Station
@@ -133,9 +126,9 @@ export default function PickupStationModal({
         </DialogHeader>
         <div className="space-y-4 mt-4">
           <Combobox
-            items={mockData.regions}
+            items={regions}
             placeholder="Region"
-            onSelect={(region: Region) => {
+            onSelect={(region: RegionWithCitiesWithStations) => {
               console.log(region);
               setSelectedRegion(region);
               setSelectedCity(null);
@@ -145,7 +138,7 @@ export default function PickupStationModal({
             <Combobox
               items={selectedRegion.cities}
               placeholder="City"
-              onSelect={(city: City) => setSelectedCity(city)}
+              onSelect={(city: CityWithStations) => setSelectedCity(city)}
             />
           )}
         </div>
@@ -154,6 +147,7 @@ export default function PickupStationModal({
           <PickupStation
             station={selectedCity?.stations[0] || null}
             onClose={handleClose}
+            setDeliveryStation={setDeliveryStation}
           />
         }
       </DialogContent>
@@ -191,33 +185,35 @@ function Combobox<T extends { id: number; name: string }>({
           <ArrowRight className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[200px] p-0">
+      <PopoverContent className=" p-0">
         <Command>
           <CommandInput
             placeholder={`Search ${placeholder.toLowerCase()}...`}
           />
-          <CommandList>
-            <CommandEmpty>No {placeholder.toLowerCase()} found.</CommandEmpty>
-            <CommandGroup>
-              {items.map((item) => (
-                <CommandItem
-                  key={item.id}
-                  onSelect={() => {
-                    setValue(item.name);
-                    setOpen(false);
-                    onSelect(item);
-                  }}
-                >
-                  <Check
-                    className={cn(
-                      "mr-2 h-4 w-4",
-                      value === item.name ? "opacity-100" : "opacity-0"
-                    )}
-                  />
-                  {item.name}
-                </CommandItem>
-              ))}
-            </CommandGroup>
+          <CommandList className="">
+            <ScrollArea className="">
+              <CommandEmpty>No {placeholder.toLowerCase()} found.</CommandEmpty>
+              <CommandGroup>
+                {items.map((item) => (
+                  <CommandItem
+                    key={item.id}
+                    onSelect={() => {
+                      setValue(item.name);
+                      setOpen(false);
+                      onSelect(item);
+                    }}
+                  >
+                    <Check
+                      className={cn(
+                        "mr-2 h-4 w-4",
+                        value === item.name ? "opacity-100" : "opacity-0"
+                      )}
+                    />
+                    {item.name}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            </ScrollArea>
           </CommandList>
         </Command>
       </PopoverContent>
@@ -227,9 +223,15 @@ function Combobox<T extends { id: number; name: string }>({
 interface PickupStationProps {
   station: Station | null;
   onClose: () => void;
+  setDeliveryStation?: (station: Station) => void;
 }
 
-function PickupStation({ station, onClose }: PickupStationProps) {
+function PickupStation({
+  station,
+  onClose,
+  setDeliveryStation = () => {},
+}: PickupStationProps) {
+  const [updating, setUpdating] = useState(false);
   if (!station) return <NoCitySelected />;
   return (
     <div className="bg-white rounded-xl p-6 shadow-md mt-4">
@@ -241,22 +243,40 @@ function PickupStation({ station, onClose }: PickupStationProps) {
       </div>
       <div className="mb-4">
         <p className="text-purple-700">{station.address}</p>
-        <p className="text-purple-600">Town: {station.town}</p>
+        {/* <p className="text-purple-600">Town: {station.town}</p> */}
       </div>
       <div className="mb-4">
         <p className="text-purple-600">
-          Opening Hours: Mon-Fri ({station.openingHours})
+          Opening Hours: ({station.openingHours})
         </p>
       </div>
       <div className="mt-6 text-center">
         <Button
-          onClick={() => {
+          disabled={updating}
+          onClick={async () => {
             console.log(`Selected station: ${station.id}`);
-            onClose();
+            try {
+              setUpdating(true);
+              const cart = await updatePickupStation({
+                stationId: station.id,
+              });
+
+              if (cart.station) {
+                setDeliveryStation(cart.station);
+                toast.success("Pickup station updated successfully.");
+              } else
+                toast.error("Error", {
+                  description: "The selected station was not updated.",
+                });
+              onClose();
+            } catch (error) {
+              toast.error("An error occurred. Please try again.");
+            }
+            setUpdating(false);
           }}
           className="w-full bg-purple-100 text-purple-700 hover:bg-purple-200 rounded-full"
         >
-          Choose this Pickup Station
+          {updating ? "Updating..." : "Choose this Pickup Station"}
           <ArrowRight className="w-5 h-5 ml-2" />
         </Button>
       </div>
@@ -268,7 +288,7 @@ function NoCitySelected() {
   return (
     <div className="flex flex-col items-center justify-center h-40 text-purple-600">
       <MapPin className="w-16 h-16 text-purple-300 mb-4" />
-      <p>Select a city to view pickup stations 🏙️</p>
+      <p>Select a city to view pickup stations </p>
     </div>
   );
 }

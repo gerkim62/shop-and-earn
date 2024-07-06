@@ -1,0 +1,1856 @@
+[
+  {
+    "id": "oppo_a3-13163",
+    "name": "A3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a3-r.jpg",
+    "description": "Oppo A3 Android smartphone. Announced Jul 2024. Features 6.7″  display, Snapdragon 695 5G chipset, 5000 mAh battery, 512 GB storage, 12 GB RAM, Corning Gorilla Glass 7i."
+  },
+  {
+    "id": "oppo_reno12_f-13182",
+    "name": "Reno12 F",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno12-f.jpg",
+    "description": "Oppo Reno12 F Android smartphone. Announced Jun 2024. Features 6.67″  display, Dimensity 6300 chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM, Asahi Glass AGC DT-Star2."
+  },
+  {
+    "id": "oppo_a3_pro_(india)-13160",
+    "name": "A3 Pro (India)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a3-pro-india.jpg",
+    "description": "Oppo A3 Pro (India) Android smartphone. Announced Jun 2024. Features 6.67″  display, Dimensity 6300 chipset, 5100 mAh battery, 256 GB storage, 8 GB RAM, Panda glass."
+  },
+  {
+    "id": "oppo_reno12_pro-13132",
+    "name": "Reno12 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno12-pro-cn.jpg",
+    "description": "Oppo Reno12 Pro Android smartphone. Announced Jun 2024. Features 6.7″  display, Dimensity 7300 Energy chipset, 5000 mAh battery, 512 GB storage, 12 GB RAM, Corning Gorilla Glass Victus 2."
+  },
+  {
+    "id": "oppo_reno12-13133",
+    "name": "Reno12",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno12.jpg",
+    "description": "Oppo Reno12 Android smartphone. Announced Jun 2024. Features 6.7″  display, Dimensity 7300 Energy chipset, 5000 mAh battery, 512 GB storage, 12 GB RAM, Corning Gorilla Glass 7i."
+  },
+  {
+    "id": "oppo_f27_pro+-13126",
+    "name": "F27 Pro+",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a3-pro.jpg",
+    "description": "Oppo F27 Pro+ Android smartphone. Announced Jun 2024. Features 6.7″  display, Dimensity 7050 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, MIL-STD-810H compliant, Corning Gorilla Glass Victus 2."
+  },
+  {
+    "id": "oppo_reno12_pro_(china)-13045",
+    "name": "Reno12 Pro (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno12-pro-cn.jpg",
+    "description": "Oppo Reno12 Pro (China) Android smartphone. Announced May 2024. Features 6.7″  display, Dimensity 9200+ chipset, 5000 mAh battery, 512 GB storage, 16 GB RAM, Corning Gorilla Glass (unspecified version)."
+  },
+  {
+    "id": "oppo_reno12_(china)-13046",
+    "name": "Reno12 (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno12-cn.jpg",
+    "description": "Oppo Reno12 (China) Android smartphone. Announced May 2024. Features 6.7″  display, Dimensity 8250 chipset, 5000 mAh battery, 512 GB storage, 16 GB RAM, Corning Gorilla Glass (unspecified version)."
+  },
+  {
+    "id": "oppo_k12x-13001",
+    "name": "K12x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k12x.jpg",
+    "description": "Oppo K12x Android smartphone. Announced Mar 2024. Features 6.67″  display, Snapdragon 695 5G chipset, 5500 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_a60-12964",
+    "name": "A60",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a60.jpg",
+    "description": "Oppo A60 Android smartphone. Announced Apr 2024. Features 6.67″  display, Snapdragon 680 4G chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_k12-12949",
+    "name": "K12",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k12.jpg",
+    "description": "Oppo K12 Android smartphone. Announced Apr 2024. Features 6.7″  display, Snapdragon 7 Gen 3 chipset, 5500 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_a3_pro-12932",
+    "name": "A3 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a3-pro.jpg",
+    "description": "Oppo A3 Pro Android smartphone. Announced Apr 2024. Features 6.7″  display, Dimensity 7050 chipset, 5000 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_watch_x-12855",
+    "name": "Watch X",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-watch-x.jpg",
+    "description": "Oppo Watch X Android watch. Announced Feb 2024. Features 1.43″  display, Snapdragon W5 Gen 1 chipset, 500 mAh battery, 32 GB storage, 2 GB RAM, MIL-STD-810H compliant, Sapphire crystal glass."
+  },
+  {
+    "id": "oppo_f25_pro-12854",
+    "name": "F25 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f25-pro.jpg",
+    "description": "Oppo F25 Pro Android smartphone. Announced Feb 2024. Features 6.7″  display, Dimensity 7050 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Panda glass."
+  },
+  {
+    "id": "oppo_reno11_f-12797",
+    "name": "Reno11 F",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno11-f-5g.jpg",
+    "description": "Oppo Reno11 F Android smartphone. Announced Feb 2024. Features 6.7″  display, Dimensity 7050 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Panda glass."
+  },
+  {
+    "id": "oppo_pad_neo-12796",
+    "name": "Pad Neo",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-pad-air2.jpg",
+    "description": "Oppo Pad Neo Android tablet. Announced Jan 2024. Features 11.4″  display, Helio G99 chipset, 8000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_reno11_pro-12790",
+    "name": "Reno11 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno11-china.jpg",
+    "description": "Oppo Reno11 Pro Android smartphone. Announced Jan 2024. Features 6.7″  display, Dimensity 8200 chipset, 4600 mAh battery, 512 GB storage, 12 GB RAM, Asahi Glass AGC."
+  },
+  {
+    "id": "oppo_reno11-12791",
+    "name": "Reno11",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno11-international.jpg",
+    "description": "Oppo Reno11 Android smartphone. Announced Jan 2024. Features 6.7″  display, Dimensity 7050 chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM, Asahi Glass AGC DT-Star2."
+  },
+  {
+    "id": "oppo_find_x7_ultra-12752",
+    "name": "Find X7 Ultra",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7-ultra.jpg",
+    "description": "Oppo Find X7 Ultra Android smartphone. Announced Jan 2024. Features 6.82″  display, Snapdragon 8 Gen 3 chipset, 5000 mAh battery, 512 GB storage, 16 GB RAM, Corning Gorilla Glass Victus 2."
+  },
+  {
+    "id": "oppo_find_x7-12778",
+    "name": "Find X7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7.jpg",
+    "description": "Oppo Find X7 Android smartphone. Announced Jan 2024. Features 6.78″  display, Dimensity 9300 chipset, 5000 mAh battery, 1024 GB storage, 16 GB RAM, Corning Gorilla Glass Victus 2."
+  },
+  {
+    "id": "oppo_a59-12754",
+    "name": "A59",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a59-5g-new.jpg",
+    "description": "Oppo A59 Android smartphone. Announced Dec 2023. Features 6.56″  display, Dimensity 6020 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_reno11_pro_(china)-12706",
+    "name": "Reno11 Pro (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno11-pro-china-new.jpg",
+    "description": "Oppo Reno11 Pro (China) Android smartphone. Announced Nov 2023. Features 6.74″  display, Snapdragon 8+ Gen 1 chipset, 4700 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_reno11_(china)-12707",
+    "name": "Reno11 (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno11-china.jpg",
+    "description": "Oppo Reno11 (China) Android smartphone. Announced Nov 2023. Features 6.7″  display, Dimensity 8200 chipset, 4800 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_pad_air2-12698",
+    "name": "Pad Air2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-pad-air2.jpg",
+    "description": "Oppo Pad Air2 Android tablet. Announced Nov 2023. Features 11.4″  display, Helio G99 chipset, 8000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a2-12683",
+    "name": "A2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a2.jpg",
+    "description": "Oppo A2 Android smartphone. Announced Nov 2023. Features 6.72″  display, Dimensity 6020 chipset, 5000 mAh battery, 512 GB storage, 12 GB RAM, Panda glass."
+  },
+  {
+    "id": "oppo_a79-12636",
+    "name": "A79",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a79-5g.jpg",
+    "description": "Oppo A79 Android smartphone. Announced Oct 2023. Features 6.72″  display, Dimensity 6020 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Panda glass."
+  },
+  {
+    "id": "oppo_find_n3-12205",
+    "name": "Find N3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-n3.jpg",
+    "description": "Oppo Find N3 Android smartphone. Announced Oct 2023. Features 7.82″  display, Snapdragon 8 Gen 2 chipset, 4805 mAh battery, 1024 GB storage, 16 GB RAM."
+  },
+  {
+    "id": "oppo_a2x-12621",
+    "name": "A2x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a2x.jpg",
+    "description": "Oppo A2x Android smartphone. Announced Oct 2023. Features 6.56″  display, Dimensity 6020 chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_a18-12591",
+    "name": "A18",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a38.jpg",
+    "description": "Oppo A18 Android smartphone. Announced Sep 2023. Features 6.56″  display, MT6769 Helio G85 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_a2_pro-12551",
+    "name": "A2 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a2-pro.jpg",
+    "description": "Oppo A2 Pro Android smartphone. Announced Sep 2023. Features 6.7″  display, Dimensity 7050 chipset, 5000 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_a38-12541",
+    "name": "A38",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a38.jpg",
+    "description": "Oppo A38 Android smartphone. Announced Sep 2023. Features 6.56″  display, MT6769 Helio G85 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_watch_se-12533",
+    "name": "Watch SE",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-watch-se.jpg",
+    "description": "Oppo Watch SE watch. Announced Aug 2023. Features 1.75″  display, Snapdragon Wear 4100 chipset, 400 mAh battery, 8 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_watch_4_pro-12532",
+    "name": "Watch 4 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-watch4-pro-.jpg",
+    "description": "Oppo Watch 4 Pro watch. Announced Aug 2023. Features 1.91″  display, Snapdragon W5+ Gen 1 chipset, 570 mAh battery, 32 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "oppo_find_n3_flip-12531",
+    "name": "Find N3 Flip",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-n3-flip.jpg",
+    "description": "Oppo Find N3 Flip Android smartphone. Announced Aug 2023. Features 6.8″  display, Dimensity 9200 chipset, 4300 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_a58_4g-12436",
+    "name": "A58 4G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a58-4g.jpg",
+    "description": "Oppo A58 4G Android smartphone. Announced Jul 2023. Features 6.72″  display, MT6769 Helio G85 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_k11-12390",
+    "name": "K11",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k11-5g.jpg",
+    "description": "Oppo K11 Android smartphone. Announced Jul 2023. Features 6.7″  display, Snapdragon 782G chipset, 5000 mAh battery, 512 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno10_pro-12413",
+    "name": "Reno10 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno10-pro-international.jpg",
+    "description": "Oppo Reno10 Pro Android smartphone. Announced Jul 2023. Features 6.7″  display, Snapdragon 778G 5G chipset, 4600 mAh battery, 256 GB storage, 12 GB RAM, Asahi Glass AGC DT-Star2."
+  },
+  {
+    "id": "oppo_reno10-12414",
+    "name": "Reno10",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno10-international.jpg",
+    "description": "Oppo Reno10 Android smartphone. Announced Jul 2023. Features 6.7″  display, Dimensity 7050 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Asahi Glass AGC DT-Star2."
+  },
+  {
+    "id": "oppo_a78_4g-12387",
+    "name": "A78 4G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a78-4g.jpg",
+    "description": "Oppo A78 4G Android smartphone. Announced Jul 2023. Features 6.43″  display, Snapdragon 680 4G chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_k11x-12295",
+    "name": "K11x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k11x.jpg",
+    "description": "Oppo K11x Android smartphone. Announced May 2023. Features 6.72″  display, Snapdragon 695 5G chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass."
+  },
+  {
+    "id": "oppo_reno10_pro+-12275",
+    "name": "Reno10 Pro+",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno10-pro-plus.jpg",
+    "description": "Oppo Reno10 Pro+ Android smartphone. Announced May 2023. Features 6.74″  display, Snapdragon 8+ Gen 1 chipset, 4700 mAh battery, 512 GB storage, 16 GB RAM, Asahi Glass AGC DT-Star2."
+  },
+  {
+    "id": "oppo_reno10_pro_(china)-12276",
+    "name": "Reno10 Pro (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno10-pro.jpg",
+    "description": "Oppo Reno10 Pro (China) Android smartphone. Announced May 2023. Features 6.74″  display, Dimensity 8200 chipset, 4600 mAh battery, 512 GB storage, 16 GB RAM."
+  },
+  {
+    "id": "oppo_reno10_(china)-12277",
+    "name": "Reno10 (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno10.jpg",
+    "description": "Oppo Reno10 (China) Android smartphone. Announced May 2023. Features 6.7″  display, Snapdragon 778G 5G chipset, 4600 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_f23-12270",
+    "name": "F23",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f23-5g.jpg",
+    "description": "Oppo F23 Android smartphone. Announced May 2023. Features 6.72″  display, Snapdragon 695 5G chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a98-11974",
+    "name": "A98",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a98-5g.jpg",
+    "description": "Oppo A98 Android smartphone. Announced May 2023. Features 6.72″  display, Snapdragon 695 5G chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a1-12213",
+    "name": "A1",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a1-5g-new.jpg",
+    "description": "Oppo A1 Android smartphone. Announced Apr 2023. Features 6.72″  display, Snapdragon 695 5G chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_a1x-12208",
+    "name": "A1x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a1x-.jpg",
+    "description": "Oppo A1x Android smartphone. Announced Mar 2023. Features 6.56″  display, Dimensity 700 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_find_x6_pro-12105",
+    "name": "Find X6 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x6-pro.jpg",
+    "description": "Oppo Find X6 Pro Android smartphone. Announced Mar 2023. Features 6.82″  display, Snapdragon 8 Gen 2 chipset, 5000 mAh battery, 512 GB storage, 16 GB RAM, Corning Gorilla Glass Victus 2."
+  },
+  {
+    "id": "oppo_find_x6-12106",
+    "name": "Find X6",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x6.jpg",
+    "description": "Oppo Find X6 Android smartphone. Announced Mar 2023. Features 6.74″  display, Dimensity 9200 chipset, 4800 mAh battery, 512 GB storage, 16 GB RAM, Unspecified."
+  },
+  {
+    "id": "oppo_pad_2-12177",
+    "name": "Pad 2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-pad2-.jpg",
+    "description": "Oppo Pad 2 Android tablet. Announced Mar 2023. Features 11.61″  display, Dimensity 9000 chipset, 9510 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_reno8_t-12109",
+    "name": "Reno8 T",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8-t-4g.jpg",
+    "description": "Oppo Reno8 T Android smartphone. Announced Feb 2023. Features 6.43″  display, Helio G99 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno8_t_5g-12069",
+    "name": "Reno8 T 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8-t.jpg",
+    "description": "Oppo Reno8 T 5G Android smartphone. Announced Feb 2023. Features 6.7″  display, Snapdragon 695 5G chipset, 4800 mAh battery, 256 GB storage, 8 GB RAM, Asahi Glass AGC DT-Star2."
+  },
+  {
+    "id": "oppo_a78-12073",
+    "name": "A78",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a58.jpg",
+    "description": "Oppo A78 Android smartphone. Announced Jan 2023. Features 6.56″  display, Dimensity 700 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM, Panda glass."
+  },
+  {
+    "id": "oppo_a56s-12064",
+    "name": "A56s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a56s.jpg",
+    "description": "Oppo A56s Android smartphone. Announced Jan 2023. Features 6.56″  display, Dimensity 810 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_find_n2_flip-12014",
+    "name": "Find N2 Flip",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-n2-flip.jpg",
+    "description": "Oppo Find N2 Flip Android smartphone. Announced Dec 2022. Features 6.8″  display, Dimensity 9000+ chipset, 4300 mAh battery, 512 GB storage, 16 GB RAM."
+  },
+  {
+    "id": "oppo_find_n2-12002",
+    "name": "Find N2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-n2-5g.jpg",
+    "description": "Oppo Find N2 Android smartphone. Announced Dec 2022. Features 7.1″  display, Snapdragon 8+ Gen 1 chipset, 4520 mAh battery, 512 GB storage, 16 GB RAM."
+  },
+  {
+    "id": "oppo_a58x-12027",
+    "name": "A58x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a58x.jpg",
+    "description": "Oppo A58x Android smartphone. Announced Dec 2022. Features 6.56″  display, Dimensity 700 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM, Panda glass."
+  },
+  {
+    "id": "oppo_reno9_pro+-11996",
+    "name": "Reno9 Pro+",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno9-pro-plus.jpg",
+    "description": "Oppo Reno9 Pro+ Android smartphone. Announced Nov 2022. Features 6.7″  display, Snapdragon 8+ Gen 1 chipset, 4700 mAh battery, 512 GB storage, 16 GB RAM, Asahi Glass AGC DT-Star2."
+  },
+  {
+    "id": "oppo_reno9_pro-11997",
+    "name": "Reno9 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno9-pro.jpg",
+    "description": "Oppo Reno9 Pro Android smartphone. Announced Nov 2022. Features 6.7″  display, Dimensity 8100 Max chipset, 4500 mAh battery, 512 GB storage, 16 GB RAM, Asahi Glass AGC DT-Star2."
+  },
+  {
+    "id": "oppo_reno9-11998",
+    "name": "Reno9",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno9.jpg",
+    "description": "Oppo Reno9 Android smartphone. Announced Nov 2022. Features 6.7″  display, Snapdragon 778G 5G chipset, 4500 mAh battery, 512 GB storage, 12 GB RAM, Asahi Glass AGC DT-Star2."
+  },
+  {
+    "id": "oppo_a1_pro-11981",
+    "name": "A1 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a1-pro.jpg",
+    "description": "Oppo A1 Pro Android smartphone. Announced Nov 2022. Features 6.7″  display, Snapdragon 695 5G chipset, 4800 mAh battery, 256 GB storage, 12 GB RAM, AGC DT-Star2."
+  },
+  {
+    "id": "oppo_a58_(china)-11967",
+    "name": "A58 (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a58.jpg",
+    "description": "Oppo A58 (China) Android smartphone. Announced Nov 2022. Features 6.56″  display, Dimensity 700 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a17k-11936",
+    "name": "A17k",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a17k.jpg",
+    "description": "Oppo A17k Android smartphone. Announced Oct 2022. Features 6.56″  display, MT6765 Helio G35 chipset, 5000 mAh battery, 64 GB storage, 3 GB RAM, Panda Glass."
+  },
+  {
+    "id": "oppo_a77s-11907",
+    "name": "A77s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a77s.jpg",
+    "description": "Oppo A77s Android smartphone. Announced Oct 2022. Features 6.56″  display, Snapdragon 680 4G chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a17-11902",
+    "name": "A17",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a17.jpg",
+    "description": "Oppo A17 Android smartphone. Announced Sep 2022. Features 6.56″  display, MT6765 Helio G35 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_k10x-11877",
+    "name": "K10x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k10x-.jpg",
+    "description": "Oppo K10x Android smartphone. Announced Sep 2022. Features 6.59″  display, Snapdragon 695 5G chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_a57e-11836",
+    "name": "A57e",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a57-4g.jpg",
+    "description": "Oppo A57e Android smartphone. Announced Aug 2022. Features 6.56″  display, MT6765G Helio G35 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_a57s-11835",
+    "name": "A57s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a57s.jpg",
+    "description": "Oppo A57s Android smartphone. Announced Aug 2022. Features 6.56″  display, MT6765G Helio G35 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM, Panda Glass."
+  },
+  {
+    "id": "oppo_reno8_4g-11743",
+    "name": "Reno8 4G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8-4g.jpg",
+    "description": "Oppo Reno8 4G Android smartphone. Announced Aug 2022. Features 6.43″  display, Snapdragon 680 4G chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM, Panda Glass."
+  },
+  {
+    "id": "oppo_watch_3_pro-11765",
+    "name": "Watch 3 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-watch3-pro.jpg",
+    "description": "Oppo Watch 3 Pro Android watch. Announced Aug 2022. Features 1.91″  display, Snapdragon W5+ Gen 1 chipset, 550 mAh battery, 32 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_watch_3-11764",
+    "name": "Watch 3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-watch3.jpg",
+    "description": "Oppo Watch 3 Android watch. Announced Aug 2022. Features 1.75″  display, Snapdragon W5+ Gen 1 chipset, 400 mAh battery, 32 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_reno8_z-11735",
+    "name": "Reno8 Z",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8z-5g.jpg",
+    "description": "Oppo Reno8 Z Android smartphone. Announced Aug 2022. Features 6.43″  display, Snapdragon 695 5G chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM, Schott Xensation Up."
+  },
+  {
+    "id": "oppo_a77_4g-11734",
+    "name": "A77 4G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a77-4g.jpg",
+    "description": "Oppo A77 4G Android smartphone. Announced Aug 2022. Features 6.56″  display, MT6765G Helio G35 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_reno8_pro-11683",
+    "name": "Reno8 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8-pro.jpg",
+    "description": "Oppo Reno8 Pro Android smartphone. Announced Jul 2022. Features 6.7″  display, Dimensity 8100 Max chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno8-11684",
+    "name": "Reno8",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8.jpg",
+    "description": "Oppo Reno8 Android smartphone. Announced Jul 2022. Features 6.4″  display, Dimensity 1300 chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a97-11655",
+    "name": "A97",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a97-5g.jpg",
+    "description": "Oppo A97 Android smartphone. Announced Jul 2022. Features 6.6″  display, Dimensity 810 chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_reno8_lite-11513",
+    "name": "Reno8 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-8-lite.jpg",
+    "description": "Oppo Reno8 Lite Android smartphone. Announced Jun 2022. Features 6.43″  display, Snapdragon 695 5G chipset, 4500 mAh battery, 128 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_k10_5g-11610",
+    "name": "K10 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k10-5g-.jpg",
+    "description": "Oppo K10 5G Android smartphone. Announced Jun 2022. Features 6.56″  display, Dimensity 810 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a77-11599",
+    "name": "A77",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a77-5g.jpg",
+    "description": "Oppo A77 Android smartphone. Announced Jun 2022. Features 6.56″  display, Dimensity 810 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_a57_4g-11565",
+    "name": "A57 4G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a57-4g.jpg",
+    "description": "Oppo A57 4G Android smartphone. Announced May 2022. Features 6.56″  display, MT6765G Helio G35 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_reno8_pro+-11543",
+    "name": "Reno8 Pro+",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8-pro-.jpg",
+    "description": "Oppo Reno8 Pro+ Android smartphone. Announced May 2022. Features 6.7″  display, Dimensity 8100 Max chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno8_pro_(china)-11542",
+    "name": "Reno8 Pro (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8-.jpg",
+    "description": "Oppo Reno8 Pro (China) Android smartphone. Announced May 2022. Features 6.62″  display, Snapdragon 7 Gen 1 chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno8_(china)-11541",
+    "name": "Reno8 (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8--.jpg",
+    "description": "Oppo Reno8 (China) Android smartphone. Announced May 2022. Features 6.43″  display, Dimensity 1300 chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_pad_air-11544",
+    "name": "Pad Air",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-pad-air.jpg",
+    "description": "Oppo Pad Air Android tablet. Announced May 2022. Features 10.36″  display, Snapdragon 680 4G chipset, 7100 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_k10_pro-11467",
+    "name": "K10 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k10-pro-.jpg",
+    "description": "Oppo K10 Pro Android smartphone. Announced Apr 2022. Features 6.62″  display, Snapdragon 888 5G chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_k10_5g_(china)-11481",
+    "name": "K10 5G (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k10-.jpg",
+    "description": "Oppo K10 5G (China) Android smartphone. Announced Apr 2022. Features 6.59″  display, Dimensity 8000 Max chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM, Panda Glass."
+  },
+  {
+    "id": "oppo_a55s-11482",
+    "name": "A55s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a55s-5g.jpg",
+    "description": "Oppo A55s Android smartphone. Announced Apr 2022. Features 6.5″  display, Dimensity 700 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a57-11476",
+    "name": "A57",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a57-5g.jpg",
+    "description": "Oppo A57 Android smartphone. Announced Apr 2022. Features 6.56″  display, Dimensity 810 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_reno7_lite-11458",
+    "name": "Reno7 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7-z-5g.jpg",
+    "description": "Oppo Reno7 Lite Android smartphone. Announced Apr 2022. Features 6.43″  display, Snapdragon 695 5G chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_f21_pro_5g-11471",
+    "name": "F21 Pro 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7-z-5g.jpg",
+    "description": "Oppo F21 Pro 5G Android smartphone. Announced Apr 2022. Features 6.43″  display, Snapdragon 695 5G chipset, 4500 mAh battery, 128 GB storage, 8 GB RAM, Schott Xensation glass."
+  },
+  {
+    "id": "oppo_f21_pro-11450",
+    "name": "F21 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7-4g.jpg",
+    "description": "Oppo F21 Pro Android smartphone. Announced Apr 2022. Features 6.43″  display, Snapdragon 680 4G chipset, 4500 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno7-11448",
+    "name": "Reno7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7-4g.jpg",
+    "description": "Oppo Reno7 Android smartphone. Announced Mar 2022. Features 6.43″  display, Snapdragon 680 4G chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_k10-11438",
+    "name": "K10",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k10.jpg",
+    "description": "Oppo K10 Android smartphone. Announced Mar 2022. Features 6.59″  display, Snapdragon 680 4G chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a96-11434",
+    "name": "A96",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a96-new.jpg",
+    "description": "Oppo A96 Android smartphone. Announced Mar 2022. Features 6.59″  display, Snapdragon 680 4G chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a16e-11433",
+    "name": "A16e",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a16k.jpg",
+    "description": "Oppo A16e Android smartphone. Announced Mar 2022. Features 6.52″  display, MT6762D Helio P22 chipset, 4230 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_reno7_z_5g-11397",
+    "name": "Reno7 Z 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7-z-5g.jpg",
+    "description": "Oppo Reno7 Z 5G Android smartphone. Announced Mar 2022. Features 6.43″  display, Snapdragon 695 5G chipset, 4500 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_find_x5_pro-11236",
+    "name": "Find X5 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x5-pro.jpg",
+    "description": "Oppo Find X5 Pro Android smartphone. Announced Feb 2022. Features 6.7″  display, Snapdragon 8 Gen 1 chipset, 5000 mAh battery, 512 GB storage, 12 GB RAM, Corning Gorilla Glass Victus."
+  },
+  {
+    "id": "oppo_find_x5-11378",
+    "name": "Find X5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x5.jpg",
+    "description": "Oppo Find X5 Android smartphone. Announced Feb 2022. Features 6.55″  display, Snapdragon 888 5G chipset, 4800 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass Victus."
+  },
+  {
+    "id": "oppo_find_x5_lite-11323",
+    "name": "Find X5 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x5-lite.jpg",
+    "description": "Oppo Find X5 Lite Android smartphone. Announced Feb 2022. Features 6.43″  display, Dimensity 900 chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_pad-11322",
+    "name": "Pad",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-pad.jpg",
+    "description": "Oppo Pad Android tablet. Announced Feb 2022. Features 11.0″  display, Snapdragon 870 5G chipset, 8360 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a76-11367",
+    "name": "A76",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a36.jpg",
+    "description": "Oppo A76 Android smartphone. Announced Feb 2022. Features 6.56″  display, Snapdragon 680 4G chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_reno7_5g-11350",
+    "name": "Reno7 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7.jpg",
+    "description": "Oppo Reno7 5G Android smartphone. Announced Feb 2022. Features 6.43″  display, Dimensity 900 chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno6_lite-11196",
+    "name": "Reno6 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno6-lite.jpg",
+    "description": "Oppo Reno6 Lite Android smartphone. Announced Jan 2022. Features 6.43″  display, Snapdragon 662 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_a96_(china)-11316",
+    "name": "A96 (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a96.jpg",
+    "description": "Oppo A96 (China) Android smartphone. Announced Jan 2022. Features 6.43″  display, Snapdragon 695 5G chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_a36-11314",
+    "name": "A36",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a36.jpg",
+    "description": "Oppo A36 Android smartphone. Announced Jan 2022. Features 6.56″  display, Snapdragon 680 4G chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a11s-11288",
+    "name": "A11s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a11s.jpg",
+    "description": "Oppo A11s Android smartphone. Announced Dec 2021. Features 6.5″  display, Snapdragon 460 chipset, 5000 mAh battery, 64 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_k9x-11235",
+    "name": "K9x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k9x.jpg",
+    "description": "Oppo K9x Android smartphone. Announced Dec 2021. Features 6.49″  display, Dimensity 810 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Aluminosilicate glass."
+  },
+  {
+    "id": "oppo_find_n-11267",
+    "name": "Find N",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-n.jpg",
+    "description": "Oppo Find N Android smartphone. Announced Dec 2021. Features 7.1″  display, Snapdragon 888 5G chipset, 4500 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_reno7_pro_5g-11190",
+    "name": "Reno7 Pro 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7-pro-r.jpg",
+    "description": "Oppo Reno7 Pro 5G Android smartphone. Announced Nov 2021. Features 6.55″  display, Dimensity 1200 Max chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno7_5g_(china)-11160",
+    "name": "Reno7 5G (China)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7-r.jpg",
+    "description": "Oppo Reno7 5G (China) Android smartphone. Announced Nov 2021. Features 6.43″  display, Snapdragon 778G 5G chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno7_se_5g-11191",
+    "name": "Reno7 SE 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7-se-r.jpg",
+    "description": "Oppo Reno7 SE 5G Android smartphone. Announced Nov 2021. Features 6.43″  display, Dimensity 900 chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a95-11195",
+    "name": "A95",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a95.jpg",
+    "description": "Oppo A95 Android smartphone. Announced Nov 2021. Features 6.43″  display, Snapdragon 662 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a16k-11200",
+    "name": "A16K",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a16k.jpg",
+    "description": "Oppo A16K Android smartphone. Announced Nov 2021. Features 6.52″  display, MT6765G Helio G35 chipset, 4230 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a54s-11144",
+    "name": "A54s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a16.jpg",
+    "description": "Oppo A54s Android smartphone. Announced Oct 2021. Features 6.52″  display, MT6765G Helio G35 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a56_5g-11172",
+    "name": "A56 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a56-5g.jpg",
+    "description": "Oppo A56 5G Android smartphone. Announced Oct 2021. Features 6.5″  display, Dimensity 700 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM, Panda / Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_k9s-11151",
+    "name": "K9s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k9s-r.jpg",
+    "description": "Oppo K9s Android smartphone. Announced Oct 2021. Features 6.59″  display, Snapdragon 778G 5G chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Panda Glass."
+  },
+  {
+    "id": "oppo_a55-11114",
+    "name": "A55",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a55-4g-1.jpg",
+    "description": "Oppo A55 Android smartphone. Announced Oct 2021. Features 6.51″  display, MT6765G Helio G35 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM, NEG T2X-1."
+  },
+  {
+    "id": "oppo_f19s-11108",
+    "name": "F19s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f19s.jpg",
+    "description": "Oppo F19s Android smartphone. Announced Sep 2021. Features 6.43″  display, Snapdragon 662 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_k9_pro-11111",
+    "name": "K9 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k9-pro.jpg",
+    "description": "Oppo K9 Pro Android smartphone. Announced Sep 2021. Features 6.43″  display, Dimensity 1200 chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_reno6_pro_5g_(snapdragon)-11093",
+    "name": "Reno6 Pro 5G (Snapdragon)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno6-pro-plus.jpg",
+    "description": "Oppo Reno6 Pro 5G (Snapdragon) Android smartphone. Announced Sep 2021. Features 6.55″  display, Snapdragon 870 5G chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "oppo_reno6-11028",
+    "name": "Reno6",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno6-4g.jpg",
+    "description": "Oppo Reno6 Android smartphone. Announced Jul 2021. Features 6.4″  display, Snapdragon 720G chipset, 4310 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_watch_2-11026",
+    "name": "Watch 2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-watch-2.jpg",
+    "description": "Oppo Watch 2 Android watch. Announced Jul 2021. Features 1.91″  display, Snapdragon Wear 4100 chipset, 510 mAh battery, 8 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_reno6_z-10978",
+    "name": "Reno6 Z",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-6z-.jpg",
+    "description": "Oppo Reno6 Z Android smartphone. Announced Jul 2021. Features 6.4″  display, Dimensity 800U chipset, 4310 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a16s-11295",
+    "name": "A16s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a16.jpg",
+    "description": "Oppo A16s Android smartphone. Announced Aug 2021. Features 6.52″  display, MT6765G Helio G35 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_a16-11021",
+    "name": "A16",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a16.jpg",
+    "description": "Oppo A16 Android smartphone. Announced Jul 2021. Features 6.52″  display, MT6765G Helio G35 chipset, 5000 mAh battery, 256 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_reno6_pro+_5g-10905",
+    "name": "Reno6 Pro+ 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno6-pro-plus.jpg",
+    "description": "Oppo Reno6 Pro+ 5G Android smartphone. Announced May 2021. Features 6.55″  display, Snapdragon 870 5G chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno6_pro_5g-10904",
+    "name": "Reno6 Pro 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno6-pro-5g.jpg",
+    "description": "Oppo Reno6 Pro 5G Android smartphone. Announced May 2021. Features 6.55″  display, Dimensity 1200 chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno6_5g-10932",
+    "name": "Reno6 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno6-5g.jpg",
+    "description": "Oppo Reno6 5G Android smartphone. Announced May 2021. Features 6.43″  display, Dimensity 900 chipset, 4300 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_k9-10894",
+    "name": "K9",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k9.jpg",
+    "description": "Oppo K9 Android smartphone. Announced May 2021. Features 6.43″  display, Snapdragon 768G 5G chipset, 4300 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a53s_5g-10874",
+    "name": "A53s 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a53s-5g.jpg",
+    "description": "Oppo A53s 5G Android smartphone. Announced Apr 2021. Features 6.52″  display, Dimensity 700 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a95_5g-10834",
+    "name": "A95 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a95-5g.jpg",
+    "description": "Oppo A95 5G Android smartphone. Announced Apr 2021. Features 6.43″  display, Dimensity 800U chipset, 4310 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a94_5g-10799",
+    "name": "A94 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a94-5g.jpg",
+    "description": "Oppo A94 5G Android smartphone. Announced Apr 2021. Features 6.43″  display, Dimensity 800U chipset, 4310 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a35-10852",
+    "name": "A35",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a15s.jpg",
+    "description": "Oppo A35 Android smartphone. Announced Apr 2021. Features 6.52″  display, MT6765 Helio P35 chipset, 4230 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_reno5_z-10760",
+    "name": "Reno5 Z",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f19-pro-plus-r.jpg",
+    "description": "Oppo Reno5 Z Android smartphone. Announced Apr 2021. Features 6.43″  display, Dimensity 800U chipset, 4310 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a54_5g-10866",
+    "name": "A54 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a54-5g.jpg",
+    "description": "Oppo A54 5G Android smartphone. Announced Apr 2021. Features 6.5″  display, Snapdragon 480 5G chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_a74_5g-10830",
+    "name": "A74 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a74-5g.jpg",
+    "description": "Oppo A74 5G Android smartphone. Announced Apr 2021. Features 6.5″  display, Snapdragon 480 5G chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a74-10829",
+    "name": "A74",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f19.jpg",
+    "description": "Oppo A74 Android smartphone. Announced Apr 2021. Features 6.43″  display, Snapdragon 662 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_f19-10764",
+    "name": "F19",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f19.jpg",
+    "description": "Oppo F19 Android smartphone. Announced Apr 2021. Features 6.43″  display, Snapdragon 662 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_a54-10818",
+    "name": "A54",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a54.jpg",
+    "description": "Oppo A54 Android smartphone. Announced Mar 2021. Features 6.51″  display, MT6765 Helio P35 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_find_x3_pro-10627",
+    "name": "Find X3 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x3-pro.jpg",
+    "description": "Oppo Find X3 Pro Android smartphone. Announced Mar 2021. Features 6.7″  display, Snapdragon 888 5G chipset, 4500 mAh battery, 512 GB storage, 16 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_find_x3-10786",
+    "name": "Find X3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x3-pro.jpg",
+    "description": "Oppo Find X3 Android smartphone. Announced Mar 2021. Features 6.7″  display, Snapdragon 870 5G chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass."
+  },
+  {
+    "id": "oppo_find_x3_neo-10787",
+    "name": "Find X3 Neo",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-plus-5g.jpg",
+    "description": "Oppo Find X3 Neo Android smartphone. Announced Mar 2021. Features 6.55″  display, Snapdragon 865 5G chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_find_x3_lite-10719",
+    "name": "Find X3 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-5g.jpg",
+    "description": "Oppo Find X3 Lite Android smartphone. Announced Mar 2021. Features 6.43″  display, Snapdragon 765G 5G chipset, 4300 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_f19_pro+_5g-10762",
+    "name": "F19 Pro+ 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f19-pro-plus-r.jpg",
+    "description": "Oppo F19 Pro+ 5G Android smartphone. Announced Mar 2021. Features 6.43″  display, Dimensity 800U chipset, 4310 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_f19_pro-10761",
+    "name": "F19 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f19-pro-r.jpg",
+    "description": "Oppo F19 Pro Android smartphone. Announced Mar 2021. Features 6.43″  display, MT6779V Helio P95 chipset, 4310 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_reno5_lite-10716",
+    "name": "Reno5 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-f-cph2217.jpg",
+    "description": "Oppo Reno5 Lite Android smartphone. Announced Mar 2021. Features 6.43″  display, MT6779V Helio P95 chipset, 4310 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a94-10765",
+    "name": "A94",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-f-cph2217.jpg",
+    "description": "Oppo A94 Android smartphone. Announced Mar 2021. Features 6.43″  display, MT6779V Helio P95 chipset, 4310 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_reno5_f-10763",
+    "name": "Reno5 F",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-f-cph2217.jpg",
+    "description": "Oppo Reno5 F Android smartphone. Announced Mar 2021. Features 6.43″  display, MT6779V Helio P95 chipset, 4310 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_reno5_k-10750",
+    "name": "Reno5 K",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-5k.jpg",
+    "description": "Oppo Reno5 K Android smartphone. Announced Feb 2021. Features 6.43″  display, Snapdragon 750G 5G chipset, 4300 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a55_5g-10703",
+    "name": "A55 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a55-5g.jpg",
+    "description": "Oppo A55 5G Android smartphone. Announced Jan 2021. Features 6.5″  display, Dimensity 700 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a93s_5g-10993",
+    "name": "A93s 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a93s-5g.jpg",
+    "description": "Oppo A93s 5G Android smartphone. Announced Jul 2021. Features 6.5″  display, Dimensity 700 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a93_5g-10683",
+    "name": "A93 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a93-5g.jpg",
+    "description": "Oppo A93 5G Android smartphone. Announced Jan 2021. Features 6.5″  display, Snapdragon 480 5G chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a15s-10644",
+    "name": "A15s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a15s.jpg",
+    "description": "Oppo A15s Android smartphone. Announced Dec 2020. Features 6.52″  display, MT6765 Helio P35 chipset, 4230 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_reno5_4g-10654",
+    "name": "Reno5 4G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-5-4g.jpg",
+    "description": "Oppo Reno5 4G Android smartphone. Announced Dec 2020. Features 6.4″  display, Snapdragon 720G chipset, 4310 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_reno5_pro+_5g-10632",
+    "name": "Reno5 Pro+ 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-plus-5g.jpg",
+    "description": "Oppo Reno5 Pro+ 5G Android smartphone. Announced Dec 2020. Features 6.55″  display, Snapdragon 865 5G chipset, 4500 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a53_5g-10608",
+    "name": "A53 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a53-5g.jpg",
+    "description": "Oppo A53 5G Android smartphone. Announced Dec 2020. Features 6.5″  display, Dimensity 720 chipset, 4040 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_reno5_pro_5g-10606",
+    "name": "Reno5 Pro 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-5g-.jpg",
+    "description": "Oppo Reno5 Pro 5G Android smartphone. Announced Dec 2020. Features 6.55″  display, Dimensity 1000+ chipset, 4350 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno5_5g-10589",
+    "name": "Reno5 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-5g.jpg",
+    "description": "Oppo Reno5 5G Android smartphone. Announced Dec 2020. Features 6.43″  display, Snapdragon 765G 5G chipset, 4300 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a73_5g-10499",
+    "name": "A73 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a73-5g-.jpg",
+    "description": "Oppo A73 5G Android smartphone. Announced Nov 2020. Features 6.5″  display, Dimensity 720 chipset, 4040 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_reno4_f-10478",
+    "name": "Reno4 F",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-4f.jpg",
+    "description": "Oppo Reno4 F Android smartphone. Announced Oct 2020. Features 6.43″  display, MT6779V Helio P95 chipset, 4000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a15-10497",
+    "name": "A15",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a15.jpg",
+    "description": "Oppo A15 Android smartphone. Announced Oct 2020. Features 6.52″  display, MT6765 Helio P35 chipset, 4230 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "oppo_a53s-10502",
+    "name": "A53s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a53-2020.jpg",
+    "description": "Oppo A53s Android smartphone. Announced Oct 2020. Features 6.5″  display, Snapdragon 460 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a73-10489",
+    "name": "A73",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a73.jpg",
+    "description": "Oppo A73 Android smartphone. Announced Oct 2020. Features 6.44″  display, Snapdragon 662 chipset, 4015 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a93-10431",
+    "name": "A93",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a93-.jpg",
+    "description": "Oppo A93 Android smartphone. Announced Oct 2020. Features 6.43″  display, MT6779V Helio P95 chipset, 4000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_reno4_z_5g-10375",
+    "name": "Reno4 Z 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a92s.jpg",
+    "description": "Oppo Reno4 Z 5G Android smartphone. Announced Sep 2020. Features 6.57″  display, Dimensity 800 chipset, 4000 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 3+."
+  },
+  {
+    "id": "oppo_reno4_lite-10465",
+    "name": "Reno4 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno4-lite.jpg",
+    "description": "Oppo Reno4 Lite Android smartphone. Announced Sep 2020. Features 6.43″  display, MT6779V Helio P95 chipset, 4015 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a33_(2020)-10474",
+    "name": "A33 (2020)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a32.jpg",
+    "description": "Oppo A33 (2020) Android smartphone. Announced Sep 2020. Features 6.5″  display, Snapdragon 460 chipset, 5000 mAh battery, 32 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_reno4_se-10433",
+    "name": "Reno4 SE",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno4-se-.jpg",
+    "description": "Oppo Reno4 SE Android smartphone. Announced Sep 2020. Features 6.43″  display, Dimensity 720 chipset, 4300 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_f17_pro-10388",
+    "name": "F17 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f17-pro---.jpg",
+    "description": "Oppo F17 Pro Android smartphone. Announced Sep 2020. Features 6.43″  display, MT6779V Helio P95 chipset, 4015 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_f17-10413",
+    "name": "F17",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f17.jpg",
+    "description": "Oppo F17 Android smartphone. Announced Sep 2020. Features 6.44″  display, Snapdragon 662 chipset, 4015 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a32-10454",
+    "name": "A32",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a32.jpg",
+    "description": "Oppo A32 Android smartphone. Announced Sep 2020. Features 6.5″  display, Snapdragon 460 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a53-10376",
+    "name": "A53",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a53-2020.jpg",
+    "description": "Oppo A53 Android smartphone. Announced Aug 2020. Features 6.5″  display, Snapdragon 460 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_watch-10115",
+    "name": "Watch",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-watch.jpg",
+    "description": "Oppo Watch Android watch. Announced Mar 2020. Features 1.91″  display, Snapdragon Wear 3100 chipset, 430 mAh battery, 8 GB storage, 1000 MB RAM, Schott Xensation Up (46mm)."
+  },
+  {
+    "id": "oppo_k7x-10573",
+    "name": "K7x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k7x.jpg",
+    "description": "Oppo K7x Android smartphone. Announced Nov 2020. Features 6.5″  display, Dimensity 720 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_reno4_pro-10327",
+    "name": "Reno4 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno4-pro.jpg",
+    "description": "Oppo Reno4 Pro Android smartphone. Announced Jul 2020. Features 6.5″  display, Snapdragon 720G chipset, 4000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno4-10348",
+    "name": "Reno4",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno4.jpg",
+    "description": "Oppo Reno4 Android smartphone. Announced Jul 2020. Features 6.4″  display, Snapdragon 720G chipset, 4015 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a72_5g-10332",
+    "name": "A72 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a72-5g.jpg",
+    "description": "Oppo A72 5G Android smartphone. Announced Jul 2020. Features 6.5″  display, Dimensity 720 chipset, 4040 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a12s-10288",
+    "name": "A12s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a11k.jpg",
+    "description": "Oppo A12s Android smartphone. Announced Jul 2020. Features 6.2″  display, MT6765 Helio P35 chipset, 4230 mAh battery, 32 GB storage, 3 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_reno4_pro_5g-10264",
+    "name": "Reno4 Pro 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno4-pro-5g.jpg",
+    "description": "Oppo Reno4 Pro 5G Android smartphone. Announced Jun 2020. Features 6.55″  display, Snapdragon 765G 5G chipset, 4000 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno4_5g-10265",
+    "name": "Reno4 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno4-5g.jpg",
+    "description": "Oppo Reno4 5G Android smartphone. Announced Jun 2020. Features 6.43″  display, Snapdragon 765G 5G chipset, 4000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a92-10211",
+    "name": "A92",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a92-.jpg",
+    "description": "Oppo A92 Android smartphone. Announced May 2020. Features 6.5″  display, Snapdragon 665 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_find_x2_neo-10195",
+    "name": "Find X2 Neo",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x2-neo.jpg",
+    "description": "Oppo Find X2 Neo Android smartphone. Announced Apr 2020. Features 6.5″  display, Snapdragon 765G 5G chipset, 4025 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a92s-10184",
+    "name": "A92s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a92s.jpg",
+    "description": "Oppo A92s Android smartphone. Announced Apr 2020. Features 6.57″  display, Dimensity 800 chipset, 4000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a72-10196",
+    "name": "A72",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a72.jpg",
+    "description": "Oppo A72 Android smartphone. Announced Apr 2020. Features 6.5″  display, Snapdragon 665 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a52-10194",
+    "name": "A52",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a52.jpg",
+    "description": "Oppo A52 Android smartphone. Announced Apr 2020. Features 6.5″  display, Snapdragon 665 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_a11k-10694",
+    "name": "A11k",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a11k.jpg",
+    "description": "Oppo A11k Android smartphone. Announced Jun 2020. Features 6.22″  display, MT6765 Helio P35 chipset, 4230 mAh battery, 32 GB storage, 2 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a12-10171",
+    "name": "A12",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a12.jpg",
+    "description": "Oppo A12 Android smartphone. Announced Apr 2020. Features 6.22″  display, MT6765 Helio P35 chipset, 4230 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_k7_5g-10354",
+    "name": "K7 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k7-5g.jpg",
+    "description": "Oppo K7 5G Android smartphone. Announced Aug 2020. Features 6.4″  display, Snapdragon 765G 5G chipset, 4025 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_find_x2_lite-10176",
+    "name": "Find X2 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x2-lite.jpg",
+    "description": "Oppo Find X2 Lite Android smartphone. Announced Apr 2020. Features 6.4″  display, Snapdragon 765G 5G chipset, 4025 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_ace2-10164",
+    "name": "Ace2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-ace2-new.jpg",
+    "description": "Oppo Ace2 Android smartphone. Announced Apr 2020. Features 6.55″  display, Snapdragon 865 5G chipset, 4000 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a12e-10173",
+    "name": "A12e",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a12e.jpg",
+    "description": "Oppo A12e Android smartphone. Announced Apr 2020. Features 6.2″  display, Snapdragon 450 chipset, 4230 mAh battery, 64 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "oppo_reno3-10125",
+    "name": "Reno3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno3-lte-r.jpg",
+    "description": "Oppo Reno3 Android smartphone. Announced Mar 2020. Features 6.4″  display, MT6779 Helio P90 chipset, 4025 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "oppo_find_x2_pro-9529",
+    "name": "Find X2 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x2-pro.jpg",
+    "description": "Oppo Find X2 Pro Android smartphone. Announced Mar 2020. Features 6.7″  display, Snapdragon 865 5G chipset, 4260 mAh battery, 512 GB storage, 12 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_find_x2-10048",
+    "name": "Find X2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x2.jpg",
+    "description": "Oppo Find X2 Android smartphone. Announced Mar 2020. Features 6.7″  display, Snapdragon 865 5G chipset, 4200 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_reno3_pro-10053",
+    "name": "Reno3 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno3-pro-.jpg",
+    "description": "Oppo Reno3 Pro Android smartphone. Announced Mar 2020. Features 6.4″  display, MT6779V Helio P95 chipset, 4025 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a31-10083",
+    "name": "A31",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a31-01.jpg",
+    "description": "Oppo A31 Android smartphone. Announced Feb 2020. Features 6.5″  display, MT6765V chipset, 4230 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_f15-10009",
+    "name": "F15",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f15-cph2001.jpg",
+    "description": "Oppo F15 Android smartphone. Announced Jan 2020. Features 6.4″  display, MT6771V Helio P70 chipset, 4025 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno3_pro_5g-9992",
+    "name": "Reno3 Pro 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno3-pro-5g-.jpg",
+    "description": "Oppo Reno3 Pro 5G Android smartphone. Announced Dec 2019. Features 6.5″  display, Snapdragon 765G 5G chipset, 4025 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno3_youth-10077",
+    "name": "Reno3 Youth",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno3-vitality-edition-pclm50.jpg",
+    "description": "Oppo Reno3 Youth Android smartphone. Announced Feb 2020. Features 6.4″  display, Snapdragon 765G 5G chipset, 4025 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno3_5g-9942",
+    "name": "Reno3 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno3-.jpg",
+    "description": "Oppo Reno3 5G Android smartphone. Announced Dec 2019. Features 6.4″  display, Dimensity 1000L chipset, 4025 mAh battery, 128 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a91-10000",
+    "name": "A91",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a91.jpg",
+    "description": "Oppo A91 Android smartphone. Announced Dec 2019. Features 6.4″  display, MT6771V Helio P70 chipset, 4025 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a8-10002",
+    "name": "A8",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a8-.jpg",
+    "description": "Oppo A8 Android smartphone. Announced Dec 2019. Features 6.5″  display, MT6765V chipset, 4230 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_a11-9901",
+    "name": "A11",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a5-2020.jpg",
+    "description": "Oppo A11 Android smartphone. Announced Oct 2019. Features 6.5″  display, Snapdragon 665 chipset, 5000 mAh battery, 256 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_k5-9907",
+    "name": "K5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k5.jpg",
+    "description": "Oppo K5 Android smartphone. Announced Oct 2019. Features 6.4″  display, Snapdragon 730G chipset, 4000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno_ace-9894",
+    "name": "Reno Ace",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-ace.jpg",
+    "description": "Oppo Reno Ace Android smartphone. Announced Oct 2019. Features 6.5″  display, Snapdragon 855+ chipset, 4000 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_reno_a-9808",
+    "name": "Reno A",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-a.jpg",
+    "description": "Oppo Reno A Android smartphone. Announced Sep 2019. Features 6.4″  display, Snapdragon 710 chipset, 3600 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a5_(2020)-9883",
+    "name": "A5 (2020)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a5-2020.jpg",
+    "description": "Oppo A5 (2020) Android smartphone. Announced Sep 2019. Features 6.5″  display, Snapdragon 665 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a9_(2020)-9819",
+    "name": "A9 (2020)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a9-2020-.jpg",
+    "description": "Oppo A9 (2020) Android smartphone. Announced Sep 2019. Features 6.5″  display, Snapdragon 665 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_reno2-9798",
+    "name": "Reno2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno2.jpg",
+    "description": "Oppo Reno2 Android smartphone. Announced Aug 2019. Features 6.5″  display, Snapdragon 730G chipset, 4000 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_reno2_f-9810",
+    "name": "Reno2 F",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-2f.jpg",
+    "description": "Oppo Reno2 F Android smartphone. Announced Aug 2019. Features 6.5″  display, MT6771V Helio P70 chipset, 4000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno2_z-9809",
+    "name": "Reno2 Z",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno2z-2f.jpg",
+    "description": "Oppo Reno2 Z Android smartphone. Announced Aug 2019. Features 6.53″  display, MT6779 Helio P90 chipset, 4000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno_z-9702",
+    "name": "Reno Z",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-z.jpg",
+    "description": "Oppo Reno Z Android smartphone. Announced May 2019. Features 6.4″  display, MT6779 Helio P90 chipset, 4035 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_k3-9699",
+    "name": "K3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k3.jpg",
+    "description": "Oppo K3 Android smartphone. Announced May 2019. Features 6.5″  display, Snapdragon 710 chipset, 3765 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a9x-9706",
+    "name": "A9x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a9.jpg",
+    "description": "Oppo A9x Android smartphone. Announced May 2019. Features 6.53″  display, MT6771V Helio P70 chipset, 4020 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a9-9677",
+    "name": "A9",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a9.jpg",
+    "description": "Oppo A9 Android smartphone. Announced Apr 2019. Features 6.53″  display, MT6771V Helio P70 chipset, 4020 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_reno_5g-9676",
+    "name": "Reno 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-10x-zoom.jpg",
+    "description": "Oppo Reno 5G Android smartphone. Announced Apr 2019. Features 6.6″  display, Snapdragon 855 chipset, 4065 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_reno_10x_zoom-9654",
+    "name": "Reno 10x zoom",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno-10x-zoom.jpg",
+    "description": "Oppo Reno 10x zoom Android smartphone. Announced Apr 2019. Features 6.6″  display, Snapdragon 855 chipset, 4065 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_reno-9631",
+    "name": "Reno",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno1.jpg",
+    "description": "Oppo Reno Android smartphone. Announced Apr 2019. Features 6.4″  display, Snapdragon 710 chipset, 3765 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_a1k-9673",
+    "name": "A1k",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a1k.jpg",
+    "description": "Oppo A1k Android smartphone. Announced Apr 2019. Features 6.1″  display, MT6762 Helio P22 chipset, 4000 mAh battery, 32 GB storage, 3 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a7n-9653",
+    "name": "A7n",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a7n.jpg",
+    "description": "Oppo A7n Android smartphone. Announced Apr 2019. Features 6.2″  display, MT6765 Helio P35 chipset, 4230 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_a5s_(ax5s)-9626",
+    "name": "A5s (AX5s)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a5s-r.jpg",
+    "description": "Oppo A5s (AX5s) Android smartphone. Announced Mar 2019. Features 6.2″  display, MT6765 Helio P35 chipset, 4230 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_f11-9617",
+    "name": "F11",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f11-.jpg",
+    "description": "Oppo F11 Android smartphone. Announced Mar 2019. Features 6.53″  display, MT6771 Helio P70 chipset, 4020 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_f11_pro-9566",
+    "name": "F11 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f11-pro-.jpg",
+    "description": "Oppo F11 Pro Android smartphone. Announced Mar 2019. Features 6.53″  display, MT6771 Helio P70 chipset, 4000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "oppo_a7-9394",
+    "name": "A7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a7.jpg",
+    "description": "Oppo A7 Android smartphone. Announced Nov 2018. Features 6.2″  display, Snapdragon 450 chipset, 4230 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_r15x-9380",
+    "name": "R15x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r15x.jpg",
+    "description": "Oppo R15x Android smartphone. Announced Oct 2018. Features 6.4″  display, Snapdragon 660 chipset, 3600 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_rx17_neo-9393",
+    "name": "RX17 Neo",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k1-.jpg",
+    "description": "Oppo RX17 Neo Android smartphone. Announced Nov 2018. Features 6.41″  display, Snapdragon 660 chipset, 3600 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_k1-9361",
+    "name": "K1",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-k1-.jpg",
+    "description": "Oppo K1 Android smartphone. Announced Oct 2018. Features 6.4″  display, Snapdragon 660 chipset, 3600 mAh battery, 64 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a7x-9317",
+    "name": "A7x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a7x-.jpg",
+    "description": "Oppo A7x Android smartphone. Announced Sep 2018. Features 6.3″  display, MT6771 Helio P60 chipset, Dual: 16 MP (f/1.8, 1/3.1, 1.0µm, PDAF) + 2 MP primary camera, 16 MP front camera, 3500 mAh battery, 128 GB storage, 4 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_rx17_pro-9288",
+    "name": "RX17 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r17-pro.jpg",
+    "description": "Oppo RX17 Pro Android smartphone. Announced Aug 2018. Features 6.4″  display, Snapdragon 710 chipset, 3700 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_r17-9287",
+    "name": "R17",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r17-.jpg",
+    "description": "Oppo R17 Android smartphone. Announced Aug 2018. Features 6.4″  display, Snapdragon 670 chipset, 3500 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_f9_(f9_pro)-9286",
+    "name": "F9 (F9 Pro)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f9.jpg",
+    "description": "Oppo F9 (F9 Pro) Android smartphone. Announced Aug 2018. Features 6.3″  display, MT6771 Helio P60 chipset, Dual: 16 MP (f/1.8, 1/3.1, 1.0µm, PDAF) + 2 MP primary camera, 25 MP front camera, 3500 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 6."
+  },
+  {
+    "id": "oppo_a3s-9269",
+    "name": "A3s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a3s.jpg",
+    "description": "Oppo A3s Android smartphone. Announced Jul 2018. Features 6.2″  display, Snapdragon 450 chipset, Dual: 13 MP (f/2.2, AF) + 2 MP primary camera, 8 MP front camera, 4230 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a5_(ax5)-9259",
+    "name": "A5 (AX5)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a5.jpg",
+    "description": "Oppo A5 (AX5) Android smartphone. Announced Jul 2018. Features 6.2″  display, Snapdragon 450 chipset, Dual: 13 MP (f/2.2, AF) + 2 MP primary camera, 8 MP front camera, 4230 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_find_x_lamborghini-9248",
+    "name": "Find X Lamborghini",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x-lamborgini-edition.jpg",
+    "description": "Oppo Find X Lamborghini Android smartphone. Announced Jun 2018. Features 6.42″  display, Snapdragon 845 chipset, 3400 mAh battery, 512 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_find_x-7885",
+    "name": "Find X",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x.jpg",
+    "description": "Oppo Find X Android smartphone. Announced Jun 2018. Features 6.42″  display, Snapdragon 845 chipset, Pop-up Dual: 16 MP (f/2.0, 1/2.6″, 1.22µm, PDAF, OIS) + 20 MP primary camera, Pop-up 25 MP front camera, 3730 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_f7_youth-9208",
+    "name": "F7 Youth",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f7-yough-5.jpg",
+    "description": "Oppo F7 Youth Android smartphone. Announced May 2018. Features 6.0″  display, MT6771 Helio P60 chipset, 13 MP primary camera, 8 MP front camera, 3410 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_a3_(2018)-9168",
+    "name": "A3 (2018)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a3.jpg",
+    "description": "Oppo A3 (2018) Android smartphone. Announced Apr 2018. Features 6.2″  display, MT6771 Helio P60 chipset, 16 MP primary camera, 8 MP front camera, 3400 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_f7-9121",
+    "name": "F7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f7-.jpg",
+    "description": "Oppo F7 Android smartphone. Announced Mar 2018. Features 6.23″  display, MT6771 Helio P60 chipset, 16 MP primary camera, 25 MP front camera, 3400 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_r15_pro-9118",
+    "name": "R15 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r15-dme.jpg",
+    "description": "Oppo R15 Pro Android smartphone. Announced Mar 2018. Features 6.28″  display, Snapdragon 660 chipset, Dual: 16 MP (f/1.7, 25mm, 1/2.6″, 1.22µm, PDAF) + 20 MP primary camera, 20 MP front camera, 3430 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_r15-9108",
+    "name": "R15",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r15-.jpg",
+    "description": "Oppo R15 Android smartphone. Announced Mar 2018. Features 6.28″  display, MT6771 Helio P60 chipset, Dual: 16 MP (f/1.7, 1/2.6″, 1.22µm, PDAF) + 5 MP primary camera, 20 MP front camera, 3450 mAh battery, 128 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a1_(2018)-9134",
+    "name": "A1 (2018)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a1.jpg",
+    "description": "Oppo A1 (2018) Android smartphone. Announced Mar 2018. Features 5.7″  display, MT6763T Helio P23 chipset, 3180 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a71_(2018)-9051",
+    "name": "A71 (2018)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a71-2018.jpg",
+    "description": "Oppo A71 (2018) Android smartphone. Announced Feb 2018. Features 5.2″  display, Snapdragon 450 chipset, 13 MP primary camera, 5 MP front camera, 3000 mAh battery, 16 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "oppo_a83-8957",
+    "name": "A83",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a83.jpg",
+    "description": "Oppo A83 Android smartphone. Announced Jan 2018. Features 5.7″  display, MT6763T Helio P23 chipset, 13 MP primary camera, 8 MP front camera, 3180 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_f5_youth-8909",
+    "name": "F5 Youth",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f5-youth-a73-new.jpg",
+    "description": "Oppo F5 Youth Android smartphone. Announced Nov 2017. Features 6.0″  display, MT6763T Helio P23 chipset, 13 MP primary camera, 16 MP front camera, 3200 mAh battery, 32 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_r11s_plus-8927",
+    "name": "R11s Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r11s-plus.jpg",
+    "description": "Oppo R11s Plus Android smartphone. Announced Nov 2017. Features 6.43″  display, Snapdragon 660 chipset, Dual: 16 MP (f/1.7, 1/2.8″, 1.12µm, PDAF) + 20 MP primary camera, 20 MP front camera, 4000 mAh battery, 64 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_f5-8889",
+    "name": "F5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f5-youth-a73-new.jpg",
+    "description": "Oppo F5 Android smartphone. Announced Oct 2017. Features 6.0″  display, MT6763T Helio P23 chipset, 16 MP primary camera, 20 MP front camera, 3200 mAh battery, 64 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_r11s-8911",
+    "name": "R11s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r11s-r.jpg",
+    "description": "Oppo R11s Android smartphone. Announced Oct 2017. Features 6.01″  display, Snapdragon 660 chipset, Dual: 16 MP (f/1.7, 1/2.8″, 1.12µm, PDAF) + 20 MP primary camera, 20 MP front camera, 3200 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a71-8849",
+    "name": "A71",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a71-.jpg",
+    "description": "Oppo A71 Android smartphone. Announced Sep 2017. Features 5.2″  display, MT6750 chipset, 13 MP primary camera, 5 MP front camera, 3000 mAh battery, 16 GB storage, 3 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a77_(2017)-8777",
+    "name": "A77 (2017)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a77-sn.jpg",
+    "description": "Oppo A77 (2017) Android smartphone. Announced Jul 2017. Features 5.5″  display, Snapdragon 625 chipset, 13 MP primary camera, 16 MP front camera, 3200 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_r11_plus-8719",
+    "name": "R11 Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r11.jpg",
+    "description": "Oppo R11 Plus Android smartphone. Announced Jun 2017. Features 6.0″  display, Snapdragon 660 chipset, Dual: 16 MP (f/1.7, 1/2.8″, 1.12µm, PDAF) + 20 MP primary camera, 20 MP front camera, 4000 mAh battery, 64 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_r11-8644",
+    "name": "R11",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r11.jpg",
+    "description": "Oppo R11 Android smartphone. Announced Jun 2017. Features 5.5″  display, Snapdragon 660 chipset, Dual: 16 MP (f/1.7, 1/2.8″, 1.12µm, PDAF) + 20 MP primary camera, 20 MP front camera, 3000 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a77_(mediatek)-8685",
+    "name": "A77 (Mediatek)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a77-.jpg",
+    "description": "Oppo A77 (Mediatek) Android smartphone. Announced May 2017. Features 5.5″  display, MT6750T chipset, 13 MP primary camera, 16 MP front camera, 3200 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "oppo_a39-8890",
+    "name": "A39",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a39.jpg",
+    "description": "Oppo A39 Android smartphone. Announced Mar 2017. Features 5.2″  display, MT6750 chipset, 13 MP primary camera, 5 MP front camera, 2900 mAh battery, 32 GB storage, 3 GB RAM, Corning Gorilla Glass 4."
+  },
+  {
+    "id": "oppo_f3-8669",
+    "name": "F3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f3-plus.jpg",
+    "description": "Oppo F3 Android smartphone. Announced May 2017. Features 5.5″  display, MT6750T chipset, 13 MP primary camera, Dual: 16 MP (f/2.0, 1/3.1″) + 8 MP front camera, 3200 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_f3_plus-8613",
+    "name": "F3 Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f3-plus.jpg",
+    "description": "Oppo F3 Plus Android smartphone. Announced Mar 2017. Features 6.0″  display, Snapdragon 653 chipset, 16 MP primary camera, Dual: 16 MP (f/2.0, 1/3″) + 8 MP front camera, 4000 mAh battery, 64 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_a57_(2016)-8468",
+    "name": "A57 (2016)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a57.jpg",
+    "description": "Oppo A57 (2016) Android smartphone. Announced Nov 2016. Features 5.2″  display, Snapdragon 435 chipset, 13 MP primary camera, 16 MP front camera, 2900 mAh battery, 32 GB storage, 3 GB RAM, Corning Gorilla Glass 4."
+  },
+  {
+    "id": "oppo_f1s-8239",
+    "name": "F1s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f1s.jpg",
+    "description": "Oppo F1s Android smartphone. Announced Aug 2016. Features 5.5″  display, MT6755 or MTK7650 chipset, 13 MP primary camera, 16 MP front camera, 3075 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 4."
+  },
+  {
+    "id": "oppo_r9s_plus-8394",
+    "name": "R9s Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r9s-.jpg",
+    "description": "Oppo R9s Plus Android smartphone. Announced Oct 2016. Features 6.0″  display, Snapdragon 653 chipset, 16 MP primary camera, 16 MP front camera, 4000 mAh battery, 64 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "oppo_r9s-8386",
+    "name": "R9s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r9s-.jpg",
+    "description": "Oppo R9s Android smartphone. Announced Oct 2016. Features 5.5″  display, Snapdragon 625 chipset, 16 MP primary camera, 16 MP front camera, 3010 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorrila Glass 5."
+  },
+  {
+    "id": "oppo_a37-8162",
+    "name": "A37",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a37.jpg",
+    "description": "Oppo A37 Android smartphone. Announced Jun 2016. Features 5.0″  display, Snapdragon 410 chipset, 8 MP primary camera, 5 MP front camera, 2630 mAh battery, 16 GB storage, 2 GB RAM, Corning Gorilla Glass 4."
+  },
+  {
+    "id": "oppo_a59_(2016)-8155",
+    "name": "A59 (2016)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a59.jpg",
+    "description": "Oppo A59 (2016) Android smartphone. Announced Jun 2016. Features 5.5″  display, MT6750 chipset, 13 MP primary camera, 8 MP front camera, 3075 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "oppo_r9_plus-7981",
+    "name": "R9 Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r9.jpg",
+    "description": "Oppo R9 Plus Android smartphone. Announced Mar 2016. Features 6.0″  display, Snapdragon 652 chipset, 16 MP primary camera, 16 MP front camera, 4120 mAh battery, 128 GB storage, 4 GB RAM, Corning Gorilla Glass 4."
+  },
+  {
+    "id": "oppo_f1_plus-7967",
+    "name": "F1 Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f1-plus.jpg",
+    "description": "Oppo F1 Plus Android smartphone. Announced Mar 2016. Features 5.5″  display, MT6755 Helio P10 chipset, 13 MP primary camera, 16 MP front camera, 2850 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 4."
+  },
+  {
+    "id": "oppo_f1-7855",
+    "name": "F1",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-f1.jpg",
+    "description": "Oppo F1 Android smartphone. Announced Jan 2016. Features 5.0″  display, Snapdragon 616 chipset, 13 MP primary camera, 8 MP front camera, 2500 mAh battery, 16 GB storage, 3 GB RAM, Corning Gorilla Glass 4."
+  },
+  {
+    "id": "oppo_a53_(2015)-7780",
+    "name": "A53 (2015)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a53.jpg",
+    "description": "Oppo A53 (2015) Android smartphone. Announced Nov 2015. Features 5.5″  display, Snapdragon 616 chipset, 13 MP primary camera, 5 MP front camera, 3075 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "oppo_a33_(2015)-7767",
+    "name": "A33 (2015)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a33.jpg",
+    "description": "Oppo A33 (2015) Android smartphone. Announced Nov 2015. Features 5.0″  display, Snapdragon 410 chipset, 8 MP primary camera, 5 MP front camera, 2400 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "oppo_neo_7-7707",
+    "name": "Neo 7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-neo-7.jpg",
+    "description": "Oppo Neo 7 Android smartphone. Announced Oct 2015. Features 5.0″  display, MT6582 chipset, 8 MP primary camera, 5 MP front camera, 2420 mAh battery, 16 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_r7s-7669",
+    "name": "R7s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r7s.jpg",
+    "description": "Oppo R7s Android smartphone. Announced Oct 2015. Features 5.5″  display, Snapdragon 615 chipset, 13 MP primary camera, 8 MP front camera, 3070 mAh battery, 32 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_r7_lite-7553",
+    "name": "R7 lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r7-new.jpg",
+    "description": "Oppo R7 lite Android smartphone. Announced Sep 2015. Features 5.0″  display, Snapdragon 615 chipset, 13 MP primary camera, 8 MP front camera, 2320 mAh battery, 16 GB storage, 2 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_r5s-7514",
+    "name": "R5s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r5s.jpg",
+    "description": "Oppo R5s Android smartphone. Announced Aug 2015. Features 5.2″  display, Snapdragon 615 chipset, 13 MP primary camera, 5 MP front camera, 2000 mAh battery, 32 GB storage, 3 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_mirror_5s-7362",
+    "name": "Mirror 5s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-mirror-5s.jpg",
+    "description": "Oppo Mirror 5s Android smartphone. Announced Jul 2015. Features 5.0″  display, Snapdragon 410 chipset, 8 MP primary camera, 5 MP front camera, 2420 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "oppo_mirror_5-7427",
+    "name": "Mirror 5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-mirror-5s.jpg",
+    "description": "Oppo Mirror 5 Android smartphone. Announced Jul 2015. Features 5.0″  display, Snapdragon 410 chipset, 8 MP primary camera, 5 MP front camera, 2420 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "oppo_joy_3-7353",
+    "name": "Joy 3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-joy3.jpg",
+    "description": "Oppo Joy 3 Android smartphone. Announced Jun 2015. Features 4.5″  display, MT6582 chipset, 5 MP primary camera, 2 MP front camera, 2000 mAh battery, 4 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_r7_plus-7237",
+    "name": "R7 Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r7-plus.jpg",
+    "description": "Oppo R7 Plus Android smartphone. Announced May 2015. Features 6.0″  display, Snapdragon 615 chipset, 13 MP primary camera, 8 MP front camera, 4100 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_r7-7221",
+    "name": "R7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r7-new.jpg",
+    "description": "Oppo R7 Android smartphone. Announced May 2015. Features 5.0″  display, Snapdragon 615 chipset, 13 MP primary camera, 8 MP front camera, 2320 mAh battery, 16 GB storage, 3 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_neo_5_(2015)-7278",
+    "name": "Neo 5 (2015)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-neo-5s.jpg",
+    "description": "Oppo Neo 5 (2015) Android smartphone. Announced Jun 2015. Features 4.5″  display, MT6582 chipset, 8 MP primary camera, 2 MP front camera, 2000 mAh battery, 16 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_neo_5s-7248",
+    "name": "Neo 5s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-neo-5s.jpg",
+    "description": "Oppo Neo 5s Android smartphone. Announced May 2015. Features 4.5″  display, Snapdragon 410 chipset, 8 MP primary camera, 2 MP front camera, 2000 mAh battery, 8 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_joy_plus-7208",
+    "name": "Joy Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-joy-plus.jpg",
+    "description": "Oppo Joy Plus Android smartphone. Announced Apr 2015. Features 4.0″  display, MT6572 chipset, 3.15 MP primary camera, 1700 mAh battery, 4 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_mirror_3-7193",
+    "name": "Mirror 3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-mirror-3.jpg",
+    "description": "Oppo Mirror 3 Android smartphone. Announced Jan 2015. Features 4.7″  display, Snapdragon 410 chipset, 8 MP primary camera, 5 MP front camera, 2000 mAh battery, 8 GB storage, 1000 MB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_a31_(2015)-7186",
+    "name": "A31 (2015)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-a31.jpg",
+    "description": "Oppo A31 (2015) Android smartphone. Announced Apr 2015. Features 4.5″  display, Snapdragon 410 chipset, 8 MP primary camera, 5 MP front camera, 2000 mAh battery, 8 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_r1x-6945",
+    "name": "R1x",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r1c-new.jpg",
+    "description": "Oppo R1x Android smartphone. Announced Jan 2015. Features 5.0″  display, Snapdragon 615 chipset, 13 MP primary camera, 5 MP front camera, 2420 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "oppo_u3-6780",
+    "name": "U3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-u3-new.jpg",
+    "description": "Oppo U3 Android smartphone. Announced Jan 2015. Features 5.9″  display, MT6752 chipset, 13 MP primary camera, 5 MP front camera, 3000 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "oppo_r5-6753",
+    "name": "R5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r5-new1.jpg",
+    "description": "Oppo R5 Android smartphone. Announced Oct 2014. Features 5.2″  display, Snapdragon 615 chipset, 13 MP primary camera, 5 MP front camera, 2000 mAh battery, 16 GB storage, 2 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_n3-6752",
+    "name": "N3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-n3-new1.jpg",
+    "description": "Oppo N3 Android smartphone. Announced Oct 2014. Features 5.5″  display, Snapdragon 801 chipset, 16 MP primary camera, 16 MP front camera, 3000 mAh battery, 32 GB storage, 2 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_r1s-6329",
+    "name": "R1S",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r1s.jpg",
+    "description": "Oppo R1S Android smartphone. Announced Apr 2014. Features 5.0″  display, Snapdragon 400 chipset, 13 MP primary camera, 5 MP front camera, 2410 mAh battery, 16 GB storage, 1000 MB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_neo_3-6704",
+    "name": "Neo 3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-neo3.jpg",
+    "description": "Oppo Neo 3 Android smartphone. Announced Aug 2014. Features 4.5″  display, MT6572 chipset, 5 MP primary camera, 2 MP front camera, 1900 mAh battery, 4 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_find_5_mini-6819",
+    "name": "Find 5 Mini",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-5-mini.jpg",
+    "description": "Oppo Find 5 Mini Android smartphone. Announced Jan 2014. Features 4.7″  display, MT6582M chipset, 8 MP primary camera, 2 MP front camera, 2000 mAh battery, 4 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_r2001_yoyo-6703",
+    "name": "R2001 Yoyo",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-yoyo.jpg",
+    "description": "Oppo R2001 Yoyo Android smartphone. Announced May 2014. Features 4.7″  display, MT6582M chipset, 5 MP primary camera, 2 MP front camera, 1900 mAh battery, 4 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_r1001_joy-6702",
+    "name": "R1001 Joy",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-joy.jpg",
+    "description": "Oppo R1001 Joy Android smartphone. Announced May 2014. Features 4.0″  display, MT6572 chipset, 3.15 MP primary camera, 1700 mAh battery, 4 GB storage, 512 MB RAM."
+  },
+  {
+    "id": "oppo_neo_5-6594",
+    "name": "Neo 5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-neo-5.jpg",
+    "description": "Oppo Neo 5 Android smartphone. Announced Aug 2014. Features 4.5″  display, Snapdragon 400 chipset, 5 MP primary camera, 2 MP front camera, 1900 mAh battery, 4 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_r3-6437",
+    "name": "R3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r3.jpg",
+    "description": "Oppo R3 Android smartphone. Announced Jun 2014. Features 5.0″  display, Snapdragon 400 chipset, 8 MP primary camera, 5 MP front camera, 2410 mAh battery, 8 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_n1_mini-6425",
+    "name": "N1 mini",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-n1-mini1.jpg",
+    "description": "Oppo N1 mini Android smartphone. Announced Aug 2014. Features 5.0″  display, Snapdragon 400 chipset, 13 MP primary camera, 13 MP front camera, 2140 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "oppo_find_7-6214",
+    "name": "Find 7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-7-new.jpg",
+    "description": "Oppo Find 7 Android smartphone. Announced Mar 2014. Features 5.5″  display, Snapdragon 801 chipset, 13 MP primary camera, 5 MP front camera, 3000 mAh battery, 32 GB storage, 3 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_find_7a-6215",
+    "name": "Find 7a",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-7-new.jpg",
+    "description": "Oppo Find 7a Android smartphone. Announced Mar 2014. Features 5.5″  display, Snapdragon 801 chipset, 13 MP primary camera, 5 MP front camera, 2800 mAh battery, 16 GB storage, 2 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_neo-5972",
+    "name": "Neo",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-neo.jpg",
+    "description": "Oppo Neo Android smartphone. Announced Feb 2014. Features 4.5″  display, 5 MP primary camera, 2 MP front camera, 1900 mAh battery, 4 GB storage, 512 MB RAM."
+  },
+  {
+    "id": "oppo_r1_r829t-5922",
+    "name": "R1 R829T",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/Oppo-R1-R829T.jpg",
+    "description": "Oppo R1 R829T Android smartphone. Announced Dec 2013. Features 5.0″  display, MT6582 chipset, 8 MP primary camera, 5 MP front camera, 2410 mAh battery, 16 GB storage, 1000 MB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "oppo_n1-5724",
+    "name": "N1",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-n1.jpg",
+    "description": "Oppo N1 Android smartphone. Announced Sep 2013. Features 5.9″  display, Snapdragon 600 chipset, 13 MP primary camera, 13 MP front camera, 3610 mAh battery, 32 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "oppo_r819-5631",
+    "name": "R819",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r819.jpg",
+    "description": "Oppo R819 Android smartphone. Announced Aug 2013. Features 4.7″  display, MT6589 chipset, 8 MP primary camera, 1.9 MP front camera, 2000 mAh battery, 16 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_find_5-5161",
+    "name": "Find 5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-5.jpg",
+    "description": "Oppo Find 5 Android smartphone. Announced Dec 2012. Features 5.0″  display, Snapdragon S4 Pro chipset, 13 MP primary camera, 1.9 MP front camera, 2500 mAh battery, 32 GB storage, 2 GB RAM, Corning Gorilla Glass 2."
+  },
+  {
+    "id": "oppo_u705t_ulike_2-5166",
+    "name": "U705T Ulike 2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-u705t.jpg",
+    "description": "Oppo U705T Ulike 2 Android smartphone. Announced Nov 2012. Features 4.5″  display, MT6517 chipset, 8 MP primary camera, 5 MP front camera, 2020 mAh battery, 16 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_r601-5167",
+    "name": "R601",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r601.jpg",
+    "description": "Oppo R601 Android smartphone. Announced Nov 2012. Features 3.0″  display, MT6515 chipset, 3.15 MP primary camera, 1100 mAh battery, 4 GB storage, 512 MB RAM."
+  },
+  {
+    "id": "oppo_r821t_find_muse-5763",
+    "name": "R821T FInd Muse",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-muse.jpg",
+    "description": "Oppo R821T FInd Muse Android smartphone. Announced  2013. Features 4.0″  display, MT6572 chipset, 3.15 MP primary camera, 1700 mAh battery, 4 GB storage, 512 MB RAM."
+  },
+  {
+    "id": "oppo_r811_real-5168",
+    "name": "R811 Real",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r811-real.jpg",
+    "description": "Oppo R811 Real Android smartphone. Announced Oct 2012. Features 3.5″  display, MT6515 chipset, 3.15 MP primary camera, 1520 mAh battery, 4 GB storage, 512 MB RAM."
+  },
+  {
+    "id": "oppo_t29-5169",
+    "name": "T29",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-t29.jpg",
+    "description": "Oppo T29 Android smartphone. Announced Oct 2012. Features 4.5″  display, MT6577 chipset, 8 MP primary camera, 3150 mAh battery, 4 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_r817_real-5170",
+    "name": "R817 Real",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r817-real.jpg",
+    "description": "Oppo R817 Real Android smartphone. Announced Oct 2012. Features 4.0″  display, MT6577 chipset, 8 MP primary camera, 1710 mAh battery, 4 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_r815t_clover-5898",
+    "name": "R815T Clover",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-r815t.jpg",
+    "description": "Oppo R815T Clover Android smartphone. Announced Apr 2013. Features 4.3″  display, MT6589 chipset, 5 MP primary camera, 2 MP front camera, 1710 mAh battery, 4 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_find-5171",
+    "name": "Find",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-finder.jpg",
+    "description": "Oppo Find Android smartphone. Announced Jun 2012. Features 4.3″  display, 8 MP primary camera, 1.3 MP front camera, 1500 mAh battery, 16 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "oppo_u701_ulike-5172",
+    "name": "U701 Ulike",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/oppo-u701-ulike.jpg",
+    "description": "Oppo U701 Ulike Android smartphone. Announced Jun 2012. Features 4.0″  display, MT6575 chipset, 5 MP primary camera, 2 MP front camera, 1710 mAh battery, 4 GB storage, 512 MB RAM."
+  },
+  {
+    "id": "oppo_k10_energy-11713",
+    "name": "K10 Energy",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/smartphone.jpg",
+    "description": "Oppo K10 Energy Android smartphone. Not announced yet. Features 6.59″  display, Snapdragon 778G 5G chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM."
+  }
+]

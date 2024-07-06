@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 import { useSession } from "next-auth/react";
 import { getCurrentUser, type UserWithRelations } from "@/auth/user";
 import { usePathname } from "next/navigation";
+import { useCart } from "../context/cart";
 
 const Header: FC = () => {
   const { status } = useSession();
@@ -19,7 +20,8 @@ const Header: FC = () => {
   const [gettingUser, setGettingUser] = useState(false);
 
   const [user, setUser] = useState<UserWithRelations | null>(null);
-  const cartItemsCount = user?.cart?.items.length || 0;
+  const { cartProductIds, setCartProductIds } = useCart();
+  const cartItemsCount = cartProductIds.length;
   const newNotificationsCount =
     user?.notifications.filter((n) => !n.read).length || 0;
 
@@ -31,9 +33,12 @@ const Header: FC = () => {
         const user = await getCurrentUser().catch(() => null);
         setUser(user);
         setGettingUser(false);
+        if (user) {
+          setCartProductIds(user.cart?.items.map((c) => c.productId) ?? []);
+        }
       }
     })();
-  }, [status, pathname]);
+  }, [status, pathname, setCartProductIds]);
 
   return (
     <header className="antialiased border-b">

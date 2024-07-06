@@ -1,0 +1,275 @@
+{
+  "id": 1859,
+  "brandId": 237,
+  "title": "Acer Chromebook Tab 10",
+  "thumbnail": "https://fdn2.gsmarena.com/vv/bigpic/acer-chromebook-tab-10.jpg",
+  "releaseDate": "Released 2018, July",
+  "dimension": "544.3g, 9.9mm thickness",
+  "os": "Chrome OS",
+  "storage": "32GB storage, microSDXC",
+  "url": "https://www.gsmarena.com/acer_chromebook_tab_10-9139.php",
+  "displaySize": "9.7\"",
+  "resolution": "1536x2048 pixels",
+  "ram": "4",
+  "chipset": "Rockchip RK3399",
+  "batterySize": "4500",
+  "batteryType": "Li-Po",
+  "photosUrl": "https://www.gsmarena.com/acer_chromebook_tab_10-pictures-9139.php",
+  "price": null,
+  "brand": null,
+  "phonePhotoes": [
+    {
+      "id": 3024,
+      "phoneId": 1859,
+      "photo": "https://fdn2.gsmarena.com/vv/pics/acer/acer-chromebook-tab-10-D651N-1.jpg"
+    },
+    {
+      "id": 3025,
+      "phoneId": 1859,
+      "photo": "https://fdn2.gsmarena.com/vv/pics/acer/acer-chromebook-tab-10-D651N-2.jpg"
+    }
+  ],
+  "phoneSpecs": [
+    {
+      "id": 72310,
+      "specId": 16,
+      "phoneId": 1859,
+      "val": "N/A",
+      "specTitle": "net2g",
+      "spec": null
+    },
+    {
+      "id": 72311,
+      "specId": 43,
+      "phoneId": 1859,
+      "val": "Up to 9 h (multimedia)",
+      "specTitle": "battalktime1",
+      "spec": null
+    },
+    {
+      "id": 72312,
+      "specId": 42,
+      "phoneId": 1859,
+      "val": "Li-Po 4500 mAh, non-removable (34 Wh)",
+      "specTitle": "batdescription1",
+      "spec": null
+    },
+    {
+      "id": 72313,
+      "specId": 41,
+      "phoneId": 1859,
+      "val": "Accelerometer",
+      "specTitle": "sensors",
+      "spec": null
+    },
+    {
+      "id": 72314,
+      "specId": 40,
+      "phoneId": 1859,
+      "val": "USB Type-C 3.1",
+      "specTitle": "usb",
+      "spec": null
+    },
+    {
+      "id": 72315,
+      "specId": 39,
+      "phoneId": 1859,
+      "val": "No",
+      "specTitle": "radio",
+      "spec": null
+    },
+    {
+      "id": 72316,
+      "specId": 38,
+      "phoneId": 1859,
+      "val": "No",
+      "specTitle": "nfc",
+      "spec": null
+    },
+    {
+      "id": 72317,
+      "specId": 37,
+      "phoneId": 1859,
+      "val": "4.1, A2DP, LE",
+      "specTitle": "bluetooth",
+      "spec": null
+    },
+    {
+      "id": 72318,
+      "specId": 36,
+      "phoneId": 1859,
+      "val": "Wi-Fi 802.11 b/g/n/ac, dual-band, Wi-Fi Direct",
+      "specTitle": "wlan",
+      "spec": null
+    },
+    {
+      "id": 72319,
+      "specId": 35,
+      "phoneId": 1859,
+      "val": "2 MP",
+      "specTitle": "cam2modules",
+      "spec": null
+    },
+    {
+      "id": 72320,
+      "specId": 34,
+      "phoneId": 1859,
+      "val": "720p",
+      "specTitle": "cam1video",
+      "spec": null
+    },
+    {
+      "id": 72321,
+      "specId": 33,
+      "phoneId": 1859,
+      "val": "5 MP",
+      "specTitle": "cam1modules",
+      "spec": null
+    },
+    {
+      "id": 72322,
+      "specId": 32,
+      "phoneId": 1859,
+      "val": "32GB 4GB RAM",
+      "specTitle": "internalmemory",
+      "spec": null
+    },
+    {
+      "id": 72323,
+      "specId": 31,
+      "phoneId": 1859,
+      "val": "microSDXC (dedicated slot)",
+      "specTitle": "memoryslot",
+      "spec": null
+    },
+    {
+      "id": 72324,
+      "specId": 30,
+      "phoneId": 1859,
+      "val": "Hexa-core (4x Cortex-A53 & 2x Cortex-A72)",
+      "specTitle": "cpu",
+      "spec": null
+    },
+    {
+      "id": 72325,
+      "specId": 29,
+      "phoneId": 1859,
+      "val": "Rockchip RK3399",
+      "specTitle": "chipset",
+      "spec": null
+    },
+    {
+      "id": 72326,
+      "specId": 28,
+      "phoneId": 1859,
+      "val": "Chrome OS",
+      "specTitle": "os",
+      "spec": null
+    },
+    {
+      "id": 72327,
+      "specId": 27,
+      "phoneId": 1859,
+      "val": "1536 x 2048 pixels, 4:3 ratio (~264 ppi density)",
+      "specTitle": "displayresolution",
+      "spec": null
+    },
+    {
+      "id": 72328,
+      "specId": 26,
+      "phoneId": 1859,
+      "val": "9.7 inches, 291.4 cm2 (~71.0% screen-to-body ratio)",
+      "specTitle": "displaysize",
+      "spec": null
+    },
+    {
+      "id": 72329,
+      "specId": 25,
+      "phoneId": 1859,
+      "val": "IPS LCD",
+      "specTitle": "displaytype",
+      "spec": null
+    },
+    {
+      "id": 72330,
+      "specId": 24,
+      "phoneId": 1859,
+      "val": "Stylus",
+      "specTitle": "bodyother",
+      "spec": null
+    },
+    {
+      "id": 72331,
+      "specId": 23,
+      "phoneId": 1859,
+      "val": "No",
+      "specTitle": "sim",
+      "spec": null
+    },
+    {
+      "id": 72332,
+      "specId": 22,
+      "phoneId": 1859,
+      "val": "544.3 g (1.20 lb)",
+      "specTitle": "weight",
+      "spec": null
+    },
+    {
+      "id": 72333,
+      "specId": 21,
+      "phoneId": 1859,
+      "val": "238.3 x 172.2 x 9.9 mm (9.38 x 6.78 x 0.39 in)",
+      "specTitle": "dimensions",
+      "spec": null
+    },
+    {
+      "id": 72334,
+      "specId": 20,
+      "phoneId": 1859,
+      "val": "Available. Released 2018, July",
+      "specTitle": "status",
+      "spec": null
+    },
+    {
+      "id": 72335,
+      "specId": 19,
+      "phoneId": 1859,
+      "val": "2018, March",
+      "specTitle": "year",
+      "spec": null
+    },
+    {
+      "id": 72336,
+      "specId": 18,
+      "phoneId": 1859,
+      "val": "No",
+      "specTitle": "edge",
+      "spec": null
+    },
+    {
+      "id": 72337,
+      "specId": 17,
+      "phoneId": 1859,
+      "val": "No",
+      "specTitle": "gprstext",
+      "spec": null
+    },
+    {
+      "id": 72338,
+      "specId": 44,
+      "phoneId": 1859,
+      "val": "Black, Blue",
+      "specTitle": "colors",
+      "spec": null
+    },
+    {
+      "id": 72339,
+      "specId": 45,
+      "phoneId": 1859,
+      "val": "About 330 EUR",
+      "specTitle": "price",
+      "spec": null
+    }
+  ],
+  "variants": []
+}

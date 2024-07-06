@@ -1,63 +1,57 @@
-"use client";
-
+import SubmitButton from "@/components/small/submit-button";
 import { Input } from "@/components/ui/input";
+import prisma from "@/lib/prisma";
+import ProductsPageSearchParamsSchema from "@/validation/pages/products";
 import { Search } from "lucide-react";
+import { redirect } from "next/navigation";
+import NoProductsFound from "./_components/no-product";
+import { Pagination } from "./_components/pagination";
 import Product from "./_components/product";
 
-// Mock data for products
-const products = [
-  {
-    id: 1,
-    title: "Cute Plushie",
-    price: 1500,
-    rating: 4.5,
-    reviews: 120,
-    image: "/logo.jpeg",
-  },
-  {
-    id: 2,
-    title: "Kawaii Stationery Set",
-    price: 800,
-    rating: 4.8,
-    reviews: 95,
-    image: "/api/placeholder/400/300",
-  },
-  {
-    id: 3,
-    title: "Pastel Headphones",
-    price: 2500,
-    rating: 4.2,
-    reviews: 78,
-    image: "/api/placeholder/400/300",
-  },
-  {
-    id: 4,
-    title: "Unicorn Backpack",
-    price: 1800,
-    rating: 4.7,
-    reviews: 150,
-    image: "/api/placeholder/400/300",
-  },
-  {
-    id: 5,
-    title: "Rainbow Socks Set",
-    price: 500,
-    rating: 4.6,
-    reviews: 200,
-    image: "/api/placeholder/400/300",
-  },
-  {
-    id: 6,
-    title: "Glitter Notebook",
-    price: 300,
-    rating: 4.4,
-    reviews: 85,
-    image: "/api/placeholder/400/300",
-  },
-  // Add more mock products as needed
-];
+const PRODUCTS_PER_PAGE = 12;
 
-const ProductsPage = () => {
+type Props = {
+  searchParams: {
+    page: number;
+    search: string;
+    brand: string;
+  };
+};
+
+const ProductsPage = async ({ searchParams }: Props) => {
+  const { page, search, brand } =
+    ProductsPageSearchParamsSchema.parse(searchParams);
+
+  console.log(page, search, brand);
+
+  const currentPage = page;
+
+  const where = {
+    OR: [
+      { name: { contains: search.trim(), mode: "insensitive" as const } },
+      {
+        description: { contains: search.trim(), mode: "insensitive" as const },
+      },
+    ],
+    manufacturer: {
+      contains: brand.trim(),
+      mode: "insensitive" as const,
+    },
+  };
+
+  const [products, totalProducts] = await Promise.all([
+    prisma.product.findMany({
+      take: PRODUCTS_PER_PAGE,
+      skip: (currentPage - 1) * PRODUCTS_PER_PAGE,
+      where,
+    }),
+    prisma.product.count({ where }),
+  ]);
+
+  const totalPages = Math.ceil(totalProducts / PRODUCTS_PER_PAGE);
+
+  if (totalProducts === 0) return <NoProductsFound />;
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-2 text-center text-purple-700">
@@ -68,24 +62,44 @@ const ProductsPage = () => {
       </p>
 
       {/* Search bar */}
-      <div className="relative mb-8">
-        <Input
-          type="text"
-          placeholder="Search cute products..."
-          className="pl-10 pr-4 py-2 rounded-full border-2 border-purple-300 focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 "
-        />
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-      </div>
+      <form
+        action={async (data: FormData) => {
+          "use server";
+          const search = data.get("search");
+          redirect(`/products?search=${search}`);
+        }}
+        className="relative mb-8 flex"
+      >
+        <div className="relative flex-grow">
+          <Input
+            type="text"
+            name="search"
+            placeholder="Search cute products..."
+            defaultValue={search}
+            className="pl-10 pr-4 py-2 rounded-l-full border-2 border-purple-300 focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50"
+          />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+        </div>
+        <SubmitButton type="submit" className="rounded-r-full">
+          Search
+        </SubmitButton>
+      </form>
 
       {/* Product grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product) => (
-          <Product key={product.id} />
+          <Product product={product} key={product.id} />
         ))}
       </div>
-      {/* 
-      pagination component
-      */}
+
+      {/* Pagination component */}
+      <div className="mt-8">
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          basePath="/products"
+        />
+      </div>
     </div>
   );
 };

@@ -27,7 +27,7 @@ const WithdrawalModal = ({
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] max-w-[95%]">
+      <DialogContent className="sm:max-w-[425px] max-w-[95%]  bg-purple-50 rounded-xl">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-purple-700">
             Withdrawal Options

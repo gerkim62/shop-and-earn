@@ -1,0 +1,788 @@
+[
+  {
+    "id": "infinix_note_40_5g-13035",
+    "name": "Note 40 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note40-5g-.jpg",
+    "description": "Infinix Note 40 5G Android smartphone. Announced May 2024. Features 6.78″  display, Dimensity 7020 chipset, 5000 mAh battery, 512 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "infinix_gt_20_pro-12962",
+    "name": "GT 20 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-gt20-pro.jpg",
+    "description": "Infinix GT 20 Pro Android smartphone. Announced Apr 2024. Features 6.78″  display, Dimensity 8200 Ultimate chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "infinix_note_40_pro+-12874",
+    "name": "Note 40 Pro+",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-40-pro-plus-5g-.jpg",
+    "description": "Infinix Note 40 Pro+ Android smartphone. Announced Mar 2024. Features 6.78″  display, Dimensity 7020 chipset, 4600 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass."
+  },
+  {
+    "id": "infinix_note_40_pro-12875",
+    "name": "Note 40 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-40-pro-5g-.jpg",
+    "description": "Infinix Note 40 Pro Android smartphone. Announced Mar 2024. Features 6.78″  display, Dimensity 7020 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass."
+  },
+  {
+    "id": "infinix_note_40_pro_4g-12876",
+    "name": "Note 40 Pro 4G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-40-pro-4g-.jpg",
+    "description": "Infinix Note 40 Pro 4G Android smartphone. Announced Mar 2024. Features 6.78″  display, Helio G99 Ultimate chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass."
+  },
+  {
+    "id": "infinix_note_40-12877",
+    "name": "Note 40",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-40-4g-.jpg",
+    "description": "Infinix Note 40 Android smartphone. Announced Mar 2024. Features 6.78″  display, Helio G99 Ultimate chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass."
+  },
+  {
+    "id": "infinix_smart_8_plus-12817",
+    "name": "Smart 8 Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-8-plus.jpg",
+    "description": "Infinix Smart 8 Plus Android smartphone. Announced Jan 2024. Features 6.6″  display, Helio G36 chipset, 6000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_smart_8_pro-12812",
+    "name": "Smart 8 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-8-pro.jpg",
+    "description": "Infinix Smart 8 Pro Android smartphone. Announced Jan 2024. Features 6.6″  display, Helio G36 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_smart_8_(india)-12792",
+    "name": "Smart 8 (India)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-8-india.jpg",
+    "description": "Infinix Smart 8 (India) Android smartphone. Announced Jan 2024. Features 6.6″  display, Helio G36 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_smart_8_hd-12736",
+    "name": "Smart 8 HD",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-8-hd.jpg",
+    "description": "Infinix Smart 8 HD Android smartphone. Announced Dec 2023. Features 6.6″  display, Unisoc T606 chipset, 5000 mAh battery, 64 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_hot_40_pro-12733",
+    "name": "Hot 40 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-40-pro.jpg",
+    "description": "Infinix Hot 40 Pro Android smartphone. Announced Dec 2023. Features 6.78″  display, Helio G99 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_hot_40-12732",
+    "name": "Hot 40",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-40.jpg",
+    "description": "Infinix Hot 40 Android smartphone. Announced Dec 2023. Features 6.78″  display, MT6769H Helio G88 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_hot_40i-12731",
+    "name": "Hot 40i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-40i.jpg",
+    "description": "Infinix Hot 40i Android smartphone. Announced Dec 2023. Features 6.56″  display, Unisoc T606 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_smart_8-12642",
+    "name": "Smart 8",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart8.jpg",
+    "description": "Infinix Smart 8 Android smartphone. Announced Nov 2023. Features 6.6″  display, Unisoc T606 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_zero_30_4g-12641",
+    "name": "Zero 30 4G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-30-4g.jpg",
+    "description": "Infinix Zero 30 4G Android smartphone. Announced Oct 2023. Features 6.78″  display, Helio G99 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "infinix_zero_30-12518",
+    "name": "Zero 30",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero30-5g.jpg",
+    "description": "Infinix Zero 30 Android smartphone. Announced Sep 2023. Features 6.78″  display, Dimensity 8020 chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "infinix_gt_10_pro-12451",
+    "name": "GT 10 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-gt10-pro-5g.jpg",
+    "description": "Infinix GT 10 Pro Android smartphone. Announced Aug 2023. Features 6.67″  display, Dimensity 8050 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_hot_30_5g-12424",
+    "name": "Hot 30 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-30-5g.jpg",
+    "description": "Infinix Hot 30 5G Android smartphone. Announced Jul 2023. Features 6.78″  display, Dimensity 6020 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_30_vip-12365",
+    "name": "Note 30 VIP",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-x6710-note-30-vip.jpg",
+    "description": "Infinix Note 30 VIP Android smartphone. Announced Jun 2023. Features 6.67″  display, Dimensity 8050 chipset, 5000 mAh battery, 256 GB storage, 12 GB RAM."
+  },
+  {
+    "id": "infinix_hot_30_play_nfc-12289",
+    "name": "Hot 30 Play NFC",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-30-play-nfc.jpg",
+    "description": "Infinix Hot 30 Play NFC Android smartphone. Announced May 2023. Features 6.82″  display, MT6765 Helio G37 chipset, 6000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_30_pro-12273",
+    "name": "Note 30 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-30-pro.jpg",
+    "description": "Infinix Note 30 Pro Android smartphone. Announced May 2023. Features 6.67″  display, Helio G99 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_30-12288",
+    "name": "Note 30",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note30-4g.jpg",
+    "description": "Infinix Note 30 Android smartphone. Announced May 2023. Features 6.78″  display, Helio G99 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_30_5g-12272",
+    "name": "Note 30 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-30-5g.jpg",
+    "description": "Infinix Note 30 5G Android smartphone. Announced May 2023. Features 6.78″  display, Dimensity 6080 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_30i-12274",
+    "name": "Note 30i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-30i.jpg",
+    "description": "Infinix Note 30i Android smartphone. Announced May 2023. Features 6.66″  display, MT6769 Helio G85 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_smart_7_hd-12243",
+    "name": "Smart 7 HD",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart7-hd.jpg",
+    "description": "Infinix Smart 7 HD Android smartphone. Announced Apr 2023. Features 6.6″  display, 5000 mAh battery, 64 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_hot_30i-12216",
+    "name": "Hot 30i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-30i.jpg",
+    "description": "Infinix Hot 30i Android smartphone. Announced Mar 2023. Features 6.56″  display, Unisoc T606 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_hot_30-12214",
+    "name": "Hot 30",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-30.jpg",
+    "description": "Infinix Hot 30 Android smartphone. Announced Mar 2023. Features 6.78″  display, MT6769H Helio G88 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_smart_7_(india)-12131",
+    "name": "Smart 7 (India)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-7-india.jpg",
+    "description": "Infinix Smart 7 (India) Android smartphone. Announced Feb 2023. Features 6.6″  display, Unisoc SC9863A1 chipset, 6000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_smart_7-12116",
+    "name": "Smart 7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-7.jpg",
+    "description": "Infinix Smart 7 Android smartphone. Announced Feb 2023. Features 6.6″  display, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_zero_5g_2023-11976",
+    "name": "Zero 5G 2023",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-5g-2023-turbo.jpg",
+    "description": "Infinix Zero 5G 2023 Android smartphone. Announced Nov 2022. Features 6.78″  display, Dimensity 1080 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_hot_20_play-11931",
+    "name": "Hot 20 Play",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot20-play.jpg",
+    "description": "Infinix Hot 20 Play Android smartphone. Announced Oct 2022. Features 6.82″  display, MT6765 Helio G37 chipset, 6000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_hot_20s-11930",
+    "name": "Hot 20S",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot20s.jpg",
+    "description": "Infinix Hot 20S Android smartphone. Announced Oct 2022. Features 6.78″  display, MT6781 Helio G96 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_hot_20-11929",
+    "name": "Hot 20",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot20-4g.jpg",
+    "description": "Infinix Hot 20 Android smartphone. Announced Oct 2022. Features 6.82″  display, MT6769Z Helio G85 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_12_(2023)-11912",
+    "name": "Note 12 (2023)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note12-pro-4g.jpg",
+    "description": "Infinix Note 12 (2023) Android smartphone. Announced Oct 2022. Features 6.7″  display, Helio G99 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_zero_ultra-11922",
+    "name": "Zero Ultra",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-ultra.jpg",
+    "description": "Infinix Zero Ultra Android smartphone. Announced Oct 2022. Features 6.8″  display, Dimensity 920 chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "infinix_hot_20_5g-11923",
+    "name": "Hot 20 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot20-5g.jpg",
+    "description": "Infinix Hot 20 5G Android smartphone. Announced Oct 2022. Features 6.58″  display, Dimensity 810 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_hot_20i-11924",
+    "name": "Hot 20i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot20i.jpg",
+    "description": "Infinix Hot 20i Android smartphone. Announced Sep 2022. Features 6.6″  display, MT6762G Helio G25 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_zero_20-11913",
+    "name": "Zero 20",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero20-.jpg",
+    "description": "Infinix Zero 20 Android smartphone. Announced Oct 2022. Features 6.7″  display, Helio G99 chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_12i_2022-11919",
+    "name": "Note 12i 2022",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note12i-2022.jpg",
+    "description": "Infinix Note 12i 2022 Android smartphone. Announced Sep 2022. Features 6.7″  display, MT6769Z Helio G85 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_hot_12_pro-11822",
+    "name": "Hot 12 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot12-pro.jpg",
+    "description": "Infinix Hot 12 Pro Android smartphone. Announced Aug 2022. Features 6.6″  display, Unisoc Tiger T616 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_smart_6_plus_(india)-11742",
+    "name": "Smart 6 Plus (India)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-6-plus.jpg",
+    "description": "Infinix Smart 6 Plus (India) Android smartphone. Announced Jul 2022. Features 6.82″  display, MT6762G Helio G25 chipset, 5000 mAh battery, 64 GB storage, 3 GB RAM, Panda Glass."
+  },
+  {
+    "id": "infinix_note_12_pro-11695",
+    "name": "Note 12 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note12-pro-4g.jpg",
+    "description": "Infinix Note 12 Pro Android smartphone. Announced Jul 2022. Features 6.7″  display, Helio G99 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_12_pro_5g-11663",
+    "name": "Note 12 Pro 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note12-pro-5g.jpg",
+    "description": "Infinix Note 12 Pro 5G Android smartphone. Announced Jul 2022. Features 6.7″  display, Dimensity 810 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "infinix_note_12_5g-11662",
+    "name": "Note 12 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note12-5g.jpg",
+    "description": "Infinix Note 12 5G Android smartphone. Announced Jul 2022. Features 6.7″  display, Dimensity 810 chipset, 5000 mAh battery, 64 GB storage, 6 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "infinix_hot_11s_nfc-11605",
+    "name": "Hot 11s NFC",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-11s-nfc.jpg",
+    "description": "Infinix Hot 11s NFC Android smartphone. Announced Feb 2022. Features 6.78″  display, MT6769H Helio G88 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_hot_12_play-11547",
+    "name": "Hot 12 Play",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot12-play.jpg",
+    "description": "Infinix Hot 12 Play Android smartphone. Announced May 2022. Features 6.82″  display, MT6765V chipset, 6000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_hot_12_play_nfc-11876",
+    "name": "Hot 12 Play NFC",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot12-play.jpg",
+    "description": "Infinix Hot 12 Play NFC Android smartphone. Announced May 2022. Features 6.82″  display, Unisoc T610 chipset, 6000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_note_12_vip-11527",
+    "name": "Note 12 VIP",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note12-vip.jpg",
+    "description": "Infinix Note 12 VIP Android smartphone. Announced May 2022. Features 6.7″  display, MT6781 Helio G96 chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_12_g96-11526",
+    "name": "Note 12 G96",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note12-g96.jpg",
+    "description": "Infinix Note 12 G96 Android smartphone. Announced May 2022. Features 6.7″  display, MT6781 Helio G96 chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "infinix_note_12i-11523",
+    "name": "Note 12i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note12i.jpg",
+    "description": "Infinix Note 12i Android smartphone. Announced May 2022. Features 6.82″  display, MT6769Z Helio G85 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_note_12-11497",
+    "name": "Note 12",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note12.jpg",
+    "description": "Infinix Note 12 Android smartphone. Announced Apr 2022. Features 6.7″  display, MT6769H Helio G88 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_hot_12-11498",
+    "name": "Hot 12",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot12.jpg",
+    "description": "Infinix Hot 12 Android smartphone. Announced Apr 2022. Features 6.82″  display, MT6769Z Helio G85 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_smart_6_hd-11499",
+    "name": "Smart 6 HD",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-6-hd.jpg",
+    "description": "Infinix Smart 6 HD Android smartphone. Announced Apr 2022. Features 6.6″  display, Unisoc SC9863A chipset, 5000 mAh battery, 64 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_hot_11_2022-11478",
+    "name": "Hot 11 2022",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-11-2022.jpg",
+    "description": "Infinix Hot 11 2022 Android smartphone. Announced Apr 2022. Features 6.7″  display, Unisoc T610 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_hot_12i-11473",
+    "name": "Hot 12i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-12i.jpg",
+    "description": "Infinix Hot 12i Android smartphone. Announced Apr 2022. Features 6.6″  display, MT6761 Helio A22 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_zero_5g-11355",
+    "name": "Zero 5G",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-5g.jpg",
+    "description": "Infinix Zero 5G Android smartphone. Announced Feb 2022. Features 6.78″  display, Dimensity 900 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_smart_5_pro-11221",
+    "name": "Smart 5 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-5pro.jpg",
+    "description": "Infinix Smart 5 Pro Android smartphone. Announced Nov 2021. Features 6.52″  display, Unisoc SC9863A chipset, 6000 mAh battery, 32 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_hot_11_play-11216",
+    "name": "Hot 11 Play",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot11-play.jpg",
+    "description": "Infinix Hot 11 Play Android smartphone. Announced Nov 2021. Features 6.82″  display, MT6765G Helio G35 chipset, 6000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_note_11i-11214",
+    "name": "Note 11i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-11i.jpg",
+    "description": "Infinix Note 11i Android smartphone. Announced Nov 2021. Features 6.95″  display, MT6769Z Helio G85 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_note_11s-11202",
+    "name": "Note 11s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-11s.jpg",
+    "description": "Infinix Note 11s Android smartphone. Announced Nov 2021. Features 6.95″  display, MT6781 Helio G96 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_note_11-11201",
+    "name": "Note 11",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note11.jpg",
+    "description": "Infinix Note 11 Android smartphone. Announced Nov 2021. Features 6.7″  display, MT6769H Helio G88 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_smart_6-11189",
+    "name": "Smart 6",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-6.jpg",
+    "description": "Infinix Smart 6 Android smartphone. Announced Oct 2021. Features 6.6″  display, Unisoc SC9863A chipset, 5000 mAh battery, 64 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_note_11_pro-11157",
+    "name": "Note 11 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-11-pro.jpg",
+    "description": "Infinix Note 11 Pro Android smartphone. Announced Oct 2021. Features 6.95″  display, MT6781 Helio G96 chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_hot_11s-11162",
+    "name": "Hot 11s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot11s.jpg",
+    "description": "Infinix Hot 11s Android smartphone. Announced Sep 2021. Features 6.78″  display, MT6769H Helio G88 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM, NEG Dinorex T2X-1."
+  },
+  {
+    "id": "infinix_hot_11-11161",
+    "name": "Hot 11",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot11.jpg",
+    "description": "Infinix Hot 11 Android smartphone. Announced Sep 2021. Features 6.6″  display, MT6769V chipset, 5200 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_zero_x_pro-10989",
+    "name": "Zero X Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/zero-x-series.jpg",
+    "description": "Infinix Zero X Pro Android smartphone. Announced Sep 2021. Features 6.67″  display, MT6785V chipset, 4500 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_zero_x-11097",
+    "name": "Zero X",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-x-.jpg",
+    "description": "Infinix Zero X Android smartphone. Announced Sep 2021. Features 6.67″  display, MT6785V chipset, 4500 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_zero_x_neo-11098",
+    "name": "Zero X Neo",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-x-neo-.jpg",
+    "description": "Infinix Zero X Neo Android smartphone. Announced Sep 2021. Features 6.78″  display, MT6785V chipset, 5000 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_hot_10i-11031",
+    "name": "Hot 10i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-10i.jpg",
+    "description": "Infinix Hot 10i Android smartphone. Announced May 2021. Features 6.52″  display, MT6769V Helio G70 chipset, 6000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_note_10_pro_nfc-10908",
+    "name": "Note 10 Pro NFC",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-10-pro-.jpg",
+    "description": "Infinix Note 10 Pro NFC Android smartphone. Announced May 2021. Features 6.95″  display, MT6785V chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_10_pro-10907",
+    "name": "Note 10 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-10-pro-.jpg",
+    "description": "Infinix Note 10 Pro Android smartphone. Announced May 2021. Features 6.95″  display, MT6785V chipset, 5000 mAh battery, 256 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_10-10909",
+    "name": "Note 10",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-10.jpg",
+    "description": "Infinix Note 10 Android smartphone. Announced May 2021. Features 6.95″  display, MT6769Z Helio G85 chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_hot_10t-10891",
+    "name": "Hot 10T",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-10t-.jpg",
+    "description": "Infinix Hot 10T Android smartphone. Announced May 2021. Features 6.82″  display, MT6769V chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_hot_10s_nfc-10869",
+    "name": "Hot 10s NFC",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-10s--.jpg",
+    "description": "Infinix Hot 10s NFC Android smartphone. Announced Apr 2021. Features 6.82″  display, MT6769Z Helio G85 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_hot_10s-10868",
+    "name": "Hot 10s",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-10s--.jpg",
+    "description": "Infinix Hot 10s Android smartphone. Announced Apr 2021. Features 6.82″  display, MT6769Z Helio G85 chipset, 6000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_smart_5_(india)-10735",
+    "name": "Smart 5 (India)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot10-play.jpg",
+    "description": "Infinix Smart 5 (India) Android smartphone. Announced Feb 2021. Features 6.82″  display, MT6762G Helio G25 chipset, 6000 mAh battery, 32 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_hot_10_play-10699",
+    "name": "Hot 10 Play",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot10-play.jpg",
+    "description": "Infinix Hot 10 Play Android smartphone. Announced Jan 2021. Features 6.82″  display, MT6762G Helio G25 chipset, 6000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_smart_hd_2021-10646",
+    "name": "Smart HD 2021",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-hd-2021.jpg",
+    "description": "Infinix Smart HD 2021 Android smartphone. Announced Dec 2020. Features 6.1″  display, MT6761D Helio A20 chipset, 5000 mAh battery, 32 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_zero_8i-10622",
+    "name": "Zero 8i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-8i.jpg",
+    "description": "Infinix Zero 8i Android smartphone. Announced Dec 2020. Features 6.85″  display, MT6785 Helio G90T chipset, 4500 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_note_8-10514",
+    "name": "Note 8",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note8-.jpg",
+    "description": "Infinix Note 8 Android smartphone. Announced Oct 2020. Features 6.95″  display, MT6769V chipset, 5200 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass."
+  },
+  {
+    "id": "infinix_note_8i-10515",
+    "name": "Note 8i",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-8i-.jpg",
+    "description": "Infinix Note 8i Android smartphone. Announced Oct 2020. Features 6.78″  display, MT6769V chipset, 5200 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass."
+  },
+  {
+    "id": "infinix_hot_10_lite-10516",
+    "name": "Hot 10 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot10-lite-.jpg",
+    "description": "Infinix Hot 10 Lite Android smartphone. Announced Sep 2020. Features 6.6″  display, MT6761D Helio A20 chipset, 5000 mAh battery, 64 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_hot_10-10452",
+    "name": "Hot 10",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot10.jpg",
+    "description": "Infinix Hot 10 Android smartphone. Announced Sep 2020. Features 6.78″  display, MT6769V chipset, 5200 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_zero_8-10401",
+    "name": "Zero 8",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero8.jpg",
+    "description": "Infinix Zero 8 Android smartphone. Announced Aug 2020. Features 6.85″  display, MT6785 Helio G90T chipset, 4500 mAh battery, 128 GB storage, 8 GB RAM."
+  },
+  {
+    "id": "infinix_smart_5-10367",
+    "name": "Smart 5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart5-.jpg",
+    "description": "Infinix Smart 5 Android smartphone. Announced Aug 2020. Features 6.6″  display, MT6761D Helio A20 chipset, 5000 mAh battery, 64 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_hot_9_play-10285",
+    "name": "Hot 9 Play",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot9-play.jpg",
+    "description": "Infinix Hot 9 Play Android smartphone. Announced Apr 2020. Features 6.82″  display, MT6761 Helio A22 chipset, 6000 mAh battery, 64 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_note_7-10175",
+    "name": "Note 7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note7.jpg",
+    "description": "Infinix Note 7 Android smartphone. Announced Apr 2020. Features 6.95″  display, MT6769V chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass."
+  },
+  {
+    "id": "infinix_note_7_lite-10177",
+    "name": "Note 7 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note7lite.jpg",
+    "description": "Infinix Note 7 Lite Android smartphone. Announced Apr 2020. Features 6.6″  display, MT6769V chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_hot_9_pro-10272",
+    "name": "Hot 9 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot9-pro.jpg",
+    "description": "Infinix Hot 9 Pro Android smartphone. Announced May 2020. Features 6.6″  display, MT6762 Helio P22 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_hot_9-10156",
+    "name": "Hot 9",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot9.jpg",
+    "description": "Infinix Hot 9 Android smartphone. Announced Mar 2020. Features 6.6″  display, MT6762D Helio A25 chipset, 5000 mAh battery, 128 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_s5_pro_(16+32)-10128",
+    "name": "S5 Pro (16+32)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-s5-pro-new.jpg",
+    "description": "Infinix S5 Pro (16+32) Android smartphone. Announced Mar 2020. Features 6.53″  display, MT6765 Helio P35 chipset, 4000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_s5_pro_(48+40)-10127",
+    "name": "S5 Pro (48+40)",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-s5-pro-new.jpg",
+    "description": "Infinix S5 Pro (48+40) Android smartphone. Announced Mar 2020. Features 6.53″  display, MT6765 Helio P35 chipset, 4000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_s5_pro-10116",
+    "name": "S5 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-s5-pro-new.jpg",
+    "description": "Infinix S5 Pro Android smartphone. Announced Mar 2020. Features 6.53″  display, MT6765 Helio P35 chipset, 4000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_s5_lite-10008",
+    "name": "S5 lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-s5-lite-new.jpg",
+    "description": "Infinix S5 lite Android smartphone. Announced Nov 2019. Features 6.6″  display, MT6762 Helio P22 chipset, 4000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_smart_4-9980",
+    "name": "Smart 4",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart4-x653.jpg",
+    "description": "Infinix Smart 4 Android smartphone. Announced Oct 2019. Features 6.6″  display, MT6761 Helio A22 chipset, 4000 mAh battery, 32 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_smart_4c-9975",
+    "name": "Smart 4c",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart4-x653c.jpg",
+    "description": "Infinix Smart 4c Android smartphone. Announced Nov 2019. Features 6.6″  display, MT6761 Helio A22 chipset, 4000 mAh battery, 32 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_hot_8_lite-9927",
+    "name": "Hot 8 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-8-lite.jpg",
+    "description": "Infinix Hot 8 Lite Android smartphone. Announced Oct 2019. Features 6.6″  display, MT6580 chipset, 5000 mAh battery, 32 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_s5-9915",
+    "name": "S5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-s5-x652.jpg",
+    "description": "Infinix S5 Android smartphone. Announced Oct 2019. Features 6.6″  display, MT6762 Helio P22 chipset, 4000 mAh battery, 128 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_hot_8-9856",
+    "name": "Hot 8",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-s8.jpg",
+    "description": "Infinix Hot 8 Android smartphone. Announced Sep 2019. Features 6.52″  display, MT6761 Helio A22 chipset, 5000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_note_6-9761",
+    "name": "Note 6",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-6-x610.jpg",
+    "description": "Infinix Note 6 Android smartphone. Announced Jun 2019. Features 6.01″  display, MT6765 Helio P35 chipset, 4000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_smart3_plus-9680",
+    "name": "Smart3 Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart3-plus.jpg",
+    "description": "Infinix Smart3 Plus Android smartphone. Announced Apr 2019. Features 6.21″  display, MT6761 Helio A22 chipset, 3500 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_s4-9678",
+    "name": "S4",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-s4.jpg",
+    "description": "Infinix S4 Android smartphone. Announced Apr 2019. Features 6.2″  display, MT6762 Helio P22 chipset, 4000 mAh battery, 64 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_hot_7_pro-9679",
+    "name": "Hot 7 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-7-pro.jpg",
+    "description": "Infinix Hot 7 Pro Android smartphone. Announced Mar 2019. Features 6.2″  display, MT6757T Helio P25 chipset, 4000 mAh battery, 64 GB storage, 6 GB RAM."
+  },
+  {
+    "id": "infinix_hot_7-9658",
+    "name": "Hot 7",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot7.jpg",
+    "description": "Infinix Hot 7 Android smartphone. Announced Jan 2019. Features 6.2″  display, MT6580 chipset, 4000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_zero_6_pro-9657",
+    "name": "Zero 6 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-6.jpg",
+    "description": "Infinix Zero 6 Pro Android smartphone. Announced Mar 2019. Features 6.18″  display, Snapdragon 636 chipset, 3650 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "infinix_zero_6-9656",
+    "name": "Zero 6",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-6.jpg",
+    "description": "Infinix Zero 6 Android smartphone. Announced Mar 2019. Features 6.18″  display, Snapdragon 636 chipset, 3650 mAh battery, 64 GB storage, 6 GB RAM, Corning Gorilla Glass 5."
+  },
+  {
+    "id": "infinix_smart_2_hd-9477",
+    "name": "Smart 2 HD",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart2-hd-n.jpg",
+    "description": "Infinix Smart 2 HD Android smartphone. Announced Oct 2018. Features 6.0″  display, MT6580 chipset, 3500 mAh battery, 16 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "infinix_hot_6x-9423",
+    "name": "Hot 6X",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot6x-n.jpg",
+    "description": "Infinix Hot 6X Android smartphone. Announced  2018. Features 6.2″  display, Snapdragon 425 chipset, 4000 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_note_5_stylus-9416",
+    "name": "Note 5 Stylus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note5-stylus-n.jpg",
+    "description": "Infinix Note 5 Stylus Android smartphone. Announced  2018. Features 6.0″  display, MT6763T Helio P23 chipset, 4000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_s3x-9420",
+    "name": "S3X",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-s3x-n.jpg",
+    "description": "Infinix S3X Android smartphone. Announced  2018. Features 6.2″  display, Snapdragon 430 chipset, 4000 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_hot_6-9426",
+    "name": "Hot 6",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot6-n.jpg",
+    "description": "Infinix Hot 6 Android smartphone. Announced  2018. Features 6.0″  display, 4000 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_note_5-9417",
+    "name": "Note 5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note5-n.jpg",
+    "description": "Infinix Note 5 Android smartphone. Announced  2018. Features 6.0″  display, MT6763 Helio P23 chipset, 4500 mAh battery, 64 GB storage, 4 GB RAM."
+  },
+  {
+    "id": "infinix_smart_2_pro-9429",
+    "name": "Smart 2 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart2-pro-n.jpg",
+    "description": "Infinix Smart 2 Pro Android smartphone. Announced  2018. Features 5.5″  display, 3050 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_smart_2-9430",
+    "name": "Smart 2",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart2-n.jpg",
+    "description": "Infinix Smart 2 Android smartphone. Announced  2018. Features 5.5″  display, 3050 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_hot_6_pro-9425",
+    "name": "Hot 6 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot6-pro-n.jpg",
+    "description": "Infinix Hot 6 Pro Android smartphone. Announced  2018. Features 6.0″  display, Snapdragon 425 chipset, 4000 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_hot_s3-9421",
+    "name": "Hot S3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-s3-n.jpg",
+    "description": "Infinix Hot S3 Android smartphone. Announced  2018. Features 5.7″  display, Snapdragon 430 chipset, 4000 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_zero_5_pro-9415",
+    "name": "Zero 5 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero5-pro.jpg",
+    "description": "Infinix Zero 5 Pro Android smartphone. Announced  2018. Features 5.98″  display, MT6757CD Helio P20 chipset, 4350 mAh battery, 128 GB storage, 6 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "infinix_zero_5-9414",
+    "name": "Zero 5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero5-n.jpg",
+    "description": "Infinix Zero 5 Android smartphone. Announced  2018. Features 5.98″  display, MT6757CD Helio P20 chipset, 4350 mAh battery, 64 GB storage, 6 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "infinix_hot_5_lite-9428",
+    "name": "Hot 5 Lite",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot5-lite-n.jpg",
+    "description": "Infinix Hot 5 Lite Android smartphone. Announced  2017. Features 5.5″  display, MT6580M chipset, 4000 mAh battery, 16 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "infinix_hot_5-9427",
+    "name": "Hot 5",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot5-n.jpg",
+    "description": "Infinix Hot 5 Android smartphone. Announced  2017. Features 5.5″  display, MT6580M chipset, 4000 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_note_4_pro-9419",
+    "name": "Note 4 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note4-pro-n.jpg",
+    "description": "Infinix Note 4 Pro Android smartphone. Announced Jul 2017. Features 5.7″  display, MT6753 chipset, 4500 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_note_4-9418",
+    "name": "Note 4",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note4-n.jpg",
+    "description": "Infinix Note 4 Android smartphone. Announced  2018. Features 5.7″  display, MT6753 chipset, 4300 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_smart-9431",
+    "name": "Smart",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-smart-n.jpg",
+    "description": "Infinix Smart Android smartphone. Announced  2017. Features 5.0″  display, MT6580 chipset, 3060 mAh battery, 16 GB storage, 1000 MB RAM."
+  },
+  {
+    "id": "infinix_zero_4_plus-9479",
+    "name": "Zero 4 Plus",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero4-plus-n.jpg",
+    "description": "Infinix Zero 4 Plus Android smartphone. Announced Mar 2017. Features 5.98″  display, MT6797M Helio X20 chipset, 4000 mAh battery, 64 GB storage, 4 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "infinix_zero_4-9478",
+    "name": "Zero 4",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-zero4-n.jpg",
+    "description": "Infinix Zero 4 Android smartphone. Announced Mar 2017. Features 5.5″  display, MT6753 chipset, 3200 mAh battery, 32 GB storage, 3 GB RAM, Corning Gorilla Glass 3."
+  },
+  {
+    "id": "infinix_s2_pro-9422",
+    "name": "S2 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-s2-n.jpg",
+    "description": "Infinix S2 Pro Android smartphone. Announced  2017. Features 5.2″  display, MT6753 chipset, 3000 mAh battery, 32 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_hot_4_pro-9473",
+    "name": "Hot 4 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot4-pro-n.jpg",
+    "description": "Infinix Hot 4 Pro Android smartphone. Announced Aug 2016. Features 5.5″  display, MT6737W chipset, 4000 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_hot_4-9472",
+    "name": "Hot 4",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot4-n.jpg",
+    "description": "Infinix Hot 4 Android smartphone. Announced Jul 2016. Features 5.5″  display, MT6580 chipset, 4000 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_note_3_pro-9476",
+    "name": "Note 3 Pro",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note3-pro-n.jpg",
+    "description": "Infinix Note 3 Pro Android smartphone. Announced Jul 2016. Features 6.0″  display, MT6753 chipset, 4500 mAh battery, 16 GB storage, 3 GB RAM."
+  },
+  {
+    "id": "infinix_note_3-9475",
+    "name": "Note 3",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note3-n.jpg",
+    "description": "Infinix Note 3 Android smartphone. Announced Jul 2016. Features 6.0″  display, MT6753 chipset, 4500 mAh battery, 16 GB storage, 2 GB RAM."
+  },
+  {
+    "id": "infinix_hot_s-9474",
+    "name": "Hot S",
+    "img": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-s-n.jpg",
+    "description": "Infinix Hot S Android smartphone. Announced Jun 2016. Features 5.2″  display, MT6753 chipset, 3000 mAh battery, 16 GB storage, 2 GB RAM."
+  }
+]

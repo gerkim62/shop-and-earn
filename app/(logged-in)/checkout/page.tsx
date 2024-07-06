@@ -6,6 +6,7 @@ import { Share2 } from "lucide-react";
 import Cart from "./_components/cart";
 import { getCurrentUserOrRedirect } from "@/auth/user";
 import prisma from "@/lib/prisma";
+import rewards from "@/constants/rewards";
 
 const CartCheckoutPage = async () => {
   const user = await getCurrentUserOrRedirect();
@@ -15,9 +16,20 @@ const CartCheckoutPage = async () => {
       userId: user.id,
     },
     include: {
+      station: true,
       items: {
         include: {
           product: true,
+        },
+      },
+    },
+  });
+
+  const regions = await prisma.region.findMany({
+    include: {
+      cities: {
+        include: {
+          stations: true,
         },
       },
     },
@@ -36,7 +48,7 @@ const CartCheckoutPage = async () => {
       <Alert className="mb-8 bg-gradient-to-r from-purple-500 to-pink-500 text-white">
         <Share2 className="h-4 w-4" />
         <AlertTitle className="text-lg font-bold">
-          Earn 200 KSH for Every Friend You Refer!
+          Earn {rewards.onSignup.referrer} KSH for Every Friend You Refer!
         </AlertTitle>
         <AlertDescription>
           Share your unique code and start earning now. The more friends join,
@@ -51,7 +63,7 @@ const CartCheckoutPage = async () => {
       </Alert>
 
       {/* Cart */}
-      <Cart cart={cart} />
+      <Cart referralBalance={user.balance} regions={regions} cart={cart} />
 
       {/* Additional Referral Incentive */}
       <Card className="mt-8 bg-yellow-50">
@@ -60,8 +72,8 @@ const CartCheckoutPage = async () => {
             💡 Quick Tip: Refer More, Save More!
           </h3>
           <p>
-            You're just 2 referrals away from getting your next purchase for
-            free! Refer now and watch your savings grow.
+            You're just a couple referrals away from getting your next purchase
+            for free! Refer now and watch your savings grow.
           </p>
         </CardContent>
       </Card>

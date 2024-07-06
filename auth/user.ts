@@ -8,7 +8,13 @@ import { Cart, CartItem, Notification, Order, User } from "@prisma/client";
 
 export type UserWithRelations = User & {
   orders: Order[];
-  referredUsers: { fullName: string; email: string }[];
+  referredUsers: {
+    id: number;
+    createdAt: Date;
+    fullName: string;
+    email: string;
+    orders: { id: number; createdAt: Date }[];
+  }[];
   notifications: Notification[];
   cart:
     | (Cart & {
@@ -32,8 +38,16 @@ async function getUserFromSession(): Promise<UserWithRelations | null> {
       orders: true,
       referredUsers: {
         select: {
+          id: true,
           email: true,
           fullName: true,
+          createdAt: true,
+          orders: {
+            select: {
+              id: true,
+              createdAt: true,
+            },
+          },
         },
       },
       notifications: true,

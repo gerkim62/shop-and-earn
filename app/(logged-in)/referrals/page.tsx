@@ -1,59 +1,34 @@
-"use client";
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Copy, CheckCircle, XCircle, Link, ShoppingCart } from "lucide-react";
-import app from "@/constants/app";
+import { getCurrentUserOrRedirect } from "@/auth/user";
 import WithdrawalModal from "@/components/modals/withdrawal";
+import CopyButton from "@/components/small/copy-button";
+import NothingHere from "@/components/small/nothing-here";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import app from "@/constants/app";
+import rewards from "@/constants/rewards";
+import { Link, ShoppingCart } from "lucide-react";
+import { headers } from "next/headers";
 
-const ReferralsPage = () => {
-  const [copied, setCopied] = useState(false);
+const ReferralsPage = async () => {
+  const headersList = headers();
+
+  const hostname = headersList.get("host");
+  const user = await getCurrentUserOrRedirect();
+  const referralLink = `https://${hostname}/invite/${user.referralCode}`;
 
   // Mock data - replace with actual data from your backend
-  const referralLink = "https://example.com/refer/USER123";
-  const totalInvited = 15;
-  const totalEarned = 5000; // in KSH
-  const invitedUsers = [
-    {
-      id: 1,
-      name: "John Doe",
-      signedUp: true,
-      purchased: true,
-      signUpDate: "2024-03-01",
-      purchaseDate: "2024-03-05",
-      earnedFromSignUp: 100,
-      earnedFromPurchase: 500,
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      signedUp: true,
-      purchased: false,
-      signUpDate: "2024-03-05",
-      purchaseDate: null,
-      earnedFromSignUp: 100,
-      earnedFromPurchase: 0,
-    },
-    {
-      id: 3,
-      name: "Alice Johnson",
-      signedUp: true,
-      purchased: true,
-      signUpDate: "2024-03-10",
-      purchaseDate: "2024-03-12",
-      earnedFromSignUp: 100,
-      earnedFromPurchase: 500,
-    },
-    // Add more users as needed
-  ];
+  const totalInvited = user.referredUsers.length;
+  const totalEarned = user.balance;
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(referralLink);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 3000);
-  };
+  const invitedUsers = user.referredUsers.map((user) => ({
+    id: user.id,
+    name: user.fullName,
+    signedUp: true,
+    purchased: user.orders.length > 0,
+    signUpDate: user.createdAt,
+    purchaseDate: user.orders[0]?.createdAt,
+  }));
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-100 to-purple-100 p-4">
@@ -74,8 +49,13 @@ const ReferralsPage = () => {
               </p>
               <ul className="list-disc list-inside text-sm text-purple-600 mt-2 space-y-1">
                 <li>Share your unique referral link with friends</li>
-                <li>Earn KSH100 when a friend signs up</li>
-                <li>Earn KSH500 when they make their first purchase</li>
+                <li>
+                  Earn KSH {rewards.onSignup.referrer} when a friend signs up
+                </li>
+                <li>
+                  Earn KSH {rewards.onFirstPurchase.referrer} when they make
+                  their first purchase
+                </li>
                 <li>There's no limit - refer as many friends as you want!</li>
               </ul>
               <p className="text-sm text-purple-600 mt-2 font-semibold">
@@ -87,14 +67,7 @@ const ReferralsPage = () => {
               <h3 className="text-lg font-semibold mb-2">Your Referral Link</h3>
               <div className="flex space-x-2">
                 <Input value={referralLink} readOnly className="flex-grow" />
-                <Button onClick={copyToClipboard} className="w-24">
-                  {copied ? (
-                    <CheckCircle className="h-5 w-5" />
-                  ) : (
-                    <Copy className="h-5 w-5" />
-                  )}
-                  {copied ? "Copied!" : "Copy"}
-                </Button>
+                <CopyButton dontNormalize link={referralLink} />
               </div>
             </div>
 
@@ -113,10 +86,9 @@ const ReferralsPage = () => {
                     Total Earned
                     {
                       <WithdrawalModal currentBalance={totalEarned}>
-                        <Button
-                        size={"sm"}
-                        variant={"outline"}
-                        >Withdraw</Button>
+                        <Button size={"sm"} variant={"outline"}>
+                          Withdraw
+                        </Button>
                       </WithdrawalModal>
                     }
                   </h3>
@@ -129,6 +101,11 @@ const ReferralsPage = () => {
 
             <div>
               <h3 className="text-lg font-semibold mb-2">Invited Friends</h3>
+              <NothingHere
+                icon="frown"
+                message="You haven't invited any friends yet. Share your referral link to start earning!"
+                title="No Invited Friends"
+              />
               <div className="space-y-2">
                 {invitedUsers.map((user) => (
                   <Card key={user.id}>
@@ -145,19 +122,24 @@ const ReferralsPage = () => {
                         </div>
                       </div>
                       <p className="text-sm text-gray-600">
-                        Signed up: {user.signUpDate}
+                        Signed up:{" "}
+                        {new Date(user.signUpDate).toLocaleDateString()}
                       </p>
                       {user.purchaseDate && (
                         <p className="text-sm text-gray-600">
-                          First purchase: {user.purchaseDate}
+                          First purchase:{" "}
+                          {new Date(user.purchaseDate).toLocaleDateString()}
                         </p>
                       )}
-                      <p className="text-sm font-semibold text-purple-600 mt-2">
+                      {/* <p className="text-sm font-semibold text-purple-600 mt-2">
                         Earned: KSH{" "}
                         {(
-                          user.earnedFromSignUp + user.earnedFromPurchase
+                          (user.signedUp ? {
+                            
+                          } : 0) +
+                          (user.purchased ? 500 : 0)
                         ).toLocaleString()}
-                      </p>
+                      </p> */}
                     </CardContent>
                   </Card>
                 ))}
