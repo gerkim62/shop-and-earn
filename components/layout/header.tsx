@@ -11,6 +11,7 @@ import { useSession } from "next-auth/react";
 import { getCurrentUser, type UserWithRelations } from "@/auth/user";
 import { usePathname } from "next/navigation";
 import { useCart } from "../context/cart";
+import { useScrollDirection } from "use-scroll-direction";
 
 const Header: FC = () => {
   const { status } = useSession();
@@ -18,6 +19,17 @@ const Header: FC = () => {
 
   const isAuthenticated = status === "authenticated";
   const [gettingUser, setGettingUser] = useState(false);
+
+  const { scrollDirection } = useScrollDirection();
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    if (scrollDirection === "DOWN") {
+      setVisible(false);
+    } else if (scrollDirection === "UP") {
+      setVisible(true);
+    }
+  }, [scrollDirection]);
 
   const [user, setUser] = useState<UserWithRelations | null>(null);
   const { cartProductIds, setCartProductIds } = useCart();
@@ -41,16 +53,14 @@ const Header: FC = () => {
   }, [status, pathname, setCartProductIds]);
 
   return (
-    <header className="antialiased border-b">
+    <header
+      className={`antialiased sticky z-50 transition-all duration-500 ease-in-out border-b 
+      ${visible ? "top-0" : "-top-16"}
+      `}
+    >
       <nav className="bg-white border-gray-200 lg:px-6 py-2.5 dark:bg-gray-800 px-4">
         <div className="flex flex-wrap justify-between items-center">
           <div className="flex items-center ">
-            <button
-              id="toggleSidebar"
-              aria-expanded="true"
-              aria-controls="sidebar"
-              className="hidden p-2 mr-3 text-gray-600 rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700"
-            ></button>
             <Link href="/" className="flex mr-4 items-center">
               <Image
                 src="/logo.jpeg"
