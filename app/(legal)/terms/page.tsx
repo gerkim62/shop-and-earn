@@ -6,9 +6,9 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import app from "@/constants/app";
 
 const TermsOfServicePage = () => {
-  const [expandedSection, setExpandedSection] = useState(null);
+  const [expandedSection, setExpandedSection] = useState<null | number>(null);
 
-  const toggleSection = (index) => {
+  const toggleSection = (index: number) => {
     setExpandedSection(expandedSection === index ? null : index);
   };
 

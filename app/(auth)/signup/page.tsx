@@ -1,7 +1,6 @@
 import SignUpForm from "@/components/forms/signup";
 import Link from "@/components/small/link-with-loader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import app from "@/constants/app";
 import { Coins, Gift, Heart, ShieldCheck } from "lucide-react";
 

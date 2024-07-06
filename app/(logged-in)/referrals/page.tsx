@@ -19,7 +19,7 @@ const ReferralsPage = async () => {
 
   // Mock data - replace with actual data from your backend
   const totalInvited = user.referredUsers.length;
-  const totalEarned = user.balance;
+  const balance = user.balance;
 
   const invitedUsers = user.referredUsers.map((user) => ({
     id: user.id,
@@ -83,9 +83,9 @@ const ReferralsPage = async () => {
               <Card className="mt-4 sm:mt-auto">
                 <CardContent className="p-4 ">
                   <h3 className="text-lg font-semibold flex justify-between">
-                    Total Earned
+                    My balance
                     {
-                      <WithdrawalModal currentBalance={totalEarned}>
+                      <WithdrawalModal currentBalance={balance}>
                         <Button size={"sm"} variant={"outline"}>
                           Withdraw
                         </Button>
@@ -93,7 +93,7 @@ const ReferralsPage = async () => {
                     }
                   </h3>
                   <p className="text-3xl font-bold text-purple-600">
-                    KSH {totalEarned.toLocaleString()}
+                    KSH {balance.toLocaleString()}
                   </p>
                 </CardContent>
               </Card>

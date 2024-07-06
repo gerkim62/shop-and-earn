@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogClose,
@@ -10,6 +10,10 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Smartphone } from "lucide-react";
+import { toast } from "sonner";
+import { graduateCartToOrder } from "@/actions/cart";
+import { useRouter } from "next/navigation";
+import { useCart } from "../context/cart";
 
 type MpesaPaymentDialogProps = {
   children: React.ReactNode;
@@ -23,6 +27,49 @@ const MpesaPaymentDialog = ({
   total,
 }: MpesaPaymentDialogProps) => {
   const amountToPay = total - referralBalance;
+
+  const [graduating, setGraduating] = useState(false);
+  const router = useRouter();
+  const { setCartProductIds } = useCart();
+
+  async function handlePaid() {
+    const confirmPayment = () => {
+        const message = `
+          🎉 Almost there! Let's make sure everything's in order:
+      
+          • Have you completed the payment?
+          • Your referral balance will be applied automatically.
+      
+          ⚠️ Important note:
+          If you confirm without having paid, your referral balance 
+          will be deducted and the order may be cancelled.
+      
+          Ready to proceed? Click OK if you've made the payment.
+          If you need more time, no worries! Just click Cancel.
+        `;
+      
+        return window.confirm(message);
+      };
+
+    if (!confirmPayment()) return;
+
+    try {
+      setGraduating(true);
+      await graduateCartToOrder({
+        grandTotal: total,
+        referralAmountToDeduct: referralBalance,
+      });
+
+      toast.success("Order placed successfully awaiting approval.");
+
+      setCartProductIds([]);
+      router.push("/account");
+    } catch (error) {
+      toast.error("Something went wrong!");
+    }
+
+    setGraduating(false);
+  }
 
   return (
     <Dialog>
@@ -65,6 +112,7 @@ const MpesaPaymentDialog = ({
         <DialogFooter className="mt-3 gap-2 flex justify-between">
           <DialogClose asChild>
             <Button
+              disabled={graduating}
               type="button"
               variant="outline"
               className="bg-purple-100 text-purple-700 hover:bg-purple-200 rounded-full text-sm px-3 py-1"
@@ -74,10 +122,12 @@ const MpesaPaymentDialog = ({
           </DialogClose>
 
           <Button
+            disabled={graduating}
+            onClick={handlePaid}
             type="button"
             className="bg-purple-600 text-white hover:bg-purple-700 rounded-full text-sm px-3 py-1"
           >
-            I have paid
+            {graduating ? "Placing order..." : "I have paid"}
           </Button>
         </DialogFooter>
       </DialogContent>

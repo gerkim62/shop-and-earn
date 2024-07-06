@@ -7,6 +7,12 @@ type Props = {};
 
 export default function page({}: Props) {
   async function addRegions() {
+    const existingRegions = await prisma.region.findMany();
+    if (existingRegions.length > 0) {
+      console.log("Regions already exist, skipping seeding.");
+      return;
+    }
+
     for (const region of regions) {
       console.log("region", region.name);
       const createdRegion = await prisma.region.create({
@@ -36,42 +42,50 @@ export default function page({}: Props) {
     }
   }
 
-  addRegions();
-//   products();
-  return <div>page</div>;
-}
-
-async function products() {
-  console.log("Seeding started...");
-  // in folder ./data/brands has json files such as Infinix.json, Samsung.json, Tecno.json. Each file contains an array of objects with keys name, description, img. the file name is the brand name. seed the data to the database
-
-  try {
-    const brands = fs.readdirSync("./data/brands");
-    console.log("brands", brands);
-    for (const brand of brands) {
-      console.log("brand", brand);
-      const data = JSON.parse(
-        fs.readFileSync(`./data/brands/${brand}`, "utf8")
-      );
-      for (const item of data) {
-        console.log("item", item);
-        await prisma.product.create({
-          data: {
-            name: item.name,
-            description: item.description,
-            images: [item.img],
-            manufacturer: brand.replace(".json", ""),
-            // TODO: add actual price
-            price: Math.floor(Math.random() * 1000),
-          },
-        });
-      }
+  async function products() {
+    const existingProducts = await prisma.product.findMany();
+    if (existingProducts.length > 0) {
+      console.log("Products already exist, skipping seeding.");
+      return;
     }
 
-    console.log("Seeded.");
-  } catch (error) {
-    console.error("Seeding failed: ", error);
-  } finally {
-    await prisma.$disconnect();
+    console.log("Seeding started...");
+    // In folder ./data/brands has json files such as Infinix.json, Samsung.json, Tecno.json. Each file contains an array of objects with keys name, description, img. The file name is the brand name. Seed the data to the database
+    try {
+      const brands = fs.readdirSync("./data/brands");
+      console.log("brands", brands);
+      for (const brand of brands) {
+        console.log("brand", brand);
+        const data = JSON.parse(
+          fs.readFileSync(`./data/brands/${brand}`, "utf8")
+        );
+
+        // @ts-expect-error
+        for (const item of data) {
+          console.log("item", item);
+          await prisma.product.create({
+            data: {
+              name: item.name,
+              description: item.description,
+              images: [item.img],
+              manufacturer: brand.replace(".json", ""),
+              // TODO: add actual price
+              price: Math.floor(Math.random() * 1000),
+            },
+          });
+        }
+      }
+
+      console.log("Seeded.");
+    } catch (error) {
+      console.error("Seeding failed: ", error);
+    } finally {
+      await prisma.$disconnect();
+    }
   }
+
+  addRegions();
+  products();
+
+  return <div>page</div>;
 }

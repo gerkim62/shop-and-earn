@@ -1,8 +1,6 @@
-import React from "react";
-import { Search, Box } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Link from "../small/link-with-loader";
+import { Search } from "lucide-react";
 import { redirect } from "next/navigation";
 
 export default function ProductSearch() {

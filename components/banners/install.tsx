@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
-import { X, Zap, Wifi, Download } from "lucide-react";
 import app from "@/constants/app";
+import { Download, X, Zap } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 const InstallBanner = () => {
   const [isVisible, setIsVisible] = useState(true);

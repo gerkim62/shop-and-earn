@@ -69,12 +69,12 @@ export default function Cart({ cart, regions, referralBalance }: Props) {
   const deliveryFee =
     Number(deliveryStation?.fee.replace(/\D/g, "") || "0") ?? 0;
 
-  const tax = Math.round(0.16 * cartTotal)
+  const tax = Math.round(0.16 * cartTotal);
 
   const grandTotal = cartTotal + deliveryFee + tax;
 
   const netToPay = Math.max(
-    MINIMUM_AMOUNT_USER_MUST_PAY,
+    Math.min(MINIMUM_AMOUNT_USER_MUST_PAY, cartTotal),
     grandTotal - referralBalance
   );
   const deductedReferralBalance = grandTotal - netToPay;
@@ -229,7 +229,10 @@ export default function Cart({ cart, regions, referralBalance }: Props) {
           </Alert>
         )}
 
-        <MpesaPaymentDialog referralBalance={referralBalance} total={cartTotal}>
+        <MpesaPaymentDialog
+          referralBalance={deductedReferralBalance}
+          total={grandTotal}
+        >
           <Button className="w-full" disabled={isPaid || !deliveryStation}>
             {isPaid ? (
               <>

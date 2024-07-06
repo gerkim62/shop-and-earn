@@ -121,4 +121,70 @@ async function removeFromCart({ productId }: { productId: number }) {
   return cart;
 }
 
-export { addToCart, removeFromCart, updatePickupStation, updateQuantity };
+async function graduateCartToOrder({
+    grandTotal,
+    referralAmountToDeduct,
+  }: {
+    grandTotal: number;
+    referralAmountToDeduct: number;
+  }) {
+    try {
+      console.log('Fetching current user...');
+      const user = await getCurrentUserOrRedirect();
+      console.log('Current user fetched:', user);
+  
+      console.log('Fetching cart for user ID:', user.id);
+      const cart = await prisma.cart.findUnique({
+        where: {
+          userId: user.id,
+        },
+      });
+  
+      if (!cart) {
+        console.error('Cart not found for user ID:', user.id);
+        throw new Error("Cart not found");
+      }
+      console.log('Cart found:', cart);
+  
+      const totalAmount = grandTotal;
+      console.log('Grand total calculated:', totalAmount);
+  
+      console.log('Starting transaction to create order and update user balance...');
+      const [order] = await prisma.$transaction([
+        prisma.order.create({
+          data: {
+            totalAmount,
+            userId: user.id,
+          },
+        }),
+        prisma.user.update({
+          where: {
+            id: user.id,
+          },
+          data: {
+            balance: {
+              decrement: referralAmountToDeduct,
+            },
+            cart: {
+              delete: true,
+            },
+          },
+        }),
+      ]);
+      console.log('Transaction successful, order created:', order);
+  
+      return order;
+    } catch (error) {
+      console.error('Error occurred:', error);
+      throw error;
+    }
+  }
+  
+
+export {
+  addToCart,
+  removeFromCart,
+  updatePickupStation,
+  updateQuantity,
+  graduateCartToOrder,
+};
