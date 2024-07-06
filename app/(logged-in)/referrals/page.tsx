@@ -101,11 +101,13 @@ const ReferralsPage = async () => {
 
             <div>
               <h3 className="text-lg font-semibold mb-2">Invited Friends</h3>
-              <NothingHere
-                icon="frown"
-                message="You haven't invited any friends yet. Share your referral link to start earning!"
-                title="No Invited Friends"
-              />
+              {invitedUsers.length === 0 && (
+                <NothingHere
+                  icon="frown"
+                  message="You haven't invited any friends yet. Share your referral link to start earning!"
+                  title="No Invited Friends"
+                />
+              )}
               <div className="space-y-2">
                 {invitedUsers.map((user) => (
                   <Card key={user.id}>
