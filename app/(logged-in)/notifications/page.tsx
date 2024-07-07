@@ -1,65 +1,19 @@
-import React from "react";
+import { getCurrentUserOrRedirect } from "@/auth/user";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import prisma from "@/lib/prisma";
 import {
   Bell,
-  Gift,
   CreditCard,
-  ShoppingCart,
+  Gift,
   Heart,
+  ShoppingCart,
   Star,
 } from "lucide-react";
-import { getServerSession } from "next-auth";
-import authOptions from "@/auth/options";
-import { redirect } from "next/navigation";
-import prisma from "@/lib/prisma";
 
 const NotificationsPage = async () => {
-  // Mock data for notifications
-  // const notifications = [
-  //   {
-  //     id: 1,
-  //     type: "reward",
-  //     message: "You earned 500 KSH from a referral!",
-  //     time: "2 hours ago",
-  //   },
-  //   {
-  //     id: 2,
-  //     type: "purchase",
-  //     message: "Your order #12345 has been shipped!",
-  //     time: "1 day ago",
-  //   },
-  //   {
-  //     id: 3,
-  //     type: "sale",
-  //     message: "Flash sale on electronics! 50% off!",
-  //     time: "3 days ago",
-  //   },
-  //   {
-  //     id: 4,
-  //     type: "wishlist",
-  //     message: "An item from your wishlist is now on sale!",
-  //     time: "1 week ago",
-  //   },
-  //   {
-  //     id: 5,
-  //     type: "review",
-  //     message: "Someone liked your product review!",
-  //     time: "2 weeks ago",
-  //   },
-  // ] as const
-  const email = (await getServerSession(authOptions))?.user.email;
+  const user = await getCurrentUserOrRedirect();
 
-  if (!email) redirect("/login");
-
-  const notifications = (
-    await prisma.notification.findMany({
-      where: {
-        user: {
-          email: email,
-        },
-      },
-    })
-  )
+  const notificationsPromise = user.notifications
     .reverse()
     .map((notification) => ({
       id: notification.id,
@@ -69,16 +23,21 @@ const NotificationsPage = async () => {
       title: notification.title,
     }));
 
-  const updated = await prisma.notification.updateMany({
+  const updatedPromise = await prisma.notification.updateMany({
     where: {
       user: {
-        email: email,
+        email: user.email,
       },
     },
     data: {
       read: true,
     },
   });
+
+  const [notifications, updated] = await Promise.all([
+    notificationsPromise,
+    updatedPromise,
+  ]);
 
   console.log(updated);
 

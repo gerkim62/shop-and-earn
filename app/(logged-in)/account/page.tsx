@@ -1,4 +1,4 @@
-import authOptions from "@/auth/options";
+import { getCurrentUserOrRedirect } from "@/auth/user";
 import PreferencesModal from "@/components/modals/preferences";
 import WithdrawalModal from "@/components/modals/withdrawal";
 import CopyButton from "@/components/small/copy-button";
@@ -17,70 +17,18 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import limits from "@/constants/limits";
-import prisma from "@/lib/prisma";
+import { formatNumber } from "@/lib/utils";
 import { Gift, ShoppingBag, User } from "lucide-react";
-import { getServerSession } from "next-auth";
 import { headers } from "next/headers";
-import { redirect } from "next/navigation";
 
 const MyAccountPage = async () => {
-  const session = await getServerSession(authOptions);
+  const user = await getCurrentUserOrRedirect();
 
   const headersList = headers();
 
   const hostname = headersList.get("host");
 
-  if (!session) redirect("/login");
-
-  // Mock data
-  // const user = {
-  //   name: "Jane Doe",
-  //   email: "jane@example.com",
-  //   referralCode: "JANE2023",
-  //   referralCount: 8,
-  //   referralTarget: 10,
-  //   earnedRewards: 1600,
-  // };
-
-  if (!session.user || !session.user.email) {
-    redirect("/login");
-  }
-
-  const user = await prisma.user.findUnique({
-    where: {
-      email: session.user.email,
-    },
-    include: {
-      orders: {
-        select: {
-          id: true,
-          createdAt: true,
-          totalAmount: true,
-          status: true,
-        },
-      },
-      referredUsers: {
-        select: {
-          id: true,
-          fullName: true,
-          createdAt: true,
-          orders: {
-            select: {
-              id: true,
-            },
-          },
-        },
-      },
-    },
-  });
-
-  if (!user) {
-    redirect("/login");
-  }
-
   const referralLink = `https://${hostname}/invite/${user.referralCode}`;
-
-
 
   const referrals = user.referredUsers.map((referredUser) => ({
     id: referredUser.id,
@@ -160,7 +108,8 @@ const MyAccountPage = async () => {
               className="mb-2"
             />
             <p className="text-sm text-gray-600">
-              {user.balance} / {limits.withdrawal}
+              {formatNumber(user.balance)} / {formatNumber(limits.withdrawal)}{" "}
+              KSH
             </p>
           </CardContent>
         </Card>
@@ -174,7 +123,7 @@ const MyAccountPage = async () => {
           </CardHeader>
           <CardContent>
             <h3 className="text-3xl font-bold text-green-600 mb-2">
-              KSH {user.balance}
+              KSH {formatNumber(user.balance)}
             </h3>
             <p className="text-gray-600 mb-4">
               Available to use on your next purchase
@@ -222,9 +171,7 @@ const MyAccountPage = async () => {
                     icon="frown"
                     title="You haven't referred anyone yet"
                     message="Start sharing your referral link to earn rewards."
-                  />{
-                    JSON.stringify(referrals)
-                  }
+                  />
                 </>
               )}
             </CardContent>
@@ -233,9 +180,7 @@ const MyAccountPage = async () => {
         <TabsContent value="orders">
           <Card>
             <CardHeader>
-              <CardTitle>
-                My Orders ({orders.length})
-              </CardTitle>
+              <CardTitle>My Orders ({orders.length})</CardTitle>
             </CardHeader>
             <CardContent>
               {orders.length > 0 ? (
@@ -253,7 +198,9 @@ const MyAccountPage = async () => {
                       <TableRow key={order.id}>
                         <TableCell>{order.id}</TableCell>
                         <TableCell>{order.date}</TableCell>
-                        <TableCell className="whitespace-nowrap">{order.total} KSH</TableCell>
+                        <TableCell className="whitespace-nowrap">
+                          {formatNumber(order.total)} KSH
+                        </TableCell>
                         <TableCell>{order.status}</TableCell>
                       </TableRow>
                     ))}

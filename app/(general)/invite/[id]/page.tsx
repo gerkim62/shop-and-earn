@@ -20,6 +20,10 @@ type InvitationPageProps = {
 };
 
 const InvitationPage = async ({ params: { id } }: InvitationPageProps) => {
+  const code = Number(id);
+  if (isNaN(code)) {
+    redirect("/signup");
+  }
   const referrer = await prisma.user.findUnique({
     where: {
       referralCode: Number(id),

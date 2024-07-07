@@ -11,7 +11,7 @@ import rewards from "@/constants/rewards";
 const CartCheckoutPage = async () => {
   const user = await getCurrentUserOrRedirect();
 
-  const cart = await prisma.cart.findUnique({
+  const cartPromise = await prisma.cart.findUnique({
     where: {
       userId: user.id,
     },
@@ -25,7 +25,7 @@ const CartCheckoutPage = async () => {
     },
   });
 
-  const regions = await prisma.region.findMany({
+  const regionsPromise = await prisma.region.findMany({
     include: {
       cities: {
         include: {
@@ -34,6 +34,8 @@ const CartCheckoutPage = async () => {
       },
     },
   });
+
+  const [cart, regions] = await Promise.all([cartPromise, regionsPromise]);
 
   return (
     <div className="container mx-auto px-4 sm:my-4 rounded py-8 min-h-screen bg-gradient-to-b from-pink-100 to-purple-100  p-4 max-w-4xl space-y-8">

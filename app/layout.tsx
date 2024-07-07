@@ -14,6 +14,8 @@ import app from "@/constants/app";
 
 const font = Quicksand({ subsets: ["latin"] });
 
+//     <link rel="apple-touch-icon" href="/example.png">
+
 export const metadata: Metadata = {
   applicationName: app.name,
   title: {
@@ -27,6 +29,12 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: app.name,
   },
+  icons: [
+    {
+      rel: "apple-touch-icon",
+      url: "/apple-touch-icon.png",
+    },
+  ],
 };
 
 export const viewport: Viewport = {
@@ -53,7 +61,7 @@ export default function RootLayout({
             <InstallBanner />
             <BackToTopButton />
             <Footer />
-            <Toaster />
+            <Toaster closeButton />
           </CartProvider>
         </AuthProvider>
       </body>

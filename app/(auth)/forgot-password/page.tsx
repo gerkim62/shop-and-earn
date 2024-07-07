@@ -1,5 +1,6 @@
-import contact from "@/constants/contact";
 import React from "react";
+import Link from "next/link";
+import contact from "@/constants/contact";
 
 const ForgotPasswordPage = () => {
   const email = contact.email;
@@ -53,10 +54,19 @@ const ForgotPasswordPage = () => {
             </div>
 
             <div className="mt-6 text-center">
-              <p className="font-medium ">
+              <p className="font-medium">
                 Send us the email and we will get back to you as soon as we can.
               </p>
             </div>
+          </div>
+
+          <div className="mt-6 text-center">
+            <Link
+              href="/login"
+              className="text-sm font-medium text-purple-600 hover:text-purple-500 hover:underline"
+            >
+              Remember your password? Log in
+            </Link>
           </div>
         </div>
       </div>

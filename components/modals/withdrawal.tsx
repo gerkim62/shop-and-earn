@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { ShoppingBag, DollarSign, CreditCard } from "lucide-react";
 import Link from "../small/link-with-loader";
+import { formatNumber } from "@/lib/utils";
 
 type WithdrawalModalProps = {
   currentBalance: number;
@@ -33,16 +34,17 @@ const WithdrawalModal = ({
             Withdrawal Options
           </DialogTitle>
           <DialogDescription className="text-gray-600 text-sm">
-            Withdraw your earnings via MPESA. Minimum withdrawal amount is KSH {withdrawalLimit}.
+            Withdraw your earnings via MPESA. Minimum withdrawal amount is KSH{" "}
+            {formatNumber(withdrawalLimit)}.
           </DialogDescription>
         </DialogHeader>
         <div className="py-4 pt-0">
           <div className="flex items-center justify-between mb-4">
             <span className="text-sm font-medium text-gray-500">
-             Your Current Balance
+              Your Current Balance
             </span>
             <span className="text-lg font-bold text-purple-600">
-              {currentBalance} KSH
+              {formatNumber(currentBalance)} KSH
             </span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
@@ -65,14 +67,15 @@ const WithdrawalModal = ({
               <ShoppingBag className="h-5 w-5 text-purple-600 mt-0.5" />
               <span>
                 <strong>Shop Now:</strong> Use your full balance of{" "}
-                {currentBalance} KSH to buy products.
+                {formatNumber(currentBalance)} KSH to buy products.
               </span>
             </div>
             <div className="flex items-start space-x-2 text-sm">
               <CreditCard className="h-5 w-5 text-purple-600 mt-0.5" />
               <span>
-                <strong>Withdrawal:</strong> Once you reach KSH
-                {withdrawalLimit}, you can withdraw it via MPESA.
+                <strong>Withdrawal:</strong> Once you reach{" "}
+                {formatNumber(withdrawalLimit)} KSH, you can withdraw it via
+                MPESA.
               </span>
             </div>
             <div className="flex items-start space-x-2 text-sm">

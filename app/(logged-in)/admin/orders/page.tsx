@@ -33,8 +33,7 @@ const OrdersPage = async ({ searchParams }: Props) => {
     return <Denied />;
   }
 
-  // In a real implementation, you would fetch orders from the database
-  const orders = await prisma.order.findMany({
+  const ordersPromise = prisma.order.findMany({
     take: MAX_ITEMS_PER_PAGE,
     skip: (page - 1) * MAX_ITEMS_PER_PAGE,
     orderBy: {
@@ -42,7 +41,12 @@ const OrdersPage = async ({ searchParams }: Props) => {
     },
   });
 
-  const totalOrders = await prisma.order.count();
+  const totalOrdersPromise = prisma.order.count();
+
+  const [orders, totalOrders] = await Promise.all([
+    ordersPromise,
+    totalOrdersPromise,
+  ]);
 
   return (
     <div className="container mx-auto py-10">

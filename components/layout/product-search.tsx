@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { redirect } from "next/navigation";
+import SubmitButton from "../small/submit-button";
 
 export default function ProductSearch() {
   return (
@@ -30,13 +30,13 @@ export default function ProductSearch() {
             placeholder="Search for products..."
             className="flex-grow rounded-md border-purple-300 focus:border-purple-500 focus:ring focus:ring-purple-200 focus:ring-opacity-50 w-full"
           />
-          <Button
+          <SubmitButton
             type="submit"
             className="bg-purple-600 hover:bg-purple-700 text-white"
           >
             <Search className="h-4 w-4 mr-2" />
             Search
-          </Button>
+          </SubmitButton>
         </form>
       </div>
     </div>

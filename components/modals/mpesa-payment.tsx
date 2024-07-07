@@ -14,6 +14,8 @@ import { toast } from "sonner";
 import { graduateCartToOrder } from "@/actions/cart";
 import { useRouter } from "next/navigation";
 import { useCart } from "../context/cart";
+import { formatNumber } from "@/lib/utils";
+import paymentMethods from "@/constants/payment-account";
 
 type MpesaPaymentDialogProps = {
   children: React.ReactNode;
@@ -36,15 +38,11 @@ const MpesaPaymentDialog = ({
     const confirmPayment = () => {
       const message = `
       🎉 Almost done! Please confirm:
-    
-      • Payment completed?
-      • Referral balance will apply automatically.
-    
-      ⚠️ Note: Confirming without payment may result in order 
-      cancellation and loss of referral balance.
-    
-      Ready? Click OK if paid, or Cancel if you need more time.
-    `;
+      • Has the payment been completed?
+      • The referral balance will apply automatically.
+      ⚠️ Note: Confirming without payment may result in order cancellation and loss of referral balance.
+      Ready? Click OK if payment is complete, or Cancel if you need more time.
+      `;
 
       return window.confirm(message);
     };
@@ -82,13 +80,15 @@ const MpesaPaymentDialog = ({
         <div className="space-y-3 text-sm">
           <div className="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
             <div>
-              <p className="text-purple-600">Total: KES {total}</p>
               <p className="text-purple-600">
-                Referrals: KES {referralBalance}
+                Total: KES {formatNumber(total)}
+              </p>
+              <p className="text-purple-600">
+                Referrals: KES {formatNumber(referralBalance)}
               </p>
             </div>
             <p className="text-purple-800 font-semibold">
-              Pay: KES {amountToPay}
+              Pay: KES {formatNumber(amountToPay)}
             </p>
           </div>
           <ol className="list-decimal list-inside space-y-1 text-purple-700 pl-2">
@@ -96,14 +96,17 @@ const MpesaPaymentDialog = ({
             <li>Lipa na M-Pesa</li>
             <li>Buy Goods and Services</li>
             <li>
-              Till Number: <span className="font-semibold">4523484</span>
+              Till Number:{" "}
+              <span className="font-semibold">
+                {paymentMethods.till.number}
+              </span>
             </li>
-            <li>Amount: KES {amountToPay}</li>
+            <li>Amount: KES {formatNumber(amountToPay)}</li>
             <li>Enter M-Pesa PIN</li>
             <li>Confirm transaction</li>
           </ol>
           <p className="text-purple-600 text-xs italic">
-            Your referral balance of KES {referralBalance} will be
+            Your referral balance of KES {formatNumber(referralBalance)} will be
             auto-deducted.
           </p>
         </div>

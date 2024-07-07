@@ -1,18 +1,19 @@
 "use client";
 
 import { removeFromCart, updateQuantity } from "@/actions/cart";
+import { useCart } from "@/components/context/cart";
+import MpesaPaymentDialog from "@/components/modals/mpesa-payment";
 import PickupStationModal from "@/components/modals/pickup-station";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { formatNumber } from "@/lib/utils";
 import { CartItem, City, Product, Region, Station } from "@prisma/client";
 import { CheckCircle, MapPin, Minus, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import EmptyCart from "./empty";
-import { useCart } from "@/components/context/cart";
-import MpesaPaymentDialog from "@/components/modals/mpesa-payment";
 
 type CartItemWithProduct = CartItem & {
   product: Product;
@@ -51,9 +52,12 @@ export default function Cart({ cart, regions, referralBalance }: Props) {
   const items = cart?.items.map((item) => ({
     id: item.id,
     name: item.product.manufacturer + " " + item.product.name,
-    price: item.product.price,
+    discountedPrice:
+      item.product.price - (item.product.discount * item.product.price) / 100,
+    actualPrice: item.product.price,
     quantity: item.quantity,
     productId: item.productId,
+    discount: item.product.discount,
   }));
   const [cartItems, setCartItems] = useState(items || []);
 
@@ -62,7 +66,7 @@ export default function Cart({ cart, regions, referralBalance }: Props) {
   }
 
   const cartTotal = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
+    (acc, item) => acc + item.discountedPrice * item.quantity,
     0
   );
 
@@ -93,7 +97,15 @@ export default function Cart({ cart, regions, referralBalance }: Props) {
           <div key={item.id} className="flex items-center justify-between mb-4">
             <div>
               <h3 className="font-semibold">{item.name}</h3>
-              <p className="text-sm text-gray-600">{item.price} KSH</p>
+              <p className="text-sm text-gray-600">
+                {formatNumber(item.discountedPrice)} KSH
+              </p>
+              <p>
+                <span className="line-through text-gray-500">
+                  {formatNumber(item.actualPrice)} KSH
+                </span>{" "}
+                <span className="text-green-600">{item.discount}% off</span>
+              </p>
             </div>
             <div className="flex items-center">
               <Button
@@ -186,23 +198,23 @@ export default function Cart({ cart, regions, referralBalance }: Props) {
         <div className="space-y-2">
           <div className="flex justify-between">
             <span>Subtotal:</span>
-            <span>{cartTotal.toFixed(2)} KSH</span>
+            <span>{formatNumber(cartTotal)} KSH</span>
           </div>
           <div className="flex justify-between">
             <span>Tax (16%):</span>
-            <span>{tax.toFixed(2)} KSH</span>
+            <span>{formatNumber(tax)} KSH</span>
           </div>
           <div className="flex justify-between">
             <span>Delivery Fee:</span>
-            <span>{deliveryFee.toFixed(2)} KSH</span>
+            <span>{formatNumber(deliveryFee)} KSH</span>
           </div>
           <div className="flex justify-between text-green-600">
             <span>Referrals Applied:</span>
-            <span>-{deductedReferralBalance.toFixed(2)} KSH</span>
+            <span>-{formatNumber(deductedReferralBalance)} KSH</span>
           </div>
           <div className="flex justify-between font-bold text-lg mt-2">
             <span>Total:</span>
-            <span>{netToPay.toFixed(2)} KSH</span>
+            <span>{formatNumber(netToPay)} KSH</span>
           </div>
         </div>
 

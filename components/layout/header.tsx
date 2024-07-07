@@ -1,7 +1,7 @@
 "use client";
 
 import app from "@/constants/app";
-import { Bell, ShoppingCart, LogIn, Loader2 } from "lucide-react";
+import { Bell, ShoppingCart, LogIn, Loader2, Package } from "lucide-react";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 import Link from "../small/link-with-loader";
@@ -77,6 +77,18 @@ const Header: FC = () => {
           <div className="flex items-center lg:order-2 sm:gap-4 gap-2">
             {isAuthenticated ? (
               <>
+                <Button
+                  asChild
+                  variant={"ghost"}
+                  type="button"
+                  className="p-2 inline-flex items-center text-xs"
+                >
+                  <Link href={"/products"}>
+                    <Package className="w-6 h-6 sm:inline hidden" />
+                    <span className="hidden sm:inline ml-2">Products</span>
+                  </Link>
+                </Button>
+
                 <Button
                   asChild
                   variant={"ghost"}

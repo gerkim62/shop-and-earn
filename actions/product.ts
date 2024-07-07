@@ -1,6 +1,7 @@
 "use server";
 
 import prisma from "@/lib/prisma";
+import { revalidatePath } from "next/cache";
 
 export async function updateProductPrice({
   id,
@@ -15,5 +16,7 @@ export async function updateProductPrice({
       price,
     },
   });
+
+  revalidatePath("/products");
   return product;
 }
