@@ -11,6 +11,7 @@ import Activities from "@/components/activities";
 import { CartProvider } from "@/components/context/cart";
 import BackToTopButton from "@/components/small/back-to-top-button";
 import app from "@/constants/app";
+import contact from "@/constants/contact";
 
 const font = Quicksand({ subsets: ["latin"] });
 
@@ -35,6 +36,24 @@ export const metadata: Metadata = {
       url: "/apple-touch-icon.png",
     },
   ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    description: app.desription,
+    siteName: app.name,
+    title: app.name,
+    countryName: "Kenya",
+    alternateLocale: "en-KE",
+    emails: [contact.email],
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: app.name,
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {

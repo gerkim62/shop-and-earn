@@ -7,6 +7,7 @@ import env from "@/constants/env";
 type Props = {};
 
 export default async function page({}: Props) {
+  // await prisma.product.deleteMany();
   async function createAdminUser() {
     const admin = await prisma.user.findUnique({
       where: {
@@ -79,17 +80,23 @@ export default async function page({}: Props) {
     try {
       const brands = fs.readdirSync("./data/brands");
       console.log("brands", brands);
-      await Promise.all(
-        brands.map(async (brand) => {
-          console.log("brand", brand);
-          const data = JSON.parse(
-            fs.readFileSync(`./data/brands/${brand}`, "utf8")
-          );
+
+      for (const brand of brands) {
+        console.log("brand", brand);
+        const data = JSON.parse(
+          fs.readFileSync(`./data/brands/${brand}`, "utf8")
+        );
+
+        // @ts-expect-error
+        for (let i = 0; i < data.length; i += 5) {
+          console.log(`batch ${i}`);
+          // @ts-expect-error
+          const batch = data.slice(i, i + 5);
 
           await Promise.all(
             // @ts-expect-error
-            data.map(async (item) => {
-              console.log("item", item);
+            batch.map(async (item) => {
+              // console.log("item", item);
               await prisma.product.create({
                 data: {
                   name: item.name,
@@ -105,8 +112,8 @@ export default async function page({}: Props) {
               });
             })
           );
-        })
-      );
+        }
+      }
 
       console.log("Seeded.");
     } catch (error) {
