@@ -18,6 +18,7 @@ const font = Quicksand({ subsets: ["latin"] });
 //     <link rel="apple-touch-icon" href="/example.png">
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cashlink.netlify.app/"),
   applicationName: app.name,
   title: {
     default: app.name,
