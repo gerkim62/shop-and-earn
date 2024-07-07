@@ -1,5 +1,6 @@
 "use server";
 
+import { sendNotification } from "@/app/(logged-in)/admin/_actions/user";
 import { getCurrentUserOrRedirect } from "@/auth/user";
 import prisma from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
@@ -122,64 +123,71 @@ async function removeFromCart({ productId }: { productId: number }) {
 }
 
 async function graduateCartToOrder({
-    grandTotal,
-    referralAmountToDeduct,
-  }: {
-    grandTotal: number;
-    referralAmountToDeduct: number;
-  }) {
-    try {
-      console.log('Fetching current user...');
-      const user = await getCurrentUserOrRedirect();
-      console.log('Current user fetched:', user);
-  
-      console.log('Fetching cart for user ID:', user.id);
-      const cart = await prisma.cart.findUnique({
-        where: {
+  grandTotal,
+  referralAmountToDeduct,
+}: {
+  grandTotal: number;
+  referralAmountToDeduct: number;
+}) {
+  try {
+    console.log("Fetching current user...");
+    const user = await getCurrentUserOrRedirect();
+    console.log("Current user fetched:", user);
+
+    console.log("Fetching cart for user ID:", user.id);
+    const cart = await prisma.cart.findUnique({
+      where: {
+        userId: user.id,
+      },
+    });
+
+    if (!cart) {
+      console.error("Cart not found for user ID:", user.id);
+      throw new Error("Cart not found");
+    }
+    console.log("Cart found:", cart);
+
+    const totalAmount = grandTotal;
+    console.log("Grand total calculated:", totalAmount);
+
+    console.log(
+      "Starting transaction to create order and update user balance..."
+    );
+    const [order] = await prisma.$transaction([
+      prisma.order.create({
+        data: {
+          totalAmount,
           userId: user.id,
         },
-      });
-  
-      if (!cart) {
-        console.error('Cart not found for user ID:', user.id);
-        throw new Error("Cart not found");
-      }
-      console.log('Cart found:', cart);
-  
-      const totalAmount = grandTotal;
-      console.log('Grand total calculated:', totalAmount);
-  
-      console.log('Starting transaction to create order and update user balance...');
-      const [order] = await prisma.$transaction([
-        prisma.order.create({
-          data: {
-            totalAmount,
-            userId: user.id,
+      }),
+      prisma.user.update({
+        where: {
+          id: user.id,
+        },
+        data: {
+          balance: {
+            decrement: referralAmountToDeduct,
           },
-        }),
-        prisma.user.update({
-          where: {
-            id: user.id,
+          cart: {
+            delete: true,
           },
-          data: {
-            balance: {
-              decrement: referralAmountToDeduct,
-            },
-            cart: {
-              delete: true,
-            },
-          },
-        }),
-      ]);
-      console.log('Transaction successful, order created:', order);
-  
-      return order;
-    } catch (error) {
-      console.error('Error occurred:', error);
-      throw error;
-    }
+        },
+      }),
+    ]);
+    console.log("Transaction successful, order created:", order);
+
+    await sendNotification({
+      userId: user.id,
+      title: "Order Placed",
+      message: `Your order #${order.id} has been placed successfully. Thank you for shopping with us.`,
+      type: "purchase",
+    });
+    return order;
+  } catch (error) {
+    console.error("Error occurred:", error);
+    throw error;
   }
-  
+}
 
 export {
   addToCart,

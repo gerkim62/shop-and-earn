@@ -2,10 +2,33 @@ import prisma from "@/lib/prisma";
 import React from "react";
 import fs from "fs";
 import regions from "@/data/regions";
+import env from "@/constants/env";
 
 type Props = {};
 
-export default function page({}: Props) {
+export default async function page({}: Props) {
+  async function createAdminUser() {
+    const admin = await prisma.user.findUnique({
+      where: {
+        email: env.ADMIN_EMAIL,
+      },
+    });
+
+    if (admin) {
+      console.log("Admin user already exists, skipping seeding.");
+      return;
+    }
+
+    await prisma.user.create({
+      data: {
+        email: env.ADMIN_EMAIL,
+        fullName: env.ADMIN_NAME,
+        password: env.ADMIN_PASSWORD,
+        role: "ADMIN",
+      },
+    });
+    console.log("Admin user created.");
+  }
   async function addRegions() {
     const existingRegions = await prisma.region.findMany();
     if (existingRegions.length > 0) {
@@ -69,8 +92,10 @@ export default function page({}: Props) {
               description: item.description,
               images: [item.img],
               manufacturer: brand.replace(".json", ""),
-              // TODO: add actual price
-              price: Math.floor(Math.random() * 1000),
+              discount: Math.floor(Math.random() * 40) + 1,
+              reviewsCount: Math.floor(Math.random() * 100) + 1,
+              rating:
+                Math.round((Math.pow(Math.random(), 2) * 1.5 + 3.7) * 10) / 10,
             },
           });
         }
@@ -79,13 +104,10 @@ export default function page({}: Props) {
       console.log("Seeded.");
     } catch (error) {
       console.error("Seeding failed: ", error);
-    } finally {
-      await prisma.$disconnect();
     }
   }
 
-  addRegions();
-  products();
+  await Promise.all([createAdminUser(), addRegions(), products()]);
 
   return <div>page</div>;
 }

@@ -1,18 +1,15 @@
-import React from "react";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import app from "@/constants/app";
+import contact from "@/constants/contact";
 import Link from "../small/link-with-loader";
 import ProductSearch from "./product-search";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 py-12 pt-4">
-      
       <ProductSearch />
       <div className="max-w-6xl mx-auto px-4 mt-4">
-        
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
@@ -99,7 +96,10 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <Link href="#" className="text-gray-600 hover:text-purple-600">
+            <p>
+              <span className="text-purple-600">{contact.email}</span>
+            </p>
+            {/* <Link href="#" className="text-gray-600 hover:text-purple-600">
               <Facebook size={24} />
             </Link>
             <Link href="#" className="text-gray-600 hover:text-purple-600">
@@ -110,7 +110,7 @@ const Footer = () => {
             </Link>
             <Link href="#" className="text-gray-600 hover:text-purple-600">
               <Linkedin size={24} />
-            </Link>
+            </Link> */}
           </div>
           <p className="text-gray-600">
             &copy; {new Date().getFullYear()} {app.name}. All rights reserved.

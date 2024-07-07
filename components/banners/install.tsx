@@ -5,9 +5,21 @@ import { Download, X, Zap } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import { useLocalStorage } from "usehooks-ts";
+
+const MAX_DENY_DAYS = 7;
+const ONE_DAY = 24 * 60 * 60 * 1000;
 
 const InstallBanner = () => {
   const [isInstalling, setIsInstalling] = useState(false);
+  const [deniedDate, setDeniedDate] = useLocalStorage<string | null>(
+    "install_denied_date",
+    null
+  );
+
+  const isStillDenied = deniedDate
+    ? new Date(deniedDate).getTime() + MAX_DENY_DAYS * ONE_DAY > Date.now()
+    : false;
 
   //for BeforeInstallPromptEvent Type, see: https://stackoverflow.com/questions/51503754/typescript-type-beforeinstallpromptevent
 
@@ -61,6 +73,14 @@ const InstallBanner = () => {
     setIsBannerVisible(false);
   }
 
+  function deny() {
+    setDeniedDate(new Date().toISOString());
+    setIsBannerVisible(false);
+    toast.warning("Denied", {
+      description: `${app.name} installation was denied.`,
+    });
+  }
+
   if (isInstalling) {
     return (
       <div
@@ -78,11 +98,17 @@ const InstallBanner = () => {
       {/* Transparent fullscreen overlay */}
       <div
         onClick={() => setIsBannerVisible(false)}
-        className="fixed inset-0 bg-black bg-opacity-50 z-40"
+        className={`fixed inset-0 bg-black bg-opacity-50 z-40 ${
+          isStillDenied ? "hidden" : ""
+        }`}
       />
 
       {/* Bottom fixed banner */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-800 text-white p-4 flex items-center justify-between z-50 shadow-lg">
+      <div
+        className={`fixed bottom-0 left-0 right-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-800 text-white p-4 items-center justify-between z-50 shadow-lg ${
+          isStillDenied ? "hidden" : "flex"
+        }`}
+      >
         <div className="flex items-center">
           <div className="mr-4">
             <Image
@@ -111,7 +137,7 @@ const InstallBanner = () => {
           </button>
           <button
             className="text-gray-300 hover:text-white transition-colors duration-300 hidden sm:block"
-            onClick={() => setIsBannerVisible(false)}
+            onClick={deny}
           >
             <X size={28} />
           </button>

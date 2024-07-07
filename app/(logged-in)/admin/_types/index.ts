@@ -5,4 +5,9 @@ type Search = {
 
 type SearchTarget = "orders" | "products" | "users";
 
-export type { Search, SearchTarget };
+type Pagination = {
+  currentPage: number;
+  totalPages: number;
+};
+
+export type { Search, SearchTarget, Pagination };

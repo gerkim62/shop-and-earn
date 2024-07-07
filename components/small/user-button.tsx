@@ -10,7 +10,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Bell, Gift, LogOut, ShoppingCart, User } from "lucide-react";
+import {
+  Bell,
+  Gift,
+  LayoutDashboard,
+  LogOut,
+  ShoppingCart,
+  User,
+} from "lucide-react";
 
 type UserButtonProps = {
   user: UserWithRelations;
@@ -53,6 +60,19 @@ export default function UserButton({ user }: UserButtonProps) {
             <span>My Account</span>
           </Link>
         </DropdownMenuItem>
+        {user.role !== "USER" && (
+          <DropdownMenuItem>
+            <Link
+              hidden={user.role !== "ADMIN"}
+              href="/admin"
+              className="flex items-center gap-2 text-purple-700"
+              prefetch={false}
+            >
+              <LayoutDashboard className="h-4 w-4" />
+              <span>Admin Dashboard</span>
+            </Link>
+          </DropdownMenuItem>
+        )}
         <DropdownMenuItem asChild className="hover:bg-purple-100">
           <Link
             href="/referrals"

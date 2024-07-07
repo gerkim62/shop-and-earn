@@ -2,27 +2,63 @@
 
 import { addToCart, removeFromCart } from "@/actions/cart";
 import { useCart } from "@/components/context/cart";
+import EditProductModal from "@/components/modals/edit-product";
 import { Button } from "@/components/ui/button";
 import {
-    Card,
-    CardContent,
-    CardFooter,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
+import { formatNumber } from "@/lib/utils";
 import { Product as ProductType } from "@prisma/client";
-import { Star } from "lucide-react";
+import { Edit, Star } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
 
 type Props = {
   product: ProductType & { description: string };
+  canEdit: boolean;
 };
 
-export default function Product({ product }: Props) {
+const StarRating = ({ rating }: { rating: number }) => {
+  return (
+    <div className="flex items-center">
+      {[...Array(5)].map((_, i) => {
+        // const starValue = i + 1;
+        return (
+          <div key={i} className="relative">
+            <Star className="h-5 w-5 text-gray-300" fill="currentColor" />
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: `${Math.max(0, Math.min(100, (rating - i) * 100))}%`,
+                overflow: "hidden",
+              }}
+            >
+              <Star className="h-5 w-5 text-yellow-400" fill="currentColor" />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default function Product({ product, canEdit }: Props) {
   const [loading, setLoading] = useState(false);
+  const discount = product.discount;
   const { cartProductIds, setCartProductIds } = useCart();
+
+  const originalPrice = product.price;
+  const discountedPrice = originalPrice - (originalPrice * discount) / 100;
+  const rating = product.rating;
+  const reviewsCount = product.reviewsCount;
+
   return (
     <Card
       key={product.id}
@@ -41,22 +77,28 @@ export default function Product({ product }: Props) {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-2xl font-bold text-green-600">{product.price} KSH</p>
-        <div className="flex items-center mt-2">
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              className={`h-5 w-5 ${
-                i < Math.floor(5) ? "text-yellow-400" : "text-gray-300"
-              }`}
-              fill="currentColor"
-            />
-          ))}
-          <span className="ml-2 text-sm text-gray-600">({6} reviews)</span>
+        <div className="flex items-baseline">
+          <p className="text-2xl font-bold text-green-600">
+            {formatNumber(discountedPrice)} KSH
+          </p>
+          <p className="ml-2 text-sm line-through text-gray-500">
+            {formatNumber(originalPrice)} KSH
+          </p>
         </div>
-        <p className="mt-4 text-sm text-gray-600 ">{product.description}</p>
+        {discount > 0 && (
+          <p className="text-sm font-semibold text-red-500 mt-1">
+            {discount}% off!
+          </p>
+        )}
+        <div className="flex items-center mt-2">
+          <StarRating rating={rating} />
+          <span className="ml-2 text-sm text-gray-600">
+            ({reviewsCount} reviews)
+          </span>
+        </div>
+        <p className="mt-4 text-sm text-gray-600">{product.description}</p>
       </CardContent>
-      <CardFooter className="flex justify-between ">
+      <CardFooter className="flex justify-between">
         <Button
           disabled={loading || cartProductIds.includes(product.id)}
           onClick={async () => {
@@ -70,7 +112,6 @@ export default function Product({ product }: Props) {
             } catch (error) {
               toast.error("Failed to add to cart!");
             }
-
             setLoading(false);
           }}
           className={`bg-purple-500 hover:bg-purple-600 text-white w-full ${
@@ -102,12 +143,16 @@ export default function Product({ product }: Props) {
         >
           Remove from Cart
         </Button>
-        {/* <Button
-          variant="outline"
-          className="text-pink-500 border-pink-500 hover:bg-pink-50"
-        >
-          <Heart className="h-5 w-5" />
-        </Button> */}
+        <EditProductModal product={product}>
+          <Button
+            variant="outline"
+            className={`text-pink-500 border-pink-500 hover:bg-pink-50 ml-4 ${
+              canEdit ? "" : "hidden"
+            }`}
+          >
+            <Edit className="h-5 w-5" />
+          </Button>
+        </EditProductModal>
       </CardFooter>
     </Card>
   );

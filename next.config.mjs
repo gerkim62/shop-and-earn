@@ -5,8 +5,9 @@ import withSerwistInit from "@serwist/next";
 // files more efficiently.
 // A viable option is `git rev-parse HEAD`.
 const revision = crypto.randomUUID();
-
+console.log("Environment:", process.env.NODE_ENV);
 const withSerwist = withSerwistInit({
+  disable: process.env.NODE_ENV === "development",
   cacheOnNavigation: true,
   swSrc: "workers/sw.ts",
   swDest: "public/sw.js",

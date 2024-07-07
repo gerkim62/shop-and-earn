@@ -56,7 +56,10 @@ model Product {
   name         String
   description  String
   price        Float       @default(0)
+  discount     Float       @default(12)
   stock        Int         @default(0)
+  reviewsCount Int
+  rating       Float
   images       String[]
   orders       OrderItem[]
   cartItems    CartItem[]
@@ -113,6 +116,7 @@ model ReferralTransaction {
 enum Role {
   USER
   ADMIN
+  EDITOR
 }
 
 enum OrderStatus {

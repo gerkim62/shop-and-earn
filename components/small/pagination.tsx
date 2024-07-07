@@ -3,27 +3,34 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
-  basePath: string;
+  currentPageIdentifier?: string;
 }
 
 export const Pagination: React.FC<PaginationProps> = ({
   currentPage,
   totalPages,
-  basePath,
+  currentPageIdentifier = "page",
 }) => {
   const searchParams = useSearchParams();
+  const basePath = usePathname();
+
+  if (totalPages <= 1) return null;
+
   const paramsAsObject = Object.fromEntries(searchParams);
   return (
-    <div className="flex justify-center items-center space-x-2">
+    <div className="flex justify-between items-center space-x-2">
       <Link
         href={{
           pathname: basePath,
-          query: { ...paramsAsObject, page: currentPage - 1 },
+          query: {
+            ...paramsAsObject,
+            [currentPageIdentifier]: currentPage - 1,
+          },
         }}
         className={`inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 ${
           currentPage === 1 ? "pointer-events-none opacity-50" : ""
@@ -39,7 +46,10 @@ export const Pagination: React.FC<PaginationProps> = ({
       <Link
         href={{
           pathname: basePath,
-          query: { ...paramsAsObject, page: currentPage + 1 },
+          query: {
+            ...paramsAsObject,
+            [currentPageIdentifier]: currentPage + 1,
+          },
         }}
         className={`inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 ${
           currentPage === totalPages ? "pointer-events-none opacity-50" : ""

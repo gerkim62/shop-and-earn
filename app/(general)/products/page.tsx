@@ -5,8 +5,9 @@ import ProductsPageSearchParamsSchema from "@/validation/pages/products";
 import { Search } from "lucide-react";
 import { redirect } from "next/navigation";
 import NoProductsFound from "./_components/no-product";
-import { Pagination } from "./_components/pagination";
 import Product from "./_components/product";
+import { Pagination } from "@/components/small/pagination";
+import { getCurrentUser } from "@/auth/user";
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -26,6 +27,9 @@ const ProductsPage = async ({ searchParams }: Props) => {
 
   const currentPage = page;
 
+  const user = await getCurrentUser();
+  const userRole = user?.role ?? "USER";
+
   const where = {
     OR: [
       { name: { contains: search.trim(), mode: "insensitive" as const } },
@@ -37,6 +41,7 @@ const ProductsPage = async ({ searchParams }: Props) => {
       contains: brand.trim(),
       mode: "insensitive" as const,
     },
+    ...(userRole === "USER" ? { price: { gt: 0 } } : {}),
   };
 
   const [products, totalProducts] = await Promise.all([
@@ -88,17 +93,17 @@ const ProductsPage = async ({ searchParams }: Props) => {
       {/* Product grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product) => (
-          <Product product={product} key={product.id} />
+          <Product
+            canEdit={user?.role === "ADMIN" || user?.role === "EDITOR"}
+            product={product}
+            key={product.id}
+          />
         ))}
       </div>
 
       {/* Pagination component */}
       <div className="mt-8">
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          basePath="/products"
-        />
+        <Pagination currentPage={currentPage} totalPages={totalPages} />
       </div>
     </div>
   );

@@ -34,22 +34,20 @@ const MpesaPaymentDialog = ({
 
   async function handlePaid() {
     const confirmPayment = () => {
-        const message = `
-          🎉 Almost there! Let's make sure everything's in order:
-      
-          • Have you completed the payment?
-          • Your referral balance will be applied automatically.
-      
-          ⚠️ Important note:
-          If you confirm without having paid, your referral balance 
-          will be deducted and the order may be cancelled.
-      
-          Ready to proceed? Click OK if you've made the payment.
-          If you need more time, no worries! Just click Cancel.
-        `;
-      
-        return window.confirm(message);
-      };
+      const message = `
+      🎉 Almost done! Please confirm:
+    
+      • Payment completed?
+      • Referral balance will apply automatically.
+    
+      ⚠️ Note: Confirming without payment may result in order 
+      cancellation and loss of referral balance.
+    
+      Ready? Click OK if paid, or Cancel if you need more time.
+    `;
+
+      return window.confirm(message);
+    };
 
     if (!confirmPayment()) return;
 

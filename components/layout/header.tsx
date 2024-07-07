@@ -130,7 +130,7 @@ const Header: FC = () => {
               >
                 <Link href={"/login"}>
                   <LogIn className="w-6 h-6" />
-                  <span className="hidden sm:inline ml-2">Login</span>
+                  <span className="inline ml-2">Login</span>
                 </Link>
               </Button>
             )}

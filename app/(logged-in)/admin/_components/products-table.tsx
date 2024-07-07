@@ -1,7 +1,7 @@
 // ProductsTable.tsx (Client Component)
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Table,
   TableBody,
@@ -24,13 +24,31 @@ import { Textarea } from "@/components/ui/textarea";
 import { Edit } from "lucide-react";
 import { Product } from "@prisma/client";
 
+import { Pagination as PaginationType, SearchTarget } from "../_types";
+import { Pagination } from "@/components/small/pagination";
+import { toast } from "sonner";
+import { useLocalStorage } from "usehooks-ts";
+import { SEARCH_TARGET_LOCALSTORAGE_KEY } from "../_constants";
+
 export function ProductsTable({
   initialProducts,
+  pagination,
 }: {
   initialProducts: Product[];
+  pagination: PaginationType;
 }) {
   const [products, setProducts] = useState(initialProducts);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
+
+  const [,setSearchTarget] = useLocalStorage<SearchTarget>(
+    SEARCH_TARGET_LOCALSTORAGE_KEY,
+    "products"
+  );
+
+  useEffect(() => {
+    toast("ProductsTable component mounted");
+    setSearchTarget("products");
+  }, [setSearchTarget]);
 
   const handleProductUpdate = (updatedProduct: Product) => {
     setProducts(
@@ -43,99 +61,102 @@ export function ProductsTable({
   };
 
   return (
-    <Table>
-      <TableCaption>A list of all products</TableCaption>
-      <TableHeader>
-        <TableRow>
-          <TableHead>Manufacturer</TableHead>
-          <TableHead>Name</TableHead>
-          <TableHead>Price</TableHead>
-          {/* <TableHead>Stock</TableHead> */}
-          <TableHead>Action</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {products.map((product) => (
-          <TableRow key={product.id}>
-            <TableCell>{product.manufacturer}</TableCell>
-            <TableCell>{product.name}</TableCell>
-            <TableCell>${product.price.toFixed(2)}</TableCell>
-            {/* <TableCell>{product.stock}</TableCell> */}
-            <TableCell>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setEditingProduct(product)}
-                  >
-                    <Edit className="w-4 h-4 mr-2" /> Edit
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-[425px]">
-                  <DialogHeader>
-                    <DialogTitle>Edit Product</DialogTitle>
-                  </DialogHeader>
-                  {editingProduct && (
-                    <form
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        handleProductUpdate(editingProduct);
-                      }}
-                    >
-                      <div className="grid gap-4 py-4">
-                        <Input
-                          value={editingProduct.name}
-                          onChange={(e) =>
-                            setEditingProduct({
-                              ...editingProduct,
-                              name: e.target.value,
-                            })
-                          }
-                          placeholder="Product Name"
-                        />
-                        <Input
-                          type="number"
-                          value={editingProduct.price}
-                          onChange={(e) =>
-                            setEditingProduct({
-                              ...editingProduct,
-                              price: parseFloat(e.target.value),
-                            })
-                          }
-                          placeholder="Price"
-                        />
-                        <Input
-                          type="number"
-                          value={editingProduct.stock}
-                          onChange={(e) =>
-                            setEditingProduct({
-                              ...editingProduct,
-                              stock: parseInt(e.target.value),
-                            })
-                          }
-                          placeholder="Stock"
-                        />
-                        <Textarea
-                          value={editingProduct.description}
-                          onChange={(e) =>
-                            setEditingProduct({
-                              ...editingProduct,
-                              description: e.target.value,
-                            })
-                          }
-                          placeholder="Description"
-                        />
-                      </div>
-                      <Button type="submit">Save changes</Button>
-                    </form>
-                  )}
-                </DialogContent>
-              </Dialog>
-            </TableCell>
+    <>
+      <Table>
+        <TableCaption>A list of all products</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Manufacturer</TableHead>
+            <TableHead>Name</TableHead>
+            <TableHead>Price</TableHead>
+            {/* <TableHead>Stock</TableHead> */}
+            <TableHead>Action</TableHead>
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHeader>
+        <TableBody>
+          {products.map((product) => (
+            <TableRow key={product.id}>
+              <TableCell>{product.manufacturer}</TableCell>
+              <TableCell>{product.name}</TableCell>
+              <TableCell>${product.price.toFixed(2)}</TableCell>
+              {/* <TableCell>{product.stock}</TableCell> */}
+              <TableCell>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setEditingProduct(product)}
+                    >
+                      <Edit className="w-4 h-4 mr-2" /> Edit
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[425px]">
+                    <DialogHeader>
+                      <DialogTitle>Edit Product</DialogTitle>
+                    </DialogHeader>
+                    {editingProduct && (
+                      <form
+                        onSubmit={(e) => {
+                          e.preventDefault();
+                          handleProductUpdate(editingProduct);
+                        }}
+                      >
+                        <div className="grid gap-4 py-4">
+                          <Input
+                            value={editingProduct.name}
+                            onChange={(e) =>
+                              setEditingProduct({
+                                ...editingProduct,
+                                name: e.target.value,
+                              })
+                            }
+                            placeholder="Product Name"
+                          />
+                          <Input
+                            type="number"
+                            value={editingProduct.price}
+                            onChange={(e) =>
+                              setEditingProduct({
+                                ...editingProduct,
+                                price: parseFloat(e.target.value),
+                              })
+                            }
+                            placeholder="Price"
+                          />
+                          <Input
+                            type="number"
+                            value={editingProduct.stock}
+                            onChange={(e) =>
+                              setEditingProduct({
+                                ...editingProduct,
+                                stock: parseInt(e.target.value),
+                              })
+                            }
+                            placeholder="Stock"
+                          />
+                          <Textarea
+                            value={editingProduct.description}
+                            onChange={(e) =>
+                              setEditingProduct({
+                                ...editingProduct,
+                                description: e.target.value,
+                              })
+                            }
+                            placeholder="Description"
+                          />
+                        </div>
+                        <Button type="submit">Save changes</Button>
+                      </form>
+                    )}
+                  </DialogContent>
+                </Dialog>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>{" "}
+      <Pagination {...pagination} currentPageIdentifier="products_page" />
+    </>
   );
 }

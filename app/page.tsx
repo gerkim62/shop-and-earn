@@ -16,18 +16,53 @@ import { getCurrentUser } from "@/auth/user";
 const testimonials = [
   {
     quote:
-      "How did I not know of this app earlier. I have earned more than KSH 10,000 so far thanks to this app!",
+      "I can't believe how much I've earned just by referring my friends. Over KSH 10,000 so far!",
     author: "Sarah M., Nairobi",
   },
   {
     quote:
-      "This app has revolutionized how I manage my finances. Highly recommended!",
+      "This app has completely changed how I shop. I get amazing discounts and earn money through referrals. Highly recommended!",
     author: "John D., Mombasa",
   },
   {
     quote:
-      "Easy to use and incredibly helpful. It's made a real difference in my life.",
+      "It's so easy to use and I've saved so much on my purchases. Plus, the referral program is fantastic!",
     author: "Alice K., Kisumu",
+  },
+  {
+    quote:
+      "I love how I can earn money and save on products I need. This app is a game-changer!",
+    author: "Peter N., Eldoret",
+  },
+  {
+    quote:
+      "The referral program is amazing. I've made so much money just by sharing the app with friends.",
+    author: "Grace L., Nakuru",
+  },
+  {
+    quote:
+      "The discounts on products are unbelievable. I always check the app first before buying anything.",
+    author: "David O., Thika",
+  },
+  {
+    quote:
+      "Earning KSH while shopping for discounted products? It doesn't get better than this!",
+    author: "Lydia M., Nyeri",
+  },
+  {
+    quote:
+      "This app makes it so easy to save money and earn extra cash. It's a must-have!",
+    author: "Brian K., Malindi",
+  },
+  {
+    quote:
+      "I've referred so many friends and made a lot of money. The best part is, they love the app too!",
+    author: "Esther W., Kericho",
+  },
+  {
+    quote:
+      "Buying products at discounted prices and earning money through referrals is the best combo ever!",
+    author: "James T., Kisii",
   },
 ];
 

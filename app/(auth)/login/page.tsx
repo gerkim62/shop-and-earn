@@ -16,9 +16,9 @@ const LoginPage = () => {
           <LoginForm />
           <div className="mt-6 text-center space-y-2">
             <p className="text-sm text-gray-600">
-              <a href="#" className="text-purple-600 hover:underline">
+              <Link href="/forgot-password" className="text-purple-600 hover:underline">
                 Forgot your password?
-              </a>
+              </Link>
             </p>
             <p className="text-sm text-gray-600">
               Don't have an account?{" "}

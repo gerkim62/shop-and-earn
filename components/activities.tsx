@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import { formatNumber } from "@/lib/utils";
 import { RECEIVE_NOTIFICATIONS_ABOUT_OTHERS_LOCALSTORAGE_KEY } from "@/constants/storage";
 import { useIsClient, useLocalStorage } from "usehooks-ts";
+import { Button } from "./ui/button";
 
 const names = [
   // Common names in Kenya
@@ -82,9 +83,9 @@ const Toast: React.FC<ToastProps> = ({ message, icon: Icon, onClose }) => (
   <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white p-4 rounded-md shadow-lg flex items-center space-x-2 z-50 sm:max-w-md w-full max-w-[90%]">
     <Icon size={20} />
     <p className="flex-grow">{message}</p>
-    <button onClick={onClose} className="focus:outline-none">
+    <Button onClick={onClose} variant={"ghost"}>
       <X size={20} />
-    </button>
+    </Button>
   </div>
 );
 
