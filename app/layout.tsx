@@ -12,14 +12,13 @@ import { CartProvider } from "@/components/context/cart";
 import BackToTopButton from "@/components/small/back-to-top-button";
 import app from "@/constants/app";
 import contact from "@/constants/contact";
-import { headers } from "next/headers";
 
 const font = Quicksand({ subsets: ["latin"] });
 
 //     <link rel="apple-touch-icon" href="/example.png">
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${headers().get("host")}`),
+  metadataBase: new URL("https://cashlink.netlify.app/"),
   applicationName: app.name,
   title: {
     default: app.name,
