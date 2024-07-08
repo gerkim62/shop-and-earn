@@ -1,17 +1,17 @@
 "use client";
 
+import { getCurrentUser, type UserWithRelations } from "@/auth/user";
 import app from "@/constants/app";
-import { Bell, ShoppingCart, LogIn, Loader2, Package } from "lucide-react";
+import { Bell, Loader2, LogIn, ShoppingBag, ShoppingCart, User2 } from "lucide-react";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { FC, useEffect, useState } from "react";
+import { useScrollDirection } from "use-scroll-direction";
+import { useCart } from "../context/cart";
 import Link from "../small/link-with-loader";
 import UserButton from "../small/user-button";
 import { Button } from "../ui/button";
-import { useSession } from "next-auth/react";
-import { getCurrentUser, type UserWithRelations } from "@/auth/user";
-import { usePathname } from "next/navigation";
-import { useCart } from "../context/cart";
-import { useScrollDirection } from "use-scroll-direction";
 
 const Header: FC = () => {
   const { status } = useSession();
@@ -84,7 +84,7 @@ const Header: FC = () => {
                   className="p-2 inline-flex items-center text-xs"
                 >
                   <Link href={"/products"}>
-                    <Package className="w-6 h-6 sm:inline hidden" />
+                    <ShoppingBag className="w-6 h-6 sm:inline hidden" />
                     <span className="hidden sm:inline ml-2">Products</span>
                   </Link>
                 </Button>
@@ -130,7 +130,7 @@ const Header: FC = () => {
                 ) : user ? (
                   <UserButton user={user} />
                 ) : (
-                  <UserLoading />
+                  <UserFallback />
                 )}
               </>
             ) : (
@@ -160,6 +160,15 @@ function UserLoading() {
     <Link href={"/account"} className="flex items-center">
       <div className="h-10 w-10 bg-gray-200 rounded-full animate-pulse mr-0 flex items-center justify-center">
         <Loader2 className="h-8 w-8 text-gray-400 animate-spin" />
+      </div>
+    </Link>
+  );
+}
+function UserFallback() {
+  return (
+    <Link href={"/account"} className="flex items-center">
+      <div className="h-10 w-10 bg-gray-200 rounded-full border mr-0 flex items-center justify-center">
+        <User2 className="h-8 w-8 text-gray-400" />
       </div>
     </Link>
   );

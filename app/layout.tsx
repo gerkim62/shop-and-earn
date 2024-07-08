@@ -81,7 +81,20 @@ export default function RootLayout({
             <InstallBanner />
             <BackToTopButton />
             <Footer />
-            <Toaster closeButton />
+            <Toaster
+              richColors
+              theme="light"
+              closeButton
+              position="top-center"
+              toastOptions={{
+                style: {
+                  background: "white",
+                  color: "#553C9A", // text-purple-800
+                  border: "1px solid #D6BCFA", // border-purple-200
+                  borderRadius: "0.75rem", // rounded-xl
+                },
+              }}
+            />
           </CartProvider>
         </AuthProvider>
       </body>
