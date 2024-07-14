@@ -1,0 +1,10 @@
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\bin\Release\IDM pub Killer.exe.config
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\bin\Release\IDM pub Killer.exe
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\bin\Release\IDM pub Killer.pdb
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\obj\Release\idmPub_killer.csproj.AssemblyReference.cache
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\obj\Release\idmPub_killer.Form1.resources
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\obj\Release\idmPub_killer.Properties.Resources.resources
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\obj\Release\idmPub_killer.csproj.GenerateResource.cache
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\obj\Release\idmPub_killer.csproj.CoreCompileInputs.cache
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\obj\Release\IDM pub Killer.exe
+C:\dev study\cSharp\s3\ASP .net web\tp3_BD\idmPub_killer\idmPub_killer\obj\Release\IDM pub Killer.pdb

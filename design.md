@@ -81,5 +81,3 @@ Our established theme for pages (eg offline, 404, error) combines a soft purple 
 5. Accessibility: Good color contrast and clear interactive elements
 
 This theme strikes a balance between being visually appealing and functional, providing users with a pleasant experience even when encountering issues like being offline or reaching a non-existent page.
-
-create a 404 page in shadcn

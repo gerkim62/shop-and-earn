@@ -1,9 +1,7 @@
-import React from "react";
+import { getCurrentUser } from "@/auth/user";
+import Link from "@/components/small/link-with-loader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CreditCard, Users, ShoppingBag, Gift } from "lucide-react";
-import Link from "@/components/small/link-with-loader";
-import app from "@/constants/app";
 import {
   Carousel,
   CarouselContent,
@@ -11,57 +9,48 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { getCurrentUser } from "@/auth/user";
+import { Calendar, CreditCard, Gift, Smartphone } from "lucide-react";
+import React from "react";
 
 const testimonials = [
   {
-    quote:
-      "I can't believe how much I've earned just by referring my friends. Over KSH 10,000 so far!",
+    quote: "I never thought I could afford a smartphone. Thanks to Lipa Mdogo Mdogo, I now own one!",
     author: "Sarah M., Nairobi",
   },
   {
-    quote:
-      "This app has completely changed how I shop. I get amazing discounts and earn money through referrals. Highly recommended!",
+    quote: "The daily payment plan fits perfectly with my income. Plus, I earned extra through referrals!",
     author: "John D., Mombasa",
   },
   {
-    quote:
-      "It's so easy to use and I've saved so much on my purchases. Plus, the referral program is fantastic!",
+    quote: "I love my new phone, and the referral program helped me save even more on my payments.",
     author: "Alice K., Kisumu",
   },
   {
-    quote:
-      "I love how I can earn money and save on products I need. This app is a game-changer!",
+    quote: "Lipa Mdogo Mdogo made it possible for me to get a quality smartphone. The referral bonus was a great surprise!",
     author: "Peter N., Eldoret",
   },
   {
-    quote:
-      "The referral program is amazing. I've made so much money just by sharing the app with friends.",
+    quote: "I referred my friends to the program, and we're all enjoying our new phones. The extra earnings were a nice touch!",
     author: "Grace L., Nakuru",
   },
   {
-    quote:
-      "The discounts on products are unbelievable. I always check the app first before buying anything.",
+    quote: "The flexibility of payments and the chance to earn through referrals make this program unbeatable.",
     author: "David O., Thika",
   },
   {
-    quote:
-      "Earning KSH while shopping for discounted products? It doesn't get better than this!",
+    quote: "I'm so glad I found Lipa Mdogo Mdogo. Affordable payments and referral rewards - what's not to love?",
     author: "Lydia M., Nyeri",
   },
   {
-    quote:
-      "This app makes it so easy to save money and earn extra cash. It's a must-have!",
+    quote: "This program made my dream of owning a smartphone a reality. The referral system is an added bonus!",
     author: "Brian K., Malindi",
   },
   {
-    quote:
-      "I've referred so many friends and made a lot of money. The best part is, they love the app too!",
+    quote: "I've recommended Lipa Mdogo Mdogo to all my friends. It's a win-win with the referral program!",
     author: "Esther W., Kericho",
   },
   {
-    quote:
-      "Buying products at discounted prices and earning money through referrals is the best combo ever!",
+    quote: "Affordable smartphone payments and the chance to earn? Lipa Mdogo Mdogo delivers on both fronts!",
     author: "James T., Kisii",
   },
 ];
@@ -73,11 +62,10 @@ const LandingPage = async () => {
       {/* Hero Section */}
       <section className="py-8 px-4 text-center">
         <h1 className="text-4xl font-bold mb-6 text-purple-800">
-          Earn While You Shop!
+          Get Your Dream Phone with Lipa Mdogo Mdogo!
         </h1>
         <p className="text-xl mb-8 text-gray-600">
-          Refer friends, earn rewards, and shop amazing discounts all in one
-          place.
+          Affordable daily payments, quality smartphones, and rewards for referrals.
         </p>
         <Button
           size="lg"
@@ -85,7 +73,7 @@ const LandingPage = async () => {
           className="bg-purple-600 hover:bg-purple-700 text-white"
         >
           <Link href={user ? "/products" : "/signup"}>
-            {user ? "Explore Products" : "Sign Up Now"}
+            {user ? "Explore Phones" : "Sign Up Now"}
           </Link>
         </Button>
         <Button asChild variant={"link"}>
@@ -98,28 +86,28 @@ const LandingPage = async () => {
       {/* Features Section */}
       <section className="py-4 px-4">
         <h2 className="text-3xl font-semibold text-center mb-4 text-purple-800">
-          Why Choose Us?
+          Why Choose Lipa Mdogo Mdogo?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <FeatureCard
+            icon={<Smartphone className="h-12 w-12 text-purple-600" />}
+            title="Quality Smartphones"
+            description="Choose from top brands like Samsung, Apple, Oppo, and Tecno"
+          />
+          <FeatureCard
             icon={<CreditCard className="h-12 w-12 text-purple-600" />}
-            title="Earn Real Money"
-            description="Get cash rewards for every friend you refer"
+            title="Affordable Payments"
+            description="Pay in small, manageable daily or monthly installments"
           />
           <FeatureCard
-            icon={<Users className="h-12 w-12 text-purple-600" />}
-            title="Easy Referrals"
-            description="Simple process to invite friends and track rewards"
-          />
-          <FeatureCard
-            icon={<ShoppingBag className="h-12 w-12 text-purple-600" />}
-            title="Huge Discounts"
-            description="Access to products at unbeatable prices"
+            icon={<Calendar className="h-12 w-12 text-purple-600" />}
+            title="Flexible Terms"
+            description="Payment plans up to one year to suit your budget"
           />
           <FeatureCard
             icon={<Gift className="h-12 w-12 text-purple-600" />}
-            title="Redeem Anytime"
-            description="Use your earnings on any purchase, any time"
+            title="Referral Rewards"
+            description="Earn money by referring friends to the program"
           />
         </div>
       </section>
@@ -127,10 +115,10 @@ const LandingPage = async () => {
       {/* CTA Section */}
       <section className="py-12 px-4 text-center bg-purple-100">
         <h2 className="text-3xl font-bold mb-6 text-purple-800">
-          Ready to Start Earning?
+          Ready to Own Your Dream Phone?
         </h2>
         <p className="text-xl mb-8 text-gray-600">
-          Join thousands of happy users who are earning and saving every day.
+          Join thousands of happy users who are enjoying their new smartphones.
         </p>
         <Button
           size="lg"
@@ -138,14 +126,14 @@ const LandingPage = async () => {
           className="bg-purple-600 hover:bg-purple-700 text-white"
         >
           <Link href={user ? "/products" : "/signup"}>
-            {user ? "Explore Products" : "Sign Up Now"}
+            {user ? "Explore Phones" : "Sign Up Now"}
           </Link>
         </Button>
       </section>
 
       <section className="py-8 px-4 bg-purple-50 max-w-[80%] mx-auto">
         <h2 className="text-3xl font-semibold text-center mb-6 text-purple-800">
-          What Our Users Say
+          What Our Customers Say
         </h2>
         <div className="max-w-4xl mx-auto">
           <Carousel>
@@ -155,7 +143,7 @@ const LandingPage = async () => {
                   <Card>
                     <CardContent className="pt-6">
                       <p className="text-lg text-gray-600 italic">
-                        "{testimonial.quote.replace("{app.name}", app.name)}"
+                        "{testimonial.quote}"
                       </p>
                       <p className="mt-4 font-semibold">
                         - {testimonial.author}

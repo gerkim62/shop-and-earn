@@ -12,6 +12,7 @@ import { z } from "zod";
 import SubmitButton from "../small/submit-button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import nProgress from "nprogress";
 
 type LoginFormProps = {};
 
@@ -56,33 +57,32 @@ const LoginForm: React.FC<LoginFormProps> = () => {
     setInvalidLogin(false);
 
     if (result.ok) {
+      router.replace("/products");
+      nProgress.start();
       toast.success("Logged in successfully", {
-        description: "You are being redirected to your account.",
+        description: "You are being redirected...",
       });
     }
-
-    router.replace("/account");
   };
 
   const [invalidLogin, setInvalidLogin] = useState(false);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      {
-        invalidLogin && <p
-        className="bg-red-500 p-1 px-4 text-center rounded-xl text-white -mt-4 flex justify-between items-center rounded-br-none rounded-bl-none"
-        >
+      {invalidLogin && (
+        <p className="bg-red-500 p-1 px-4 text-center rounded-xl text-white -mt-0 flex justify-between items-center rounded-br-none rounded-bl-none">
           Invalid email or password.
           <button>
-         <X
-         onClick={()=>setInvalidLogin(false)}
-         role="button"
-         className="border rounded-full bg-red-500 hover:scale-125 transition-transform border-red-300 -mr-2 cursor-pointer"
-         height={20}
-         width={20}
-         /></button>
+            <X
+              onClick={() => setInvalidLogin(false)}
+              role="button"
+              className="border rounded-full bg-red-500 hover:scale-125 transition-transform border-red-300 -mr-2 cursor-pointer"
+              height={20}
+              width={20}
+            />
+          </button>
         </p>
-      }
+      )}
       <div className="space-y-2">
         <Label htmlFor="email" className="text-sm font-medium text-gray-700">
           Email

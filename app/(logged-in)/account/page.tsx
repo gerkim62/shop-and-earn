@@ -16,6 +16,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { INVITE_MESSAGE_TEMPLATE } from "@/constants/invite";
 import limits from "@/constants/limits";
 import { formatNumber } from "@/lib/utils";
 import { Gift, ShoppingBag, User } from "lucide-react";
@@ -29,6 +30,11 @@ const MyAccountPage = async () => {
   const hostname = headersList.get("host");
 
   const referralLink = `https://${hostname}/invite/${user.referralCode}`;
+
+  const inviteMessage = INVITE_MESSAGE_TEMPLATE.replace(
+    "{{LINK}}",
+    referralLink
+  );
 
   const referrals = user.referredUsers.map((referredUser) => ({
     id: referredUser.id,
@@ -97,8 +103,7 @@ const MyAccountPage = async () => {
                 className="flex-grow  w-32  border rounded-l-md px-2 "
               />
               <CopyButton
-                dontNormalize
-                link={referralLink}
+                text={inviteMessage}
                 className="rounded-l-none "
               ></CopyButton>
             </div>

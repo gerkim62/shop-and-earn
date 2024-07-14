@@ -11,7 +11,7 @@ import rewards from "@/constants/rewards";
 const CartCheckoutPage = async () => {
   const user = await getCurrentUserOrRedirect();
 
-  const cartPromise = await prisma.cart.findUnique({
+  const cartPromise =  prisma.cart.findUnique({
     where: {
       userId: user.id,
     },
@@ -25,7 +25,7 @@ const CartCheckoutPage = async () => {
     },
   });
 
-  const regionsPromise = await prisma.region.findMany({
+  const regionsPromise =  prisma.region.findMany({
     include: {
       cities: {
         include: {

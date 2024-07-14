@@ -1,6 +1,7 @@
 "use client";
 
-import { addToCart, removeFromCart } from "@/actions/cart";
+import { removeFromCart } from "@/actions/cart";
+import { createLipaMdogoMdogoOrder } from "@/actions/lipa-mdogo-mdogo";
 import { useCart } from "@/components/context/cart";
 import EditProductModal from "@/components/modals/edit-product";
 import { Button } from "@/components/ui/button";
@@ -13,10 +14,18 @@ import {
 } from "@/components/ui/card";
 import { formatNumber } from "@/lib/utils";
 import { Product as ProductType } from "@prisma/client";
-import { Edit, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Edit, Star } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 type Props = {
   product: ProductType & { description: string };
@@ -27,7 +36,6 @@ const StarRating = ({ rating }: { rating: number }) => {
   return (
     <div className="flex items-center">
       {[...Array(5)].map((_, i) => {
-        // const starValue = i + 1;
         return (
           <div key={i} className="relative">
             <Star className="h-5 w-5 text-gray-300" fill="currentColor" />
@@ -59,18 +67,47 @@ export default function Product({ product, canEdit }: Props) {
   const rating = product.rating;
   const reviewsCount = product.reviewsCount;
 
+  const allImages = product.qualityImages.concat(product.images);
+
+  const THIS_IS_FAKE = 100000000;
+
   return (
     <Card
       key={product.id}
       className="overflow-hidden transition-all duration-300 transform hover:shadow-lg"
     >
-      <Image
-        height={212}
-        width={160}
-        src={product.images[0] ?? "/placeholder.webp"}
-        alt={product.name}
-        className="h-[212px] w-[160px] mx-auto mt-2 object-fit"
-      />
+      <Carousel className="w-full max-w-xs mx-auto relative">
+        <CarouselContent>
+          {allImages.map((image, index) => (
+            <CarouselItem key={index}>
+              <Image
+                quality={100}
+                height={212}
+                width={160}
+                src={image ?? "/placeholder.webp"}
+                alt={`${product.name} - Image ${index + 1}`}
+                className="h-[212px] w-auto mx-auto mt-2 object-fit"
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="absolute left-2 top-1/2 transform -translate-y-1/2">
+          <ChevronLeft className="h-6 w-6" />
+        </CarouselPrevious>
+        <CarouselNext className="absolute right-2 top-1/2 transform -translate-y-1/2">
+          <ChevronRight className="h-6 w-6" />
+        </CarouselNext>
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {allImages.map((_, index) => (
+            <div
+              key={index}
+              className={`h-2 w-2 rounded-full ${
+                THIS_IS_FAKE === index ? "bg-purple-500" : "bg-gray-300"
+              }`}
+            />
+          ))}
+        </div>
+      </Carousel>
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-purple-700">
           {product.manufacturer} {product.name}
@@ -100,25 +137,36 @@ export default function Product({ product, canEdit }: Props) {
       </CardContent>
       <CardFooter className="flex justify-between">
         <Button
-          disabled={loading || cartProductIds.includes(product.id)}
+          disabled={loading}
           onClick={async () => {
             setLoading(true);
             try {
-              await addToCart({
+              const result:
+                | undefined
+                | {
+                    success: boolean;
+                    message: string;
+                  } = await createLipaMdogoMdogoOrder({
                 productId: product.id,
               });
-              toast.success("Added to cart!");
-              setCartProductIds([...cartProductIds, product.id]);
+
+              if (!result?.success && result?.message) {
+                return toast.error(result.message);
+              }
             } catch (error) {
-              toast.error("Failed to add to cart!");
+              console.log(error);
+              toast.error("Something went wrong!");
+              setLoading(false);
             }
             setLoading(false);
+
+            return;
           }}
           className={`bg-purple-500 hover:bg-purple-600 text-white w-full ${
             cartProductIds.includes(product.id) ? "hidden" : ""
           }`}
         >
-          Add to Cart
+          Order Now &rarr;
         </Button>
         <Button
           disabled={loading || !cartProductIds.includes(product.id)}

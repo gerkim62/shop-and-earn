@@ -9,6 +9,7 @@ import signup from "@/actions/signup";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import SubmitButton from "../small/submit-button";
+import nProgress from "nprogress";
 
 type SignUpFormProps = {
   inviteCode: string | null;
@@ -42,6 +43,7 @@ const SignUpForm = ({ inviteCode }: SignUpFormProps) => {
 
     console.log("Account created successfully!", user);
 
+    nProgress.start();
     router.push("/login");
   };
 
@@ -124,7 +126,6 @@ const SignUpForm = ({ inviteCode }: SignUpFormProps) => {
           Referral Code
         </label>
         <input
-        
           value={inviteCode ?? ""}
           type="text"
           id="referralCode"
@@ -132,7 +133,6 @@ const SignUpForm = ({ inviteCode }: SignUpFormProps) => {
           className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-600"
           readOnly={!!inviteCode}
         />
-        
       </div>
 
       <SubmitButton

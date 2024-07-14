@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+"use client";
+
+import { updateLMMPickupStation } from "@/actions/lipa-mdogo-mdogo";
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { ArrowRight, MapPin, Check } from "lucide-react";
-import { cn } from "@/lib/utils";
+  CityWithStations,
+  RegionWithCitiesWithStations,
+} from "@/app/(logged-in)/checkout/_components/cart";
+import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -18,89 +15,33 @@ import {
   CommandList,
 } from "@/components/ui/command";
 import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import {
-  CityWithStations,
-  RegionWithCitiesWithStations,
-} from "@/app/(logged-in)/checkout/_components/cart";
+import { cn } from "@/lib/utils";
 import { Station } from "@prisma/client";
-import { ScrollArea } from "../ui/scroll-area";
+import { ArrowRight, Check, MapPin } from "lucide-react";
+import React, { useState } from "react";
 import { toast } from "sonner";
-import { updatePickupStation } from "@/actions/cart";
+import { ScrollArea } from "../ui/scroll-area";
 
-// Mock data
-// const regions: { regions: Region[] } = {
-//   regions: [
-//     {
-//       id: 1,
-//       name: "North",
-//       cities: [
-//         {
-//           id: 1,
-//           name: "City A",
-//           stations: [
-//             {
-//               id: 1,
-//               name: "Station 1",
-//               fee: "$5",
-//               address: "123 Main St",
-//               town: "Downtown",
-//               openingHours: "9AM-5PM",
-//             },
-//           ],
-//         },
-//         {
-//           id: 2,
-//           name: "City B",
-//           stations: [
-//             {
-//               id: 2,
-//               name: "Station 2",
-//               fee: "$4",
-//               address: "456 Elm St",
-//               town: "Uptown",
-//               openingHours: "8AM-6PM",
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//     {
-//       id: 2,
-//       name: "South",
-//       cities: [
-//         {
-//           id: 3,
-//           name: "City C",
-//           stations: [
-//             {
-//               id: 3,
-//               name: "Station 3",
-//               fee: "$6",
-//               address: "789 Oak St",
-//               town: "Midtown",
-//               openingHours: "10AM-7PM",
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//   ],
-// };
 
 interface PickupStationModalProps {
   children: React.ReactNode;
   regions: RegionWithCitiesWithStations[];
-  setDeliveryStation?: (station: Station) => void;
 }
 
 export default function PickupStationModal({
   children,
   regions,
-  setDeliveryStation = () => {},
 }: PickupStationModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedRegion, setSelectedRegion] =
@@ -147,7 +88,6 @@ export default function PickupStationModal({
           <PickupStation
             station={selectedCity?.stations[0] || null}
             onClose={handleClose}
-            setDeliveryStation={setDeliveryStation}
           />
         }
       </DialogContent>
@@ -223,14 +163,9 @@ function Combobox<T extends { id: number; name: string }>({
 interface PickupStationProps {
   station: Station | null;
   onClose: () => void;
-  setDeliveryStation?: (station: Station) => void;
 }
 
-function PickupStation({
-  station,
-  onClose,
-  setDeliveryStation = () => {},
-}: PickupStationProps) {
+function PickupStation({ station, onClose }: PickupStationProps) {
   const [updating, setUpdating] = useState(false);
   if (!station) return <NoCitySelected />;
   return (
@@ -257,17 +192,12 @@ function PickupStation({
             console.log(`Selected station: ${station.id}`);
             try {
               setUpdating(true);
-              const cart = await updatePickupStation({
+              await updateLMMPickupStation({
                 stationId: station.id,
               });
 
-              if (cart.station) {
-                setDeliveryStation(cart.station);
-                toast.success("Pickup station updated successfully.");
-              } else
-                toast.error("Error", {
-                  description: "The selected station was not updated.",
-                });
+              toast.success("Pickup station updated successfully.");
+
               onClose();
             } catch (error) {
               toast.error("An error occurred. Please try again.");

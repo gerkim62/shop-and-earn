@@ -45,7 +45,7 @@ export default function Cart({ cart, regions, referralBalance }: Props) {
   const { setCartProductIds } = useCart();
 
   const [status, setStatus] = useState<Status>("idle");
-  const [deliveryStation, setDeliveryStation] = useState<Station | null>(
+  const [deliveryStation] = useState<Station | null>(
     cart?.station || null
   );
 
@@ -219,7 +219,6 @@ export default function Cart({ cart, regions, referralBalance }: Props) {
         </div>
 
         <PickupStationModal
-          setDeliveryStation={setDeliveryStation}
           regions={regions}
         >
           <Button

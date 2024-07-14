@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import app from "@/constants/app";
+import { INVITE_MESSAGE_TEMPLATE } from "@/constants/invite";
 import rewards from "@/constants/rewards";
 import { Link, ShoppingCart } from "lucide-react";
 import { headers } from "next/headers";
@@ -16,6 +17,11 @@ const ReferralsPage = async () => {
   const hostname = headersList.get("host");
   const user = await getCurrentUserOrRedirect();
   const referralLink = `https://${hostname}/invite/${user.referralCode}`;
+
+  const inviteMessage = INVITE_MESSAGE_TEMPLATE.replace(
+    "{{LINK}}",
+    referralLink
+  );
 
   // Mock data - replace with actual data from your backend
   const totalInvited = user.referredUsers.length;
@@ -67,7 +73,7 @@ const ReferralsPage = async () => {
               <h3 className="text-lg font-semibold mb-2">Your Referral Link</h3>
               <div className="flex space-x-2">
                 <Input value={referralLink} readOnly className="flex-grow" />
-                <CopyButton dontNormalize link={referralLink} />
+                <CopyButton text={inviteMessage} />
               </div>
             </div>
 

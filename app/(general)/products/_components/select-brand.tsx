@@ -17,9 +17,10 @@ type Props = {
 
 export default function SelectBrand({ brands, selectedBrand }: Props) {
   function handleChange() {
-    toast.info("Filter...", {
-      description: "Click the 'Search Products' button to apply the filter.",
-    });
+    const form = document.querySelector("form");
+    if (form) {
+      form.requestSubmit();
+    } else toast.info("Click 'Search Products' to apply filter...");
   }
   return (
     <div className="w-full sm:w-1/4">
